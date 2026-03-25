@@ -10,6 +10,9 @@ jQuery(function($) {
     });
 
     $('.navbar-collapse ul li a').on('click', function() {
+        if (!this.hash || $(this.hash).length === 0) {
+            return true;
+        }
         $('html, body').animate({
             scrollTop: $(this.hash).offset().top - 5
         }, 1000);
@@ -23,8 +26,11 @@ jQuery(function($) {
         var rangeTop = 200;
         var rangeBottom = 500;
         $('.navbar-collapse').find('.scroll a').each(function() {
-            contentTop.push($($(this).attr('href')).offset().top);
-            contentBottom.push($($(this).attr('href')).offset().top + $($(this).attr('href')).height());
+            var sectionTarget = $($(this).attr('href'));
+            if (sectionTarget.length) {
+                contentTop.push(sectionTarget.offset().top);
+                contentBottom.push(sectionTarget.offset().top + sectionTarget.height());
+            }
         })
         $.each(contentTop, function(i) {
             if (winTop > contentTop[i] - rangeTop) {
@@ -36,6 +42,9 @@ jQuery(function($) {
     };
 
     $('#tohash').on('click', function() {
+        if (!this.hash || $(this.hash).length === 0) {
+            return true;
+        }
         $('html, body').animate({
             scrollTop: $(this.hash).offset().top - 5
         }, 1000);
@@ -117,10 +126,11 @@ jQuery(function($) {
 
 });
 
-const searchWord = document.getElementById("searchWord");
 const showMore = document.getElementById("showMore");
 const show6 = document.getElementById("show6");
 
-showMore.addEventListener('click',function(){
-    show6.style.display = 'block';
-} );
+if (showMore && show6) {
+    showMore.addEventListener('click', function() {
+        show6.style.display = 'block';
+    });
+}
