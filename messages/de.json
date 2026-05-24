@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "machines": "Maschinen",
+    "about": "Ueber uns",
+    "contact": "Kontakt",
+    "blog": "Ratgeber"
+  },
+  "footer": {
+    "contact": "Kontakt",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  }
+}

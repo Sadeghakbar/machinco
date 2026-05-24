@@ -1,0 +1,9 @@
+/*
+  Temporary compatibility layer while migrating from Bootstrap 3 template styles
+  to React-Bootstrap on Bootstrap 5. Keep this file small and remove rules once
+  route-level parity is confirmed.
+*/
+
+main {
+  min-height: calc(100vh - 180px);
+}

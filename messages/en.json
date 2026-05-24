@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Home",
+    "machines": "Machines",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "footer": {
+    "contact": "Contact",
+    "imprint": "Imprint",
+    "privacy": "Privacy"
+  }
+}
