@@ -1,4 +1,5 @@
 import type { Locale } from "@/i18n/config";
+import type { PrivacyConsentCopy } from "@/content/privacyConsent";
 import { getPathForRouteKey } from "@/i18n/routes";
 
 export type AboutPageContent = {
@@ -51,7 +52,7 @@ export type ContactPageContent = {
     formId: string;
     subject: string;
     submitLabel: string;
-    privacyConsent: string;
+    privacyConsent: PrivacyConsentCopy;
     fields: {
       name: string;
       email: string;
@@ -161,8 +162,11 @@ const contactByLocale: Record<Locale, ContactPageContent> = {
       formId: "kontakt-formular",
       subject: "Machinco DE - Kontaktformular (Kontaktseite)",
       submitLabel: "Anfrage senden",
-      privacyConsent:
-        "Ich habe die Datenschutzerklaerung gelesen und akzeptiere die Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage.",
+      privacyConsent: {
+        before: "Ich habe die ",
+        linkLabel: "Datenschutzerklaerung",
+        after: " gelesen und akzeptiere die Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage."
+      },
       fields: {
         name: "Name*",
         email: "E-Mail*",
@@ -198,8 +202,11 @@ const contactByLocale: Record<Locale, ContactPageContent> = {
       formId: "contact-form",
       subject: "Machinco EN - Contact Form (Contact Page)",
       submitLabel: "Send Inquiry",
-      privacyConsent:
-        "I have read the privacy policy and agree to the processing of my data for handling my inquiry.",
+      privacyConsent: {
+        before: "I have read the ",
+        linkLabel: "privacy policy",
+        after: " and agree to the processing of my data for handling my inquiry."
+      },
       fields: {
         name: "Name*",
         email: "Email*",

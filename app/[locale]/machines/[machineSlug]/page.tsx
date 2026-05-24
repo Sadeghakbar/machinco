@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isLocale, locales, type Locale } from "@/i18n/config";
-import { getMachineDetailContent, getMachineRouteKey, getMachineSlugs } from "@/content/machines";
+import { getMachineDetailContent, getMachineSlugs } from "@/content/machines";
 import { MachineDetailPageView } from "@/components/pages/MachinesPages";
-import { buildRouteMetadata } from "@/seo/metadata";
+import { buildMachineMetadata } from "@/seo/metadata";
 
 type MachineDetailPageProps = {
   params: Promise<{ locale: string; machineSlug: string }>;
@@ -21,13 +21,12 @@ export async function generateMetadata({ params }: MachineDetailPageProps): Prom
     return {};
   }
 
-  const routeKey = getMachineRouteKey(machineSlug);
   const content = getMachineDetailContent(locale as Locale, machineSlug);
-  if (!routeKey || !content) {
+  if (!content) {
     return {};
   }
 
-  return buildRouteMetadata(locale as Locale, routeKey, content.hero.title, content.hero.description);
+  return buildMachineMetadata(locale as Locale, machineSlug, content.title, content.summary);
 }
 
 export default async function MachineDetailPage({ params }: MachineDetailPageProps) {
@@ -37,11 +36,12 @@ export default async function MachineDetailPage({ params }: MachineDetailPagePro
     notFound();
   }
 
-  const content = getMachineDetailContent(locale as Locale, machineSlug);
+  const resolvedLocale = locale as Locale;
+  const content = getMachineDetailContent(resolvedLocale, machineSlug);
 
   if (!content) {
     notFound();
   }
 
-  return <MachineDetailPageView content={content} />;
+  return <MachineDetailPageView content={content} locale={resolvedLocale} />;
 }

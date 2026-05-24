@@ -7,7 +7,14 @@ export const metadata: Metadata = {
     default: "Machinco GmbH",
     template: "%s | Machinco GmbH"
   },
-  description: "Industrial machine solutions"
+  description: "Industrial machine solutions",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" }
+    ],
+    apple: "/apple-icon.png"
+  }
 };
 
 type RootLayoutProps = {

@@ -1,4 +1,5 @@
 import type { RouteKey } from "@/content/types";
+import { hasProductSlug } from "@/content/machinesCatalog";
 import { routePathByKey } from "@/i18n/routes";
 
 const routeEntries = Object.entries(routePathByKey) as Array<
@@ -14,17 +15,8 @@ export function getRouteKeyFromPathname(pathname: string): RouteKey {
     }
   }
 
-  if (cleanPath.startsWith("/de/machines/")) {
-    if (cleanPath.endsWith("/belt-grinding")) return "machines.belt-grinding";
-    if (cleanPath.endsWith("/surface-grinding")) return "machines.surface-grinding";
-    if (cleanPath.endsWith("/deburring")) return "machines.deburring";
-    return "machines.index";
-  }
-
-  if (cleanPath.startsWith("/en/machines/")) {
-    if (cleanPath.endsWith("/belt-grinding")) return "machines.belt-grinding";
-    if (cleanPath.endsWith("/surface-grinding")) return "machines.surface-grinding";
-    if (cleanPath.endsWith("/deburring")) return "machines.deburring";
+  const machineDetailMatch = cleanPath.match(/^\/(de|en)\/machines\/([^/]+)$/);
+  if (machineDetailMatch && hasProductSlug(machineDetailMatch[2])) {
     return "machines.index";
   }
 

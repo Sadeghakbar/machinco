@@ -31,6 +31,7 @@ export default async function MachinesPage({ params }: MachinesPageProps) {
     notFound();
   }
 
-  const content = getMachinesIndexContent(locale as Locale);
-  return <MachinesIndexPage content={content} />;
+  const resolvedLocale = locale as Locale;
+  const content = getMachinesIndexContent(resolvedLocale);
+  return <MachinesIndexPage content={content} locale={resolvedLocale} />;
 }

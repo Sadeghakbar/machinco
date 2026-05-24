@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Locale } from "@/i18n/config";
 import { getPathForRouteKey } from "@/i18n/routes";
+import { getLocalizedPath } from "@/i18n/localizedPath";
 import { getRouteKeyFromPathname } from "@/i18n/routeKeyFromPathname";
 import type { RouteKey } from "@/content/types";
 import type { LocaleMessages } from "@/i18n/getMessages";
@@ -56,7 +57,7 @@ export function Header({ locale, messages }: HeaderProps) {
                 </li>
               ))}
               <li>
-                <Link href={getPathForRouteKey(switchLocale, activeRouteKey)}>
+                <Link href={getLocalizedPath(pathname, switchLocale)}>
                   {switchLocale.toUpperCase()}
                 </Link>
               </li>

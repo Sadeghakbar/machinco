@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { FormPrivacyConsent } from "@/components/forms/FormPrivacyConsent";
+import type { HomeContent } from "@/content/home";
 import type { Locale } from "@/i18n/config";
 import { getPathForRouteKey } from "@/i18n/routes";
-import type { HomeContent } from "@/content/home";
 
 type HomePageProps = {
   locale: Locale;
@@ -222,7 +223,8 @@ export function HomePage({ locale, content }: HomePageProps) {
                 </div>
                 <div className="checkbox">
                   <label>
-                    <input type="checkbox" required /> {content.quickInquiry.privacyConsent}
+                    <input type="checkbox" required />{" "}
+                    <FormPrivacyConsent locale={locale} copy={content.quickInquiry.privacyConsent} />
                   </label>
                 </div>
                 <button type="submit" className="btn show">
@@ -238,15 +240,17 @@ export function HomePage({ locale, content }: HomePageProps) {
         <div className="container text-center">
           <h2>{content.finalCta.title}</h2>
           <p>{content.finalCta.description}</p>
-          <Link className="btn btn-warning btn-lg hero-cta-primary" href={`#${content.inquiryId}`}>
-            {content.finalCta.primaryCta}
-          </Link>
-          <Link
-            className="btn btn-default btn-lg hero-cta-secondary"
-            href={getPathForRouteKey(locale, "contact")}
-          >
-            {content.finalCta.secondaryCta}
-          </Link>
+          <div className="hero-cta-group">
+            <Link className="btn btn-warning btn-lg hero-cta-primary" href={`#${content.inquiryId}`}>
+              {content.finalCta.primaryCta}
+            </Link>
+            <Link
+              className="btn btn-default btn-lg hero-cta-secondary"
+              href={getPathForRouteKey(locale, "contact")}
+            >
+              {content.finalCta.secondaryCta}
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -313,6 +317,12 @@ export function HomePage({ locale, content }: HomePageProps) {
                         placeholder={content.contact.placeholders.message}
                         required
                       ></textarea>
+                    </div>
+                    <div className="checkbox">
+                      <label>
+                        <input type="checkbox" required />{" "}
+                        <FormPrivacyConsent locale={locale} copy={content.quickInquiry.privacyConsent} />
+                      </label>
                     </div>
                     <button type="submit" className="btn show">
                       {content.contact.submitCta}

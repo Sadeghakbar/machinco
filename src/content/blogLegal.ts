@@ -398,36 +398,43 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
       title: "Impressum",
       description: "Angaben gemaess den gesetzlichen Informationspflichten in Deutschland."
     },
-    legalNote:
-      "Hinweis: Dieser Inhalt ist als umsetzbarer Musterstand vorbereitet und sollte vor Live-Schaltung rechtlich geprueft werden.",
+    legalNote: "Hinweis: Die englische Impressumsseite ist eine Orientierungsuebersetzung.",
     sections: [
       {
         title: "Angaben gemaess § 5 TMG",
-        paragraphs: ["Machinco GmbH", "Musterstrasse 12", "80331 Muenchen", "Deutschland"]
+        paragraphs: ["Machinco GmbH", "Plaentschweg 13", "81247 Muenchen", "Deutschland"]
+      },
+      {
+        title: "Showroom-Adresse",
+        paragraphs: ["Nr.29-040, Derchinger Str. 120/1/2", "86165 Augsburg"]
       },
       {
         title: "Vertreten durch",
-        paragraphs: ["Geschaeftsfuehrer: Max Mustermann, Julia Beispiel"]
+        paragraphs: ["Geschaeftsfuehrer: Mohammad Sadegh Akbar"]
       },
       {
         title: "Kontakt",
-        paragraphs: ["Telefon: +49 (0)89 123456-0", "E-Mail: info@machinco.de", "Website: www.machinco.de"]
+        paragraphs: [
+          "Telefon: +49 (0)163 0133066",
+          "E-Mail: info@machincogmbh.de",
+          "Website: www.machinco.de"
+        ]
       },
       {
         title: "Registereintrag",
         paragraphs: [
           "Eintragung im Handelsregister",
           "Registergericht: Amtsgericht Muenchen",
-          "Registernummer: HRB 123456"
+          "Registernummer: HRB 289032"
         ]
       },
       {
         title: "Umsatzsteuer-ID",
-        paragraphs: ["Umsatzsteuer-Identifikationsnummer gemaess § 27 a Umsatzsteuergesetz: DE123456789"]
+        paragraphs: ["Umsatzsteuer-Identifikationsnummer gemaess § 27 a Umsatzsteuergesetz: DE407250572"]
       },
       {
         title: "Inhaltlich verantwortlich gemaess § 18 Abs. 2 MStV",
-        paragraphs: ["Max Mustermann, Anschrift wie oben"]
+        paragraphs: ["Mohammad Sadegh Akbar, Anschrift wie oben"]
       },
       {
         title: "EU-Streitschlichtung",
@@ -510,70 +517,79 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
       description: "Informationen zur Verarbeitung personenbezogener Daten nach DSGVO und BDSG."
     },
     legalNote:
-      "Hinweis: Dieser Text ist ein belastbarer Musterstand. Bitte vor Live-Schaltung auf tatsaechlich eingesetzte Tools und Prozesse rechtlich abstimmen.",
+      "Hinweis: Diese Website setzt derzeit keine Statistik- oder Marketing-Cookies ein. Ein Cookie-Banner ist deshalb nicht erforderlich, solange keine entsprechenden Dienste aktiviert werden.",
     sections: [
       {
         title: "1. Verantwortlicher",
         paragraphs: [
-          "Machinco GmbH, Musterstrasse 12, 80331 Muenchen, E-Mail: datenschutz@machinco.de, Telefon: +49 (0)89 123456-0"
+          "Machinco GmbH, Plaentschweg 13, 81247 Muenchen, Deutschland",
+          "E-Mail: info@machincogmbh.de, Telefon: +49 (0)163 0133066"
         ]
       },
       {
         title: "2. Allgemeine Hinweise",
         paragraphs: [
-          "Wir verarbeiten personenbezogene Daten nur im erforderlichen Umfang und auf Grundlage der DSGVO sowie des BDSG."
+          "Wir verarbeiten personenbezogene Daten nur im erforderlichen Umfang und auf Grundlage der DSGVO sowie des BDSG.",
+          "Diese Erklaerung beschreibt den aktuellen Stand unserer Website unter www.machinco.de (statische Auslieferung, ohne Webanalyse- oder Werbe-Tracking beim Seitenaufruf)."
         ]
       },
       {
         title: "3. Hosting und Server-Logfiles",
         paragraphs: [
-          "Beim Besuch der Website werden technisch notwendige Daten verarbeitet (z. B. IP-Adresse, Datum/Uhrzeit, Browserinformationen).",
-          "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO."
+          "Die Website wird als statische Seite ueber GitHub Pages bereitgestellt. Beim Aufruf koennen beim Hosting-Anbieter technisch erforderliche Verbindungsdaten verarbeitet werden (z. B. IP-Adresse, Datum/Uhrzeit, aufgerufene URL, Browser- und Geraeteinformationen).",
+          "Anbieter: GitHub, Inc. (bzw. die fuer GitHub Pages eingesetzte Infrastruktur, u. a. Microsoft).",
+          "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren und stabilen Webauftritt)."
         ]
       },
       {
-        title: "4. Kontaktaufnahme und Anfragen",
+        title: "4. Kontaktformulare und Anfragen",
         paragraphs: [
-          "Bei Kontaktaufnahme per Formular, E-Mail oder Telefon verarbeiten wir Ihre Angaben zur Bearbeitung der Anfrage und fuer Rueckfragen.",
-          "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO und Art. 6 Abs. 1 lit. f DSGVO."
+          "Wenn Sie uns ueber ein Formular auf der Website kontaktieren, verarbeiten wir die von Ihnen eingegebenen Daten (z. B. Name, E-Mail, Telefon, Unternehmen, Nachricht, ggf. Produktbezug) zur Bearbeitung Ihrer Anfrage.",
+          "Die Uebermittlung erfolgt an unseren Formular-Dienst Web3Forms (api.web3forms.com). Die Verarbeitung startet erst, wenn Sie das Formular absenden.",
+          "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Massnahmen bzw. Anbahnung) und Art. 6 Abs. 1 lit. f DSGVO.",
+          "Bei Kontakt per E-Mail oder Telefon gelten die gleichen Zwecke und Speicherfristen entsprechend dem jeweiligen Kommunikationskanal."
         ]
       },
       {
-        title: "5. Cookies und Einwilligung",
+        title: "5. Cookies und lokale Speicherung",
         paragraphs: [
-          "Technisch notwendige Cookies koennen zur Bereitstellung der Website verwendet werden. Optionale Cookies (Statistik/Marketing) werden nur mit Einwilligung gesetzt.",
-          "Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG."
+          "Beim reinen Besuch der Website setzen wir derzeit keine Cookies zu Statistik- oder Marketingzwecken ein.",
+          "Fuer den Betrieb der Website sind keine optionalen Tracking-Cookies erforderlich. Sollten wir kuenftig Analyse- oder Marketing-Tools einsetzen, werden diese erst nach Ihrer Einwilligung aktiviert und in dieser Datenschutzerklaerung sowie ueber ein Cookie-Banner dokumentiert.",
+          "Rechtsgrundlage fuer kuenftige optionale Cookies: Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG."
         ]
       },
       {
         title: "6. Empfaenger und Auftragsverarbeitung",
         paragraphs: [
-          "Wir setzen Dienstleister ein (z. B. Hosting, IT, Formularverarbeitung), die Daten in unserem Auftrag verarbeiten. Mit diesen bestehen Auftragsverarbeitungsvertraege gemaess Art. 28 DSGVO."
+          "Wir setzen Dienstleister fuer Hosting (GitHub Pages) und Formularverarbeitung (Web3Forms) ein. Diese verarbeiten Daten ggf. in unserem Auftrag. Mit Auftragsverarbeitern schliessen wir Vertraege gemaess Art. 28 DSGVO, soweit erforderlich.",
+          "Eine Uebermittlung in Drittlaender kann bei Cloud-Dienstleistern nicht ausgeschlossen werden. In diesem Fall erfolgt sie nur unter den Voraussetzungen der Art. 44 ff. DSGVO (z. B. Standardvertragsklauseln)."
         ]
       },
       {
         title: "7. Speicherdauer",
         paragraphs: [
-          "Personenbezogene Daten speichern wir nur solange, wie es fuer den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen."
+          "Anfragen aus Formularen und E-Mails speichern wir nur so lange, wie es fuer die Bearbeitung, Nachverfolgung und ggf. gesetzliche Aufbewahrungspflichten erforderlich ist.",
+          "Hosting-Logdaten werden durch den Anbieter nach dessen Richtlinien fuer einen begrenzten Zeitraum vorgehalten."
         ]
       },
       {
         title: "8. Ihre Rechte",
         paragraphs: [
-          "Sie haben das Recht auf Auskunft, Berichtigung, Loeschung, Einschraenkung der Verarbeitung, Datenuebertragbarkeit und Widerspruch sowie das Recht auf Beschwerde bei einer Aufsichtsbehoerde."
+          "Sie haben das Recht auf Auskunft, Berichtigung, Loeschung, Einschraenkung der Verarbeitung, Datenuebertragbarkeit und Widerspruch gegen Verarbeitungen auf Basis von Art. 6 Abs. 1 lit. f DSGVO.",
+          "Sie koennen eine erteilte Einwilligung jederzeit mit Wirkung fuer die Zukunft widerrufen.",
+          "Sie haben das Recht auf Beschwerde bei einer Aufsichtsbehoerde, z. B. beim Bayerischen Landesamt fuer Datenschutzaufsicht."
         ]
       },
       {
-        title: "9. Cookie-Banner Text (Opt-in)",
+        title: "9. Aenderungen",
         paragraphs: [
-          "Titel: Ihre Privatsphaere ist uns wichtig",
-          "Text: Wir verwenden Cookies, um unsere Website technisch bereitzustellen und mit Ihrer Einwilligung Nutzungsdaten zur Verbesserung unseres Angebots zu verarbeiten.",
-          "Buttons: Alle akzeptieren | Nur notwendige Cookies | Einstellungen speichern"
+          "Wir passen diese Datenschutzerklaerung an, wenn sich unsere Website, eingesetzte Dienste oder rechtliche Anforderungen aendern.",
+          "Vor Aktivierung von Webanalyse, Remarketing oder vergleichbaren Diensten aktualisieren wir diese Seite und implementieren ein Opt-in-Cookie-Banner."
         ]
       },
       {
         title: "10. Stand",
-        paragraphs: ["Stand dieser Datenschutzerklaerung: Maerz 2026"]
+        paragraphs: ["Stand dieser Datenschutzerklaerung: Mai 2026"]
       }
     ]
   },
@@ -583,70 +599,79 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
       description: "Information on personal data processing in accordance with GDPR and applicable German law."
     },
     legalNote:
-      "Note: This page is an English convenience translation. The German version remains legally authoritative.",
+      "Note: This is an English convenience translation. The German version is legally authoritative. This website does not currently use statistics or marketing cookies, so no cookie banner is shown.",
     sections: [
       {
         title: "1. Controller",
         paragraphs: [
-          "Machinco GmbH, Plaentschweg 13, 81247 Munich, Germany, Email: info@machincogmbh.de, Phone: +49 (0)163 0133066"
+          "Machinco GmbH, Plaentschweg 13, 81247 Munich, Germany",
+          "Email: info@machincogmbh.de, Phone: +49 (0)163 0133066"
         ]
       },
       {
         title: "2. General Information",
         paragraphs: [
-          "We process personal data only to the extent necessary and on the basis of GDPR and the German Federal Data Protection Act (BDSG)."
+          "We process personal data only to the extent necessary and on the basis of GDPR and the German Federal Data Protection Act (BDSG).",
+          "This policy reflects the current website at www.machinco.de: static delivery without analytics or advertising tracking on page load."
         ]
       },
       {
         title: "3. Hosting and Server Log Files",
         paragraphs: [
-          "When visiting our website, technically necessary data may be processed (e.g., IP address, date/time, browser information).",
-          "Legal basis: Art. 6(1)(f) GDPR."
+          "The website is delivered as a static site via GitHub Pages. When you access pages, the hosting provider may process connection data required for operation (e.g., IP address, date/time, requested URL, browser and device information).",
+          "Provider: GitHub, Inc. (and infrastructure used for GitHub Pages, including Microsoft where applicable).",
+          "Legal basis: Art. 6(1)(f) GDPR (legitimate interest in secure and reliable website operation)."
         ]
       },
       {
-        title: "4. Contact and Inquiries",
+        title: "4. Contact Forms and Inquiries",
         paragraphs: [
-          "If you contact us via form, email, or phone, we process your data to handle your inquiry and follow-up communication.",
-          "Legal basis: Art. 6(1)(b) GDPR and Art. 6(1)(f) GDPR."
+          "If you contact us via a website form, we process the data you submit (e.g., name, email, phone, company, message, and product reference where applicable) to handle your request.",
+          "Submission is transmitted to our form service Web3Forms (api.web3forms.com). Processing starts only when you submit the form.",
+          "Legal basis: Art. 6(1)(b) GDPR (pre-contractual steps) and Art. 6(1)(f) GDPR.",
+          "The same purposes and retention principles apply to contact by email or phone."
         ]
       },
       {
-        title: "5. Cookies and Consent",
+        title: "5. Cookies and Local Storage",
         paragraphs: [
-          "Technically necessary cookies may be used for website operation. Optional cookies (statistics/marketing) are only used with your consent.",
-          "Legal basis: Art. 6(1)(a) GDPR and Section 25(1) TDDDG."
+          "When simply browsing the website, we do not currently set cookies for statistics or marketing purposes.",
+          "No optional tracking cookies are required to operate the site. If we introduce analytics or marketing tools in the future, they will only run after your consent and will be documented here and via a cookie consent banner.",
+          "Legal basis for any future optional cookies: Art. 6(1)(a) GDPR and Section 25(1) TDDDG."
         ]
       },
       {
         title: "6. Recipients and Processing on Our Behalf",
         paragraphs: [
-          "We may use service providers (e.g., hosting, IT, form processing) that process data on our behalf under data processing agreements according to Art. 28 GDPR."
+          "We use service providers for hosting (GitHub Pages) and form processing (Web3Forms). They may process data on our behalf. We conclude data processing agreements under Art. 28 GDPR where required.",
+          "Transfers to third countries cannot be ruled out for cloud services and take place only under Art. 44 et seq. GDPR (e.g., standard contractual clauses)."
         ]
       },
       {
         title: "7. Storage Duration",
         paragraphs: [
-          "We retain personal data only as long as necessary for the purposes stated or as required by legal retention obligations."
+          "We retain inquiry data only as long as needed for handling, follow-up, and legal retention obligations.",
+          "Hosting log data is retained by the provider for a limited period according to its policies."
         ]
       },
       {
         title: "8. Your Rights",
         paragraphs: [
-          "You have the right to access, rectification, erasure, restriction of processing, data portability, objection, and to lodge a complaint with a supervisory authority."
+          "You have the right to access, rectification, erasure, restriction of processing, data portability, and to object to processing based on Art. 6(1)(f) GDPR.",
+          "You may withdraw consent at any time with effect for the future.",
+          "You may lodge a complaint with a supervisory authority, e.g., the Bavarian State Office for Data Protection Supervision."
         ]
       },
       {
-        title: "9. Cookie Banner Copy (Opt-in)",
+        title: "9. Changes",
         paragraphs: [
-          "Title: Your privacy matters to us",
-          "Text: We use cookies to provide this website technically and, with your consent, process usage data to improve our services.",
-          "Buttons: Accept all | Necessary only | Save settings"
+          "We update this policy when our website, services, or legal requirements change.",
+          "Before enabling web analytics, remarketing, or similar tools, we will update this page and implement an opt-in cookie banner."
         ]
       },
       {
         title: "10. Last Updated",
-        paragraphs: ["Last updated: March 2026"]
+        paragraphs: ["Last updated: May 2026"]
       }
     ]
   }

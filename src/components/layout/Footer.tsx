@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Locale } from "@/i18n/config";
 import { getPathForRouteKey } from "@/i18n/routes";
-import { getRouteKeyFromPathname } from "@/i18n/routeKeyFromPathname";
+import { getLocalizedPath } from "@/i18n/localizedPath";
 import type { LocaleMessages } from "@/i18n/getMessages";
 
 type FooterProps = {
@@ -14,7 +14,6 @@ type FooterProps = {
 
 export function Footer({ locale, messages }: FooterProps) {
   const pathname = usePathname();
-  const currentRouteKey = getRouteKeyFromPathname(pathname);
   const switchLocale = locale === "de" ? "en" : "de";
 
   return (
@@ -28,7 +27,7 @@ export function Footer({ locale, messages }: FooterProps) {
             <Link href={getPathForRouteKey(locale, "contact")}>{messages.footer.contact}</Link> |{" "}
             <Link href={getPathForRouteKey(locale, "legal.imprint")}>{messages.footer.imprint}</Link>{" "}
             | <Link href={getPathForRouteKey(locale, "legal.privacy")}>{messages.footer.privacy}</Link> |{" "}
-            <Link href={getPathForRouteKey(switchLocale, currentRouteKey)}>
+            <Link href={getLocalizedPath(pathname, switchLocale)}>
               {switchLocale.toUpperCase()}
             </Link>
           </div>

@@ -1,4 +1,5 @@
 import type { Locale } from "@/i18n/config";
+import type { PrivacyConsentCopy } from "@/content/privacyConsent";
 import { getPathForRouteKey } from "@/i18n/routes";
 
 type HomeMachineCard = {
@@ -56,7 +57,7 @@ export type HomeContent = {
     title: string;
     description: string;
     subject: string;
-    privacyConsent: string;
+    privacyConsent: PrivacyConsentCopy;
     placeholders: {
       name: string;
       email: string;
@@ -242,8 +243,11 @@ const homeContentByLocale: Record<Locale, HomeContent> = {
       description:
         "Teilen Sie uns kurz Ihre Anforderungen mit. Wir melden uns zeitnah mit einer fundierten Einschaetzung.",
       subject: "Machinco DE - Schnellanfrage in 2 Minuten (Homepage)",
-      privacyConsent:
-        "Ich habe die Datenschutzerklaerung gelesen und akzeptiere die Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage.",
+      privacyConsent: {
+        before: "Ich habe die ",
+        linkLabel: "Datenschutzerklaerung",
+        after: " gelesen und akzeptiere die Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage."
+      },
       placeholders: {
         name: "Name*",
         email: "E-Mail*",
@@ -372,8 +376,11 @@ const homeContentByLocale: Record<Locale, HomeContent> = {
       title: "Quick Inquiry in 2 Minutes",
       description: "Share your key requirements and we will respond with a solid first assessment.",
       subject: "Machinco EN - Quick Inquiry in 2 Minutes (Homepage)",
-      privacyConsent:
-        "I have read the privacy policy and agree to the processing of my data for handling my inquiry.",
+      privacyConsent: {
+        before: "I have read the ",
+        linkLabel: "privacy policy",
+        after: " and agree to the processing of my data for handling my inquiry."
+      },
       placeholders: {
         name: "Name*",
         email: "Email*",

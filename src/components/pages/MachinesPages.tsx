@@ -1,11 +1,16 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import type { MachineDetailContent, MachinesIndexContent } from "@/content/machines";
+import { ProductDetailHero } from "@/components/pages/ProductDetailHero";
+import { ProductInquiryForm } from "@/components/pages/ProductInquiryForm";
+import { ProductPurchasePanel } from "@/components/pages/ProductPurchasePanel";
 
 type MachinesIndexPageProps = {
   content: MachinesIndexContent;
+  locale: "de" | "en";
 };
 
-export function MachinesIndexPage({ content }: MachinesIndexPageProps) {
+export function MachinesIndexPage({ content, locale }: MachinesIndexPageProps) {
   return (
     <>
       <section className="page-hero">
@@ -17,17 +22,53 @@ export function MachinesIndexPage({ content }: MachinesIndexPageProps) {
 
       <section className="page-section">
         <div className="container">
-          <div className="row">
-            {content.cards.map((card) => (
-              <div key={card.title} className="col-md-4">
-                <div className="blog-teaser">
-                  <span className="inline-badge">{card.badge}</span>
-                  <h3>{card.title}</h3>
-                  <p>{card.description}</p>
-                  <Link className="btn show" href={card.href}>
-                    {card.cta}
+          <div className="row product-grid">
+            {content.products.map((product) => (
+              <div key={product.id} className="col-md-4 col-sm-6">
+                <article className="product-card">
+                  <Link href={product.href} className="product-card-image-link">
+                    <img
+                      src={product.heroImage}
+                      alt={product.title}
+                      className="product-card-image"
+                    />
                   </Link>
-                </div>
+                  <div className="product-card-body">
+                    <div className="product-card-badges">
+                      <span className="inline-badge">{content.listingBadge}</span>
+                      {product.featured ? (
+                        <span className="inline-badge product-badge-featured">
+                          {content.featuredBadge}
+                        </span>
+                      ) : null}
+                      <span className={`product-status product-status-${product.status}`}>
+                        {content.statusLabels[product.status]}
+                      </span>
+                    </div>
+                    <h3>
+                      <Link href={product.href}>{product.title}</Link>
+                    </h3>
+                    <p>{product.summary}</p>
+                    <ul className="product-meta">
+                      <li>
+                        <strong>{locale === "de" ? "Kategorie" : "Category"}:</strong> {product.category}
+                      </li>
+                      {product.brand ? (
+                        <li>
+                          <strong>{locale === "de" ? "Hersteller" : "Brand"}:</strong> {product.brand}
+                        </li>
+                      ) : null}
+                      {product.year ? (
+                        <li>
+                          <strong>{locale === "de" ? "Baujahr" : "Year"}:</strong> {product.year}
+                        </li>
+                      ) : null}
+                    </ul>
+                    <Link className="btn show" href={product.href}>
+                      {product.ctaLabel}
+                    </Link>
+                  </div>
+                </article>
               </div>
             ))}
           </div>
@@ -47,15 +88,35 @@ export function MachinesIndexPage({ content }: MachinesIndexPageProps) {
 
 type MachineDetailPageProps = {
   content: MachineDetailContent;
+  locale: "de" | "en";
 };
 
-export function MachineDetailPageView({ content }: MachineDetailPageProps) {
+export function MachineDetailPageView({ content, locale }: MachineDetailPageProps) {
   return (
     <>
-      <section className="page-hero">
+      <ProductDetailHero content={content} locale={locale} />
+
+      <section className="product-detail-meta-bar">
         <div className="container">
-          <h1>{content.hero.title}</h1>
-          <p>{content.hero.description}</p>
+          <ul className="product-detail-meta-inline">
+            <li>
+              <strong>{content.detailLabels.metaCategory}:</strong> {content.category}
+            </li>
+            {content.brand ? (
+              <li>
+                <strong>{content.detailLabels.metaBrand}:</strong> {content.brand}
+              </li>
+            ) : null}
+            {content.year ? (
+              <li>
+                <strong>{content.detailLabels.metaYear}:</strong> {content.year}
+              </li>
+            ) : null}
+            <li>
+              <strong>{content.detailLabels.metaStatus}:</strong> {content.statusLabel}
+            </li>
+          </ul>
+          <p className="product-detail-summary">{content.summary}</p>
         </div>
       </section>
 
@@ -63,31 +124,45 @@ export function MachineDetailPageView({ content }: MachineDetailPageProps) {
         <div className="container">
           <div className="row">
             <div className="col-md-8">
-              <div className="content-card">
-                <h3>{content.blocks.applicationsTitle}</h3>
-                <ul className="keyword-list">
-                  {content.blocks.applications.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="content-card">
-                <h3>{content.blocks.benefitsTitle}</h3>
-                <ul className="keyword-list">
-                  {content.blocks.benefits.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
+                  <div className="content-card">
+                    <h3>{content.detailLabels.highlightsTitle}</h3>
+                    <ul className="keyword-list">
+                      {content.highlights.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="content-card">
+                    <h3>{content.detailLabels.specsTitle}</h3>
+                    <table className="product-spec-table">
+                      <tbody>
+                        {content.specs.map((spec) => (
+                          <tr key={spec.label}>
+                            <th scope="row">{spec.label}</th>
+                            <td>{spec.value}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div className="content-card">
+                    <h3>{content.detailLabels.applicationsTitle}</h3>
+                    <ul className="keyword-list">
+                      {content.applications.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+              <Suspense fallback={<div className="content-card product-inquiry-form" />}>
+                <ProductInquiryForm locale={locale} content={content} />
+              </Suspense>
             </div>
+
             <div className="col-md-4">
-              <div className="content-card">
-                <h3>{content.sidePanel.title}</h3>
-                <p>{content.sidePanel.description}</p>
-                <Link className="btn show" href={content.sidePanel.ctaHref}>
-                  {content.sidePanel.cta}
-                </Link>
-              </div>
+              <ProductPurchasePanel content={content} />
             </div>
           </div>
         </div>

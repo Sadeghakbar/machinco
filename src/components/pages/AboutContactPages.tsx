@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { FormPrivacyConsent } from "@/components/forms/FormPrivacyConsent";
 import type { AboutPageContent, ContactPageContent } from "@/content/aboutContact";
+import type { Locale } from "@/i18n/config";
 
 type AboutPageViewProps = {
   content: AboutPageContent;
@@ -57,10 +59,11 @@ export function AboutPageView({ content }: AboutPageViewProps) {
 }
 
 type ContactPageViewProps = {
+  locale: Locale;
   content: ContactPageContent;
 };
 
-export function ContactPageView({ content }: ContactPageViewProps) {
+export function ContactPageView({ locale, content }: ContactPageViewProps) {
   return (
     <>
       <section className="page-hero">
@@ -153,8 +156,8 @@ export function ContactPageView({ content }: ContactPageViewProps) {
                   </div>
                   <div className="checkbox">
                     <label>
-                      <input type="checkbox" required />
-                      {` ${content.form.privacyConsent}`}
+                      <input type="checkbox" required />{" "}
+                      <FormPrivacyConsent locale={locale} copy={content.form.privacyConsent} />
                     </label>
                   </div>
                   <button type="submit" className="btn show">

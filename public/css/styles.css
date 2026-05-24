@@ -1093,9 +1093,15 @@ padding: 7px 0 0;
   margin-bottom: 24px;
 }
 
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
 .hero-cta-group .btn {
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .hero-cta-secondary {
