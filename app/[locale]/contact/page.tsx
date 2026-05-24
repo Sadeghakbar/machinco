@@ -1,12 +1,24 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/i18n/config";
 import { isLocale } from "@/i18n/config";
 import { getContactContent } from "@/content/aboutContact";
 import { ContactPageView } from "@/components/pages/AboutContactPages";
+import { buildRouteMetadata } from "@/seo/metadata";
 
 type ContactPageProps = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: ContactPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) {
+    return {};
+  }
+
+  const content = getContactContent(locale as Locale);
+  return buildRouteMetadata(locale as Locale, "contact", content.hero.title, content.hero.description);
+}
 
 export default async function ContactPage({ params }: ContactPageProps) {
   const { locale } = await params;

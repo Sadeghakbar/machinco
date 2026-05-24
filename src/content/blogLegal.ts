@@ -1,4 +1,5 @@
 import type { Locale } from "@/i18n/config";
+import type { RouteKey } from "@/content/types";
 import { getPathForRouteKey } from "@/i18n/routes";
 
 export type BlogIndexContent = {
@@ -651,6 +652,16 @@ export function getBlogIndexContent(locale: Locale): BlogIndexContent {
 
 export function getBlogArticleContent(locale: Locale, postSlug: string): BlogArticleContent | null {
   return blogArticleByLocale[locale][postSlug] ?? null;
+}
+
+export function getBlogRouteKey(postSlug: string): RouteKey | null {
+  const routeKeyByPostSlug: Record<string, RouteKey> = {
+    "machine-selection": "blog.machine-selection",
+    "industrial-machine-costs": "blog.industrial-machine-costs",
+    "grinding-machine-selection-tips": "blog.grinding-machine-selection-tips"
+  };
+
+  return routeKeyByPostSlug[postSlug] ?? null;
 }
 
 export function getImprintContent(locale: Locale): LegalPageContent {

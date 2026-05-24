@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Machinco",
+  metadataBase: new URL("https://www.machinco.de"),
+  title: {
+    default: "Machinco GmbH",
+    template: "%s | Machinco GmbH"
+  },
   description: "Industrial machine solutions"
 };
 
