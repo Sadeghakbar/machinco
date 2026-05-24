@@ -29,7 +29,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <>
       <Header locale={resolvedLocale} messages={messages} />
-      <main>{children}</main>
+      <main className="site-main">{children}</main>
       <Footer locale={resolvedLocale} messages={messages} />
     </>
   );

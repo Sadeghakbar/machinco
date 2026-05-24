@@ -19,3 +19,13 @@ a.btn:focus {
   box-shadow: none !important;
   background-color: transparent !important;
 }
+
+.site-main {
+  padding-top: 8px;
+}
+
+@media (max-width: 767px) {
+  .site-main {
+    padding-top: 8px;
+  }
+}

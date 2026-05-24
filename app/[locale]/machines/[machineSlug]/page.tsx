@@ -1,12 +1,8 @@
 import { notFound } from "next/navigation";
-import { PagePlaceholder } from "@/components/PagePlaceholder";
-import type { RouteKey } from "@/content/types";
-
-const routeKeyByMachineSlug: Record<string, RouteKey> = {
-  "belt-grinding": "machines.belt-grinding",
-  "surface-grinding": "machines.surface-grinding",
-  deburring: "machines.deburring"
-};
+import type { Locale } from "@/i18n/config";
+import { isLocale } from "@/i18n/config";
+import { getMachineDetailContent } from "@/content/machines";
+import { MachineDetailPageView } from "@/components/pages/MachinesPages";
 
 type MachineDetailPageProps = {
   params: Promise<{ locale: string; machineSlug: string }>;
@@ -14,11 +10,16 @@ type MachineDetailPageProps = {
 
 export default async function MachineDetailPage({ params }: MachineDetailPageProps) {
   const { locale, machineSlug } = await params;
-  const routeKey = routeKeyByMachineSlug[machineSlug];
 
-  if (!routeKey) {
+  if (!isLocale(locale)) {
     notFound();
   }
 
-  return <PagePlaceholder localeParam={locale} routeKey={routeKey} />;
+  const content = getMachineDetailContent(locale as Locale, machineSlug);
+
+  if (!content) {
+    notFound();
+  }
+
+  return <MachineDetailPageView content={content} />;
 }
