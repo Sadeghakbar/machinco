@@ -1,5 +1,3 @@
-import type { Locale } from "@/i18n/config";
-
 export type RouteKey =
   | "home"
   | "machines.index"
@@ -14,12 +12,3 @@ export type RouteKey =
   | "blog.grinding-machine-selection-tips"
   | "legal.imprint"
   | "legal.privacy";
-
-export type RouteContent = {
-  title: string;
-  description: string;
-};
-
-export type ContentProvider = {
-  getPageContent: (locale: Locale, routeKey: RouteKey) => RouteContent;
-};
