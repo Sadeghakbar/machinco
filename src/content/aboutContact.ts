@@ -144,11 +144,13 @@ const contactByLocale: Record<Locale, ContactPageContent> = {
     details: {
       title: "Kontaktdaten",
       company: "Machinco GmbH",
-      addressLines: ["Musterstrasse 12", "80331 Muenchen"],
+      addressLines: ["Plaentschweg 13", "81247 Muenchen"],
       phoneLabel: "Telefon",
-      phoneValue: "+49 (0)89 123456-0",
+      phoneValue: "+49 163 0133066",
       emailLabel: "E-Mail",
-      emailValue: "info@machinco.de"
+      emailValue: "info@machincogmbh.com",
+      extraBlockTitle: "Showroom-Adresse",
+      extraBlockLines: ["No.29-040, Derchinger Str. 120/1/2", "86165 Augsburg"]
     },
     quickInfo: {
       title: "Schnelle Angebotsanfrage",
