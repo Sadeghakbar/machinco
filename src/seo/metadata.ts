@@ -4,14 +4,15 @@ import type { RouteKey } from "@/content/types";
 import { getMachinePath } from "@/content/machinesCatalog";
 import { getPathForRouteKey } from "@/i18n/routes";
 
+export const SITE_TITLE = "Machinco GmbH";
+
 export function buildRouteMetadata(
   locale: Locale,
   routeKey: RouteKey,
-  title: string,
   description: string
 ): Metadata {
   return {
-    title,
+    title: SITE_TITLE,
     description,
     alternates: {
       canonical: getPathForRouteKey(locale, routeKey),
@@ -26,11 +27,10 @@ export function buildRouteMetadata(
 export function buildMachineMetadata(
   locale: Locale,
   slug: string,
-  title: string,
   description: string
 ): Metadata {
   return {
-    title,
+    title: SITE_TITLE,
     description,
     alternates: {
       canonical: getMachinePath(locale, slug),

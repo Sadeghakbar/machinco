@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: LocaleHomePageProps): Promise
   }
 
   const content = getHomeContent(locale as Locale);
-  return buildRouteMetadata(locale as Locale, "home", content.hero.title, content.hero.description);
+  return buildRouteMetadata(locale as Locale, "home", content.hero.description);
 }
 
 export default async function LocaleHomePage({ params }: LocaleHomePageProps) {

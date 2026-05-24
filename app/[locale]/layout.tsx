@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { isLocale, locales, type Locale } from "@/i18n/config";
 export const metadata: Metadata = {
-  title: "Machinco",
+  title: "Machinco GmbH",
   description: "Industrial machine solutions"
 };
 

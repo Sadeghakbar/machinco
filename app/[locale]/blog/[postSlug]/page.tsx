@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
     return {};
   }
 
-  return buildRouteMetadata(locale as Locale, routeKey, content.hero.title, content.hero.description);
+  return buildRouteMetadata(locale as Locale, routeKey, content.hero.description);
 }
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {

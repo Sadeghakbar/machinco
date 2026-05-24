@@ -17,12 +17,7 @@ export async function generateMetadata({ params }: MachinesPageProps): Promise<M
   }
 
   const content = getMachinesIndexContent(locale as Locale);
-  return buildRouteMetadata(
-    locale as Locale,
-    "machines.index",
-    content.hero.title,
-    content.hero.description
-  );
+  return buildRouteMetadata(locale as Locale, "machines.index", content.hero.description);
 }
 
 export default async function MachinesPage({ params }: MachinesPageProps) {

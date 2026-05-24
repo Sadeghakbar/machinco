@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: AboutPageProps): Promise<Meta
   }
 
   const content = getAboutContent(locale as Locale);
-  return buildRouteMetadata(locale as Locale, "about", content.hero.title, content.hero.description);
+  return buildRouteMetadata(locale as Locale, "about", content.hero.description);
 }
 
 export default async function AboutPage({ params }: AboutPageProps) {

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   }
 
   const content = getBlogIndexContent(locale as Locale);
-  return buildRouteMetadata(locale as Locale, "blog.index", content.hero.title, content.hero.description);
+  return buildRouteMetadata(locale as Locale, "blog.index", content.hero.description);
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {

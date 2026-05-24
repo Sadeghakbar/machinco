@@ -4,10 +4,7 @@ import "@/styles/legacy-bridge.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.machinco.de"),
-  title: {
-    default: "Machinco GmbH",
-    template: "%s | Machinco GmbH"
-  },
+  title: "Machinco GmbH",
   description: "Industrial machine solutions",
   icons: {
     icon: [

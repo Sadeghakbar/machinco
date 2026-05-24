@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
   }
 
   const content = getContactContent(locale as Locale);
-  return buildRouteMetadata(locale as Locale, "contact", content.hero.title, content.hero.description);
+  return buildRouteMetadata(locale as Locale, "contact", content.hero.description);
 }
 
 export default async function ContactPage({ params }: ContactPageProps) {

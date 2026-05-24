@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
   }
 
   const content = getPrivacyContent(locale as Locale);
-  return buildRouteMetadata(locale as Locale, "legal.privacy", content.hero.title, content.hero.description);
+  return buildRouteMetadata(locale as Locale, "legal.privacy", content.hero.description);
 }
 
 export default async function PrivacyPage({ params }: PrivacyPageProps) {

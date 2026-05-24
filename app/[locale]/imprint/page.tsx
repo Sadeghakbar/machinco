@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: ImprintPageProps): Promise<Me
   }
 
   const content = getImprintContent(locale as Locale);
-  return buildRouteMetadata(locale as Locale, "legal.imprint", content.hero.title, content.hero.description);
+  return buildRouteMetadata(locale as Locale, "legal.imprint", content.hero.description);
 }
 
 export default async function ImprintPage({ params }: ImprintPageProps) {
