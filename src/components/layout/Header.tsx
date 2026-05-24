@@ -2,13 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import type { Locale } from "@/i18n/config";
 import { getPathForRouteKey } from "@/i18n/routes";
 import { getRouteKeyFromPathname } from "@/i18n/routeKeyFromPathname";
-import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import type { RouteKey } from "@/content/types";
 import type { LocaleMessages } from "@/i18n/getMessages";
 
@@ -28,32 +24,46 @@ const navItems: Array<{ routeKey: RouteKey; labelKey: keyof LocaleMessages["nav"
 export function Header({ locale, messages }: HeaderProps) {
   const pathname = usePathname();
   const activeRouteKey = getRouteKeyFromPathname(pathname);
+  const switchLocale = locale === "de" ? "en" : "de";
 
   return (
-    <Navbar bg="light" expand="lg" fixed="top" className="border-bottom">
-      <Container>
-        <Navbar.Brand as={Link} href={getPathForRouteKey(locale, "home")}>
-          Machinco
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="main-nav" />
-        <Navbar.Collapse id="main-nav">
-          <Nav className="ms-auto align-items-lg-center gap-lg-2">
-            {navItems.map((item) => (
-              <Nav.Link
-                key={item.routeKey}
-                as={Link}
-                href={getPathForRouteKey(locale, item.routeKey)}
-                active={activeRouteKey === item.routeKey}
-              >
-                {messages.nav[item.labelKey]}
-              </Nav.Link>
-            ))}
-            <Nav.Item className="ps-lg-2">
-              <LanguageSwitcher locale={locale} routeKey={activeRouteKey} />
-            </Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <header id="header">
+      <nav id="main-nav" className="navbar navbar-default navbar-fixed-top" role="banner">
+        <div className="container">
+          <div className="navbar-header">
+            <button
+              type="button"
+              className="navbar-toggle"
+              data-toggle="collapse"
+              data-target=".navbar-collapse"
+            >
+              <span className="sr-only">{messages.header.navigationSrOnly}</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+            <Link className="navbar-brand" href={getPathForRouteKey(locale, "home")}>
+              <img height="65" src="/images/logo.png" alt={messages.header.logoAlt} />
+            </Link>
+          </div>
+          <div className="collapse navbar-collapse navbar-right">
+            <ul className="nav navbar-nav">
+              {navItems.map((item) => (
+                <li key={item.routeKey} className={activeRouteKey === item.routeKey ? "active" : ""}>
+                  <Link href={getPathForRouteKey(locale, item.routeKey)}>
+                    {messages.nav[item.labelKey]}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href={getPathForRouteKey(switchLocale, activeRouteKey)}>
+                  {switchLocale.toUpperCase()}
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }

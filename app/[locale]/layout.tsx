@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Container from "react-bootstrap/Container";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { isLocale, type Locale } from "@/i18n/config";
@@ -30,9 +29,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <>
       <Header locale={resolvedLocale} messages={messages} />
-      <main className="pt-5">
-        <Container className="py-4">{children}</Container>
-      </main>
+      <main>{children}</main>
       <Footer locale={resolvedLocale} messages={messages} />
     </>
   );

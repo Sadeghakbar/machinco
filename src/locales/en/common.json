@@ -1,4 +1,8 @@
 {
+  "header": {
+    "navigationSrOnly": "Navigation",
+    "logoAlt": "Machinco Logo"
+  },
   "nav": {
     "home": "Home",
     "machines": "Machines",
@@ -9,6 +13,7 @@
   "footer": {
     "contact": "Contact",
     "imprint": "Imprint",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "copyrightSuffix": "Industrial Machines for B2B Production"
   }
 }

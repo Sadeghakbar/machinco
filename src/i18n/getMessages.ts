@@ -1,5 +1,5 @@
-import de from "../../messages/de.json";
-import en from "../../messages/en.json";
+import de from "../locales/de/common.json";
+import en from "../locales/en/common.json";
 import type { Locale } from "@/i18n/config";
 
 export type LocaleMessages = typeof de;

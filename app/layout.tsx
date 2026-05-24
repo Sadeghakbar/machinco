@@ -12,7 +12,14 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="de">
+    <html lang="de" data-scroll-behavior="smooth">
+      <head>
+        <link href="/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="/css/animate.min.css" rel="stylesheet" />
+        <link href="/css/prettyphoto.css" rel="stylesheet" />
+        <link href="/css/styles.css" rel="stylesheet" />
+      </head>
       <body>{children}</body>
     </html>
   );
