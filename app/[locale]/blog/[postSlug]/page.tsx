@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import type { Locale } from "@/i18n/config";
-import { isLocale } from "@/i18n/config";
-import { getBlogArticleContent, getBlogRouteKey } from "@/content/blogLegal";
+import { isLocale, locales, type Locale } from "@/i18n/config";
+import { getBlogArticleContent, getBlogPostSlugs, getBlogRouteKey } from "@/content/blogLegal";
 import { BlogArticlePage } from "@/components/pages/BlogLegalPages";
 import { buildRouteMetadata } from "@/seo/metadata";
 
 type BlogDetailPageProps = {
   params: Promise<{ locale: string; postSlug: string }>;
 };
+
+export function generateStaticParams() {
+  return locales.flatMap((locale) => getBlogPostSlugs().map((postSlug) => ({ locale, postSlug })));
+}
 
 export async function generateMetadata({ params }: BlogDetailPageProps): Promise<Metadata> {
   const { locale, postSlug } = await params;

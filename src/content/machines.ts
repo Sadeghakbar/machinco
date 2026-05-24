@@ -313,3 +313,7 @@ export function getMachineDetailContent(
 export function getMachineRouteKey(machineSlug: string): RouteKey | null {
   return detailRouteBySlug[machineSlug] ?? null;
 }
+
+export function getMachineSlugs(): string[] {
+  return Object.keys(detailRouteBySlug);
+}

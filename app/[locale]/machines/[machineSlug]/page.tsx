@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import type { Locale } from "@/i18n/config";
-import { isLocale } from "@/i18n/config";
-import { getMachineDetailContent, getMachineRouteKey } from "@/content/machines";
+import { isLocale, locales, type Locale } from "@/i18n/config";
+import { getMachineDetailContent, getMachineRouteKey, getMachineSlugs } from "@/content/machines";
 import { MachineDetailPageView } from "@/components/pages/MachinesPages";
 import { buildRouteMetadata } from "@/seo/metadata";
 
 type MachineDetailPageProps = {
   params: Promise<{ locale: string; machineSlug: string }>;
 };
+
+export function generateStaticParams() {
+  return locales.flatMap((locale) =>
+    getMachineSlugs().map((machineSlug) => ({ locale, machineSlug }))
+  );
+}
 
 export async function generateMetadata({ params }: MachineDetailPageProps): Promise<Metadata> {
   const { locale, machineSlug } = await params;

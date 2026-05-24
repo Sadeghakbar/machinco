@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { routePathByKey } from "@/i18n/routes";
 
 const siteUrl = "https://www.machinco.de";
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
