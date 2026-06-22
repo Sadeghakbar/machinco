@@ -236,6 +236,12 @@ a.btn:focus {
   margin-bottom: 8px;
 }
 
+.product-detail-price-sold,
+.product-purchase-price-sold {
+  color: #d93636;
+  text-transform: uppercase;
+}
+
 .product-detail-price-label {
   margin: 0 0 18px;
   color: #d7d7d7;
@@ -259,6 +265,16 @@ a.btn:focus {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   padding: 24px 20px;
   text-align: left;
+}
+
+.product-purchase-panel-sold {
+  border-top-color: #d93636;
+}
+
+.product-sold-description {
+  margin: 10px 0 0;
+  color: #4a4a4a;
+  line-height: 1.55;
 }
 
 .product-purchase-title {
@@ -467,6 +483,18 @@ a.btn:focus {
   border-collapse: collapse;
 }
 
+.product-spec-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.product-spec-group h4 {
+  margin: 0 0 10px;
+  color: #1f1f1f;
+  font-size: 17px;
+}
+
 .product-spec-table th,
 .product-spec-table td {
   border: 1px solid #e5e5e5;
@@ -477,6 +505,14 @@ a.btn:focus {
 .product-spec-table th {
   width: 35%;
   background: #f8f8f8;
+}
+
+.product-spec-group .product-spec-table th {
+  width: 52%;
+}
+
+.product-dimensions-table {
+  max-width: 720px;
 }
 
 @media (max-width: 767px) {
@@ -516,5 +552,9 @@ a.btn:focus {
     top: 8px;
     right: 8px;
     z-index: 2;
+  }
+
+  .product-spec-groups {
+    grid-template-columns: 1fr;
   }
 }

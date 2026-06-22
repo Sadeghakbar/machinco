@@ -54,11 +54,14 @@ export type MachineDetailContent = ProductDetail & {
     galleryCtaLabel: string;
     highlightsTitle: string;
     specsTitle: string;
+    dimensionsTitle: string;
     applicationsTitle: string;
     metaCategory: string;
     metaBrand: string;
     metaYear: string;
     metaStatus: string;
+    soldNoticeTitle: string;
+    soldNoticeDescription: string;
   };
 };
 
@@ -73,12 +76,16 @@ const detailLabelsByLocale: Record<
     inspectCtaLabel: "Maschine besichtigen",
     galleryCtaLabel: "Foto Galerie",
     highlightsTitle: "Technische Highlights",
-    specsTitle: "Spezifikationen",
+    specsTitle: "Technische Daten",
+    dimensionsTitle: "Abmessungen und Gewicht",
     applicationsTitle: "Typische Einsatzbereiche",
     metaCategory: "Kategorie",
     metaBrand: "Hersteller",
     metaYear: "Baujahr",
-    metaStatus: "Status"
+    metaStatus: "Status",
+    soldNoticeTitle: "Diese Maschine ist verkauft",
+    soldNoticeDescription:
+      "Die Maschine ist nicht mehr verfügbar. Die technischen Daten und Bilder bleiben als Referenz sichtbar."
   },
   en: {
     priceLabel: "Machinco price",
@@ -87,12 +94,16 @@ const detailLabelsByLocale: Record<
     inspectCtaLabel: "Request machine viewing",
     galleryCtaLabel: "Photo gallery",
     highlightsTitle: "Technical Highlights",
-    specsTitle: "Specifications",
+    specsTitle: "Technical Details",
+    dimensionsTitle: "Dimensions and Weight",
     applicationsTitle: "Typical Applications",
     metaCategory: "Category",
     metaBrand: "Manufacturer",
     metaYear: "Year",
-    metaStatus: "Status"
+    metaStatus: "Status",
+    soldNoticeTitle: "This machine has been sold",
+    soldNoticeDescription:
+      "This machine is no longer available. Its technical details and gallery remain visible for reference."
   }
 };
 

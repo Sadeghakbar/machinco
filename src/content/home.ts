@@ -1,5 +1,6 @@
 import type { Locale } from "@/i18n/config";
 import type { PrivacyConsentCopy } from "@/content/privacyConsent";
+import type { ProductStatus } from "@/content/machinesCatalog";
 import { getPathForRouteKey } from "@/i18n/routes";
 
 type HomeMachineCard = {
@@ -8,6 +9,7 @@ type HomeMachineCard = {
   imageSrc: string;
   imageAlt: string;
   href: string;
+  status: ProductStatus;
 };
 
 export type HomeContent = {
@@ -89,57 +91,88 @@ export type HomeContent = {
   };
 };
 
+function sortMachineCards(cards: HomeMachineCard[]): HomeMachineCard[] {
+  const statusRank: Record<ProductStatus, number> = {
+    available: 0,
+    "on-request": 1,
+    sold: 2
+  };
+
+  return cards.sort((left, right) => statusRank[left.status] - statusRank[right.status]);
+}
+
 function machineCardsDe(): HomeMachineCard[] {
-  return [
+  return sortMachineCards([
     {
-      title: "Bandschleifmaschinen",
-      description:
-        "Konstante Schliffbilder bei mittleren bis hohen Losgroessen mit stabiler Prozessfuehrung.",
-      imageSrc: "/images/rundschleifmachine.avif",
-      imageAlt: "Bandschleifmaschine in der industriellen Fertigung",
-      href: getPathForRouteKey("de", "machines.belt-grinding")
+      title: "2007 Deckel Maho DMC 635V",
+      description: "CNC-Vertikal-Bearbeitungszentrum mit Siemens 840D, SK40 und 20-fach Werkzeugwechsler.",
+      imageSrc: "/machines/deckel-maho-dmc-635v/main-pic.png",
+      imageAlt: "2007 Deckel Maho DMC 635V CNC-Vertikal-Bearbeitungszentrum",
+      href: getPathForRouteKey("de", "machines.belt-grinding"),
+      status: "sold"
     },
     {
-      title: "Flachschleifmaschinen",
-      description: "Hohe Wiederholgenauigkeit fuer plane Flaechen und enge Toleranzen in der Serienfertigung.",
-      imageSrc: "/images/blum.jpeg",
-      imageAlt: "Flachschleifmaschine fuer praezise Bauteile",
-      href: getPathForRouteKey("de", "machines.surface-grinding")
+      title: "1999 Leadwell T7",
+      description: "CNC-Drehmaschine mit Fanuc Series O-TD Steuerung, 350 mm Drehdurchmesser und 12-fach Revolver.",
+      imageSrc: "/machines/leadwell-t7/main-pic.png",
+      imageAlt: "1999 Leadwell T7 CNC-Drehmaschine",
+      href: getPathForRouteKey("de", "machines.surface-grinding"),
+      status: "sold"
     },
     {
-      title: "Entgratmaschinen",
-      description: "Saubere Kanten, weniger manuelle Nacharbeit und bessere Weiterverarbeitung Ihrer Bauteile.",
-      imageSrc: "/images/pic3.jpg",
-      imageAlt: "Entgratmaschine fuer saubere Werkstueckkanten",
-      href: getPathForRouteKey("de", "machines.deburring")
+      title: "1991 Mori Seiki MV-40B",
+      description: "3-Achs-CNC-Universal-Bearbeitungszentrum mit Fanuc MF-M4 Steuerung und BT-40 Aufnahme.",
+      imageSrc: "/machines/mori-seiki-mv-40b/main-pic.png",
+      imageAlt: "1991 Mori Seiki MV-40B CNC Universal-Bearbeitungszentrum",
+      href: getPathForRouteKey("de", "machines.deburring"),
+      status: "sold"
+    },
+    {
+      title: "1991 Biglia B131 S2 CNC",
+      description: "CNC-Drehmaschine mit GE Fanuc Series 15-T, 12-fach Revolver und Exomist-Absaugung.",
+      imageSrc: "/machines/biglia-b131-s2/main-pic.jpg",
+      imageAlt: "1991 Biglia B131 S2 CNC-Drehmaschine",
+      href: "/de/machines/biglia-b131-s2/",
+      status: "available"
     }
-  ];
+  ]);
 }
 
 function machineCardsEn(): HomeMachineCard[] {
-  return [
+  return sortMachineCards([
     {
-      title: "Belt Grinding Machines",
-      description: "Consistent surface quality in medium and high-volume production with stable process control.",
-      imageSrc: "/images/rundschleifmachine.avif",
-      imageAlt: "Belt grinding machine for industrial production",
-      href: getPathForRouteKey("en", "machines.belt-grinding")
+      title: "2007 Deckel Maho DMC 635V",
+      description: "CNC vertical machining centre with Siemens 840D, SK40 taper, and 20-station tool changer.",
+      imageSrc: "/machines/deckel-maho-dmc-635v/main-pic.png",
+      imageAlt: "2007 Deckel Maho DMC 635V CNC vertical machining centre",
+      href: getPathForRouteKey("en", "machines.belt-grinding"),
+      status: "sold"
     },
     {
-      title: "Surface Grinding Machines",
-      description: "High repeatability for flat surfaces and tight tolerances in serial production.",
-      imageSrc: "/images/blum.jpeg",
-      imageAlt: "Surface grinding machine for precision components",
-      href: getPathForRouteKey("en", "machines.surface-grinding")
+      title: "1999 Leadwell T7",
+      description: "CNC lathe with Fanuc Series O-TD control, 350 mm turning diameter, and 12-station turret.",
+      imageSrc: "/machines/leadwell-t7/main-pic.png",
+      imageAlt: "1999 Leadwell T7 CNC lathe",
+      href: getPathForRouteKey("en", "machines.surface-grinding"),
+      status: "sold"
     },
     {
-      title: "Deburring Machines",
-      description: "Clean edges, less manual rework, and improved downstream handling quality.",
-      imageSrc: "/images/pic3.jpg",
-      imageAlt: "Deburring machine for clean part edges",
-      href: getPathForRouteKey("en", "machines.deburring")
+      title: "1991 Mori Seiki MV-40B",
+      description: "3-axis CNC universal machine centre with Fanuc MF-M4 control and BT-40 taper.",
+      imageSrc: "/machines/mori-seiki-mv-40b/main-pic.png",
+      imageAlt: "1991 Mori Seiki MV-40B CNC universal machine centre",
+      href: getPathForRouteKey("en", "machines.deburring"),
+      status: "sold"
+    },
+    {
+      title: "1991 Biglia B131 S2 CNC",
+      description: "CNC lathe with GE Fanuc Series 15-T, 12-station turret, and Exomist extraction.",
+      imageSrc: "/machines/biglia-b131-s2/main-pic.jpg",
+      imageAlt: "1991 Biglia B131 S2 CNC lathe",
+      href: "/en/machines/biglia-b131-s2/",
+      status: "available"
     }
-  ];
+  ]);
 }
 
 const homeContentByLocale: Record<Locale, HomeContent> = {
@@ -149,16 +182,16 @@ const homeContentByLocale: Record<Locale, HomeContent> = {
       learnMore: "Mehr erfahren"
     },
     hero: {
-      title: "Mehr Ausbringung. Weniger Ausschuss. Maschinen, die in Ihrer Produktion leisten.",
+      title: "Höhere Produktivität. Geringere Kosten. Maschinen, die in der Praxis überzeugen.",
       description:
-        "Machinco begleitet produzierende Unternehmen von der technischen Auswahl bis zur Inbetriebnahme - fuer stabile Prozesse, reproduzierbare Oberflaechenqualitaet und wirtschaftliche Fertigung.",
+        "Wir unterstützen Fertigungsbetriebe mit sorgfältig geprüften, gebrauchten CNC- und konventionellen Werkzeugmaschinen. Für stabile Prozesse und eine wirtschaftliche Produktion.",
       videoFallbackText: "Ihr Browser unterstuetzt das Video-Tag nicht.",
-      primaryCta: "Jetzt Angebot anfordern",
-      secondaryCta: "Kostenlose Beratung sichern",
+      primaryCta: "Aktuelle Maschinen ansehen",
+      secondaryCta: "Kontakt aufnehmen",
       proofPoints: [
-        "Antwort in der Regel innerhalb von 24 Stunden",
-        "Beratung durch erfahrene Anwendungsspezialisten",
-        "Loesungen fuer Einzelteile, Serien und hohe Taktzahlen"
+        "Schnelle Reaktion & unkomplizierte B2B-Abwicklung",
+        "Geprüfte Industriequalität von europäischen Premium-Marken",
+        "Besichtigung vor Ort & professionelle Verladehilfe"
       ]
     },
     advantages: {
@@ -286,16 +319,16 @@ const homeContentByLocale: Record<Locale, HomeContent> = {
       learnMore: "Learn more"
     },
     hero: {
-      title: "Higher output. Less scrap. Machines that perform in real production.",
+      title: "Higher productivity. Lower costs. Machines that perform in practice.",
       description:
-        "Machinco supports manufacturing companies from technical selection to commissioning - for stable processes, reproducible surface quality, and cost-efficient production.",
+        "We support manufacturing companies with carefully inspected used CNC and conventional machine tools. For stable processes and cost-efficient production.",
       videoFallbackText: "Your browser does not support the video tag.",
-      primaryCta: "Request a quote now",
-      secondaryCta: "Book a free consultation",
+      primaryCta: "View available machines",
+      secondaryCta: "Contact us",
       proofPoints: [
-        "Response typically within 24 hours",
-        "Support from experienced application specialists",
-        "Solutions for single parts, series production, and high throughput lines"
+        "Fast response and straightforward B2B processing",
+        "Inspected industrial quality from premium European brands",
+        "On-site inspection and professional loading support"
       ]
     },
     advantages: {

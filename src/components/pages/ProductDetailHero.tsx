@@ -10,9 +10,12 @@ type ProductDetailHeroProps = {
 };
 
 export function ProductDetailHero({ content, locale }: ProductDetailHeroProps) {
-  const images = useMemo(
-    () => Array.from(new Set([content.heroImage, ...content.galleryImages])),
-    [content.heroImage, content.galleryImages]
+  const media = useMemo(
+    () => {
+      const items = [{ src: content.heroImage, type: "image" as const }, ...content.galleryMedia];
+      return items.filter((item, index) => items.findIndex((candidate) => candidate.src === item.src) === index);
+    },
+    [content.heroImage, content.galleryMedia]
   );
 
   const [galleryOpen, setGalleryOpen] = useState(false);
@@ -28,12 +31,12 @@ export function ProductDetailHero({ content, locale }: ProductDetailHeroProps) {
   }, []);
 
   const showPrevious = useCallback(() => {
-    setActiveIndex((current) => (current === 0 ? images.length - 1 : current - 1));
-  }, [images.length]);
+    setActiveIndex((current) => (current === 0 ? media.length - 1 : current - 1));
+  }, [media.length]);
 
   const showNext = useCallback(() => {
-    setActiveIndex((current) => (current === images.length - 1 ? 0 : current + 1));
-  }, [images.length]);
+    setActiveIndex((current) => (current === media.length - 1 ? 0 : current + 1));
+  }, [media.length]);
 
   useEffect(() => {
     if (!galleryOpen) {
@@ -89,11 +92,19 @@ export function ProductDetailHero({ content, locale }: ProductDetailHeroProps) {
             </div>
 
             <div className="product-detail-hero-right">
-              <div className="product-detail-price">{content.priceDisplay}</div>
-              <p className="product-detail-price-label">{content.detailLabels.priceLabel}</p>
-              <Link className="btn show product-detail-action-btn" href={content.inquiryLinks.quote}>
-                {content.detailLabels.quoteCtaLabel}
-              </Link>
+              <div className={`product-detail-price${content.status === "sold" ? " product-detail-price-sold" : ""}`}>
+                {content.priceDisplay}
+              </div>
+              {content.status === "sold" ? (
+                <p className="product-detail-price-label">{content.detailLabels.soldNoticeTitle}</p>
+              ) : (
+                <>
+                  <p className="product-detail-price-label">{content.detailLabels.priceLabel}</p>
+                  <Link className="btn show product-detail-action-btn" href={content.inquiryLinks.quote}>
+                    {content.detailLabels.quoteCtaLabel}
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -112,7 +123,7 @@ export function ProductDetailHero({ content, locale }: ProductDetailHeroProps) {
               ×
             </button>
 
-            {images.length > 1 ? (
+            {media.length > 1 ? (
               <>
                 <button
                   type="button"
@@ -133,15 +144,25 @@ export function ProductDetailHero({ content, locale }: ProductDetailHeroProps) {
               </>
             ) : null}
 
-            <img
-              src={images[activeIndex]}
-              alt={`${content.title} ${activeIndex + 1}`}
-              className="product-gallery-modal-image"
-            />
+            {media[activeIndex].type === "video" ? (
+              <video
+                key={media[activeIndex].src}
+                src={media[activeIndex].src}
+                className="product-gallery-modal-image"
+                controls
+                autoPlay
+              />
+            ) : (
+              <img
+                src={media[activeIndex].src}
+                alt={`${content.title} ${activeIndex + 1}`}
+                className="product-gallery-modal-image"
+              />
+            )}
 
-            {images.length > 1 ? (
+            {media.length > 1 ? (
               <p className="product-gallery-counter">
-                {activeIndex + 1} / {images.length}
+                {activeIndex + 1} / {media.length}
               </p>
             ) : null}
           </div>

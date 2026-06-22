@@ -23,7 +23,10 @@ export function HomePage({ locale, content }: HomePageProps) {
               <h1>{content.hero.title}</h1>
               <p>{content.hero.description}</p>
               <div className="hero-cta-group">
-                <Link className="btn btn-warning btn-lg hero-cta-primary" href={`#${content.inquiryId}`}>
+                <Link
+                  className="btn btn-warning btn-lg hero-cta-primary"
+                  href={getPathForRouteKey(locale, "machines.index")}
+                >
                   {content.hero.primaryCta}
                 </Link>
                 <Link
@@ -69,7 +72,7 @@ export function HomePage({ locale, content }: HomePageProps) {
             <p className="wow fadeInDown">{content.machines.description}</p>
           </div>
           <div className="row">
-          {content.machines.cards.map((machine) => (
+            {content.machines.cards.map((machine) => (
               <div key={machine.title} className="col-sm-6 col-md-4">
                 <div className="thumbnail machine-card">
                   <img src={machine.imageSrc} alt={machine.imageAlt} />

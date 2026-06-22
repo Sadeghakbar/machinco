@@ -135,30 +135,57 @@ export function MachineDetailPageView({ content, locale }: MachineDetailPageProp
 
                   <div className="content-card">
                     <h3>{content.detailLabels.specsTitle}</h3>
-                    <table className="product-spec-table">
-                      <tbody>
-                        {content.specs.map((spec) => (
-                          <tr key={spec.label}>
-                            <th scope="row">{spec.label}</th>
-                            <td>{spec.value}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <div className="content-card">
-                    <h3>{content.detailLabels.applicationsTitle}</h3>
-                    <ul className="keyword-list">
-                      {content.applications.map((item) => (
-                        <li key={item}>{item}</li>
+                    <div className="product-spec-groups">
+                      {content.specGroups.map((group) => (
+                        <section className="product-spec-group" key={group.title}>
+                          <h4>{group.title}</h4>
+                          <table className="product-spec-table">
+                            <tbody>
+                              {group.specs.map((spec) => (
+                                <tr key={spec.label}>
+                                  <th scope="row">{spec.label}</th>
+                                  <td>{spec.value}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </section>
                       ))}
-                    </ul>
+                    </div>
                   </div>
 
-              <Suspense fallback={<div className="content-card product-inquiry-form" />}>
-                <ProductInquiryForm locale={locale} content={content} />
-              </Suspense>
+                  {content.dimensions.length > 0 ? (
+                    <div className="content-card">
+                      <h3>{content.detailLabels.dimensionsTitle}</h3>
+                      <table className="product-spec-table product-dimensions-table">
+                        <tbody>
+                          {content.dimensions.map((spec) => (
+                            <tr key={spec.label}>
+                              <th scope="row">{spec.label}</th>
+                              <td>{spec.value}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : null}
+
+                  {content.applications.length > 0 ? (
+                    <div className="content-card">
+                      <h3>{content.detailLabels.applicationsTitle}</h3>
+                      <ul className="keyword-list">
+                        {content.applications.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+
+              {content.status !== "sold" ? (
+                <Suspense fallback={<div className="content-card product-inquiry-form" />}>
+                  <ProductInquiryForm locale={locale} content={content} />
+                </Suspense>
+              ) : null}
             </div>
 
             <div className="col-md-4">
