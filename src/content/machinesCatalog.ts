@@ -647,10 +647,10 @@ const productCatalog: ProductDefinition[] = [
     brand: "Biglia",
     year: 1991,
     featured: true,
-    status: "available",
-    heroImage: "/machines/biglia-b131-s2/main-pic.jpg",
+    status: "sold",
+    heroImage: "/machines/biglia-b131-s2/main-pic.png",
     galleryMedia: [
-      { src: "/machines/biglia-b131-s2/main-pic.jpg", type: "image" },
+      { src: "/machines/biglia-b131-s2/main-pic.png", type: "image" },
       { src: "/machines/biglia-b131-s2/35612-2.jpg", type: "image" },
       { src: "/machines/biglia-b131-s2/35612-3.jpg", type: "image" },
       { src: "/machines/biglia-b131-s2/35612-4.jpg", type: "image" },

@@ -130,10 +130,10 @@ function machineCardsDe(): HomeMachineCard[] {
     {
       title: "1991 Biglia B131 S2 CNC",
       description: "CNC-Drehmaschine mit GE Fanuc Series 15-T, 12-fach Revolver und Exomist-Absaugung.",
-      imageSrc: "/machines/biglia-b131-s2/main-pic.jpg",
+      imageSrc: "/machines/biglia-b131-s2/main-pic.png",
       imageAlt: "1991 Biglia B131 S2 CNC-Drehmaschine",
       href: "/de/machines/biglia-b131-s2/",
-      status: "available"
+      status: "sold"
     }
   ]);
 }
@@ -167,10 +167,10 @@ function machineCardsEn(): HomeMachineCard[] {
     {
       title: "1991 Biglia B131 S2 CNC",
       description: "CNC lathe with GE Fanuc Series 15-T, 12-station turret, and Exomist extraction.",
-      imageSrc: "/machines/biglia-b131-s2/main-pic.jpg",
+      imageSrc: "/machines/biglia-b131-s2/main-pic.png",
       imageAlt: "1991 Biglia B131 S2 CNC lathe",
       href: "/en/machines/biglia-b131-s2/",
-      status: "available"
+      status: "sold"
     }
   ]);
 }
