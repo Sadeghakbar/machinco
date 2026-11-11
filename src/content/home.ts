@@ -134,6 +134,14 @@ function machineCardsDe(): HomeMachineCard[] {
       imageAlt: "1991 Biglia B131 S2 CNC-Drehmaschine",
       href: "/de/machines/biglia-b131-s2/",
       status: "sold"
+    },
+    {
+      title: "UNION BFP 130/6",
+      description: "Horizontal-Tischbohrwerk mit 130 mm Spindel, Heidenhain/Sony-Digitalanzeige und Planzugkopf.",
+      imageSrc: "/machines/union-bfp-130-6/main-pic.jpg",
+      imageAlt: "UNION BFP 130/6 Horizontal-Tischbohrwerk",
+      href: "/de/machines/union-bfp-130-6/",
+      status: "available"
     }
   ]);
 }
@@ -171,6 +179,14 @@ function machineCardsEn(): HomeMachineCard[] {
       imageAlt: "1991 Biglia B131 S2 CNC lathe",
       href: "/en/machines/biglia-b131-s2/",
       status: "sold"
+    },
+    {
+      title: "UNION BFP 130/6",
+      description: "Horizontal table-type boring mill with 130 mm spindle, Heidenhain/Sony DRO, and facing head.",
+      imageSrc: "/machines/union-bfp-130-6/main-pic.jpg",
+      imageAlt: "UNION BFP 130/6 horizontal table-type boring mill",
+      href: "/en/machines/union-bfp-130-6/",
+      status: "available"
     }
   ]);
 }

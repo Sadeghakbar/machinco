@@ -791,6 +791,131 @@ const productCatalog: ProductDefinition[] = [
         ctaLabel: "Request a Quote"
       }
     }
+  },
+  {
+    id: "union-bfp-130-6",
+    slug: "union-bfp-130-6",
+    category: {
+      de: "Horizontal-Tischbohrwerk",
+      en: "Horizontal table-type boring mill"
+    },
+    reference: "BFP 130/6",
+    brand: "UNION",
+    featured: true,
+    status: "available",
+    heroImage: "/machines/union-bfp-130-6/main-pic.jpg",
+    galleryMedia: [
+      { src: "/machines/union-bfp-130-6/main-pic.jpg", type: "image" },
+      { src: "/machines/union-bfp-130-6/img-00.jpg", type: "image" },
+      { src: "/machines/union-bfp-130-6/img-02.jpg", type: "image" },
+      { src: "/machines/union-bfp-130-6/img-03.jpg", type: "image" },
+      { src: "/machines/union-bfp-130-6/img-04.jpg", type: "image" },
+      { src: "/machines/union-bfp-130-6/img-05.jpg", type: "image" },
+      { src: "/machines/union-bfp-130-6/img-06.jpg", type: "image" },
+      { src: "/machines/union-bfp-130-6/img-07.jpg", type: "image" },
+      { src: "/machines/union-bfp-130-6/img-08.jpg", type: "image" },
+      { src: "/machines/union-bfp-130-6/img-09.jpg", type: "image" },
+      { src: "/machines/union-bfp-130-6/img-10.jpg", type: "image" },
+      { src: "/machines/union-bfp-130-6/img-11.jpg", type: "image" }
+    ],
+    locale: {
+      de: {
+        title: "UNION BFP 130/6 Horizontal-Tischbohrwerk",
+        summary:
+          "Robustes Horizontal-Tischbohrwerk von UNION (WMW) mit 130 mm Bohrspindel, Heidenhain- und Sony-Digitalanzeige, Planzugkopf und separatem VEM-Schaltschrank – demontiert und verladebereit.",
+        highlights: [
+          "Horizontal-Tischbohrwerk mit 130 mm Bohrspindel",
+          "Aufspanntisch ca. 1800 x 2000 mm",
+          "Digitalanzeige von Heidenhain und Sony, inklusive Planzugkopf",
+          "Demontiert und verladebereit, mit separatem VEM-Schaltschrank"
+        ],
+        specGroups: [
+          {
+            title: "Maschinendaten",
+            specs: [
+              { label: "Hersteller", value: "UNION (WMW)" },
+              { label: "Typ", value: "BFP 130/6" },
+              { label: "Bauart", value: "Horizontal-Tischbohrwerk" },
+              { label: "Zustand", value: "Demontiert und verladebereit" }
+            ]
+          },
+          {
+            title: "Steuerung und Ausstattung",
+            specs: [
+              { label: "Digitalanzeige (DRO)", value: "Heidenhain und Sony" },
+              { label: "Planzugkopf", value: "Ja" },
+              { label: "Schaltschrank", value: "Separat (VEM)" }
+            ]
+          },
+          {
+            title: "Spindel und Tisch",
+            specs: [
+              { label: "Spindeldurchmesser", value: "130 mm" },
+              { label: "Tischabmessungen", value: "ca. 1800 x 2000 mm" }
+            ]
+          },
+          {
+            title: "Typische Modelldaten (Richtwerte)",
+            specs: [
+              { label: "Spindeldrehzahl", value: "4,5 - 900 U/min" },
+              { label: "Bohrspindelvorschub (W)", value: "900 mm" }
+            ]
+          }
+        ],
+        applications: [],
+        ctaTitle: "UNION BFP 130/6 anfragen",
+        ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
+        ctaLabel: "Jetzt Angebot anfordern"
+      },
+      en: {
+        title: "UNION BFP 130/6 Horizontal Table-Type Boring Mill",
+        summary:
+          "Robust UNION (WMW) horizontal table-type boring mill with 130 mm spindle, Heidenhain and Sony digital readouts, facing head, and separate VEM control cabinet – dismantled and ready for loading.",
+        highlights: [
+          "Horizontal table-type boring mill with 130 mm spindle",
+          "Worktable approx. 1800 x 2000 mm",
+          "Heidenhain and Sony digital readouts, facing head included",
+          "Dismantled and ready for loading, with separate VEM control cabinet"
+        ],
+        specGroups: [
+          {
+            title: "Machine data",
+            specs: [
+              { label: "Brand", value: "UNION (WMW)" },
+              { label: "Type", value: "BFP 130/6" },
+              { label: "Machine type", value: "Horizontal table-type boring mill" },
+              { label: "Condition", value: "Dismantled and ready for loading" }
+            ]
+          },
+          {
+            title: "Control and equipment",
+            specs: [
+              { label: "Digital readout (DRO)", value: "Heidenhain and Sony" },
+              { label: "Facing head", value: "Yes" },
+              { label: "Control cabinet", value: "Separate (VEM)" }
+            ]
+          },
+          {
+            title: "Spindle and table",
+            specs: [
+              { label: "Spindle diameter", value: "130 mm" },
+              { label: "Table dimensions", value: "approx. 1800 x 2000 mm" }
+            ]
+          },
+          {
+            title: "Typical model data (guide values)",
+            specs: [
+              { label: "Spindle speed", value: "4.5 - 900 rpm" },
+              { label: "Boring spindle stroke (W)", value: "900 mm" }
+            ]
+          }
+        ],
+        applications: [],
+        ctaTitle: "Enquire About the UNION BFP 130/6",
+        ctaDescription: "Request more information or arrange a viewing of this machine.",
+        ctaLabel: "Request a Quote"
+      }
+    }
   }
 ];
 
