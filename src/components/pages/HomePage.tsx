@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FormPrivacyConsent } from "@/components/forms/FormPrivacyConsent";
+import { LocationDetails } from "@/components/location/LocationDetails";
 import type { HomeContent } from "@/content/home";
 import type { Locale } from "@/i18n/config";
 import { getPathForRouteKey } from "@/i18n/routes";
@@ -264,15 +265,7 @@ export function HomePage({ locale, content }: HomePageProps) {
               <div className="col-sm-4 col-md-4">
                 <div className="contact-form">
                   <h3>{content.contact.title}</h3>
-                  <address>
-                    <strong>{content.contact.addressLines[0]}</strong>
-                    <br />
-                    {content.contact.addressLines[1]}
-                    <br />
-                    <abbr title={content.contact.phoneLabel}>T:</abbr> {content.contact.addressLines[2]}
-                    <br />
-                    <abbr title={content.contact.emailLabel}>E:</abbr> {content.contact.addressLines[3]}
-                  </address>
+                  <LocationDetails locale={locale} />
                 </div>
               </div>
               <div className="col-sm-8 col-md-8">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "@/styles/legacy-bridge.css";
+import { getBusinessJsonLd } from "@/content/business";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.machinco.de"),
@@ -28,8 +29,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link href="/css/animate.min.css" rel="stylesheet" />
         <link href="/css/prettyphoto.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
+        <link href="/css/refinements.css" rel="stylesheet" />
       </head>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          // Primary business location (Gablingen) for search engines.
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getBusinessJsonLd()) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

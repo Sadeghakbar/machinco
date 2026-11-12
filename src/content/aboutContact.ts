@@ -35,7 +35,6 @@ export type ContactPageContent = {
   details: {
     title: string;
     company: string;
-    addressLines: string[];
     phoneLabel: string;
     phoneValue: string;
     emailLabel: string;
@@ -145,7 +144,6 @@ const contactByLocale: Record<Locale, ContactPageContent> = {
     details: {
       title: "Kontaktdaten",
       company: "Machinco GmbH",
-      addressLines: ["Plaentschweg 13", "81247 Muenchen"],
       phoneLabel: "Telefon",
       phoneValue: "+49 163 0133066",
       emailLabel: "E-Mail",
@@ -185,7 +183,6 @@ const contactByLocale: Record<Locale, ContactPageContent> = {
     details: {
       title: "Contact Details",
       company: "Machinco GmbH",
-      addressLines: ["Plaentschweg 13", "81247 Munich"],
       phoneLabel: "Phone",
       phoneValue: "+49 (0)163-0133066",
       emailLabel: "Email",

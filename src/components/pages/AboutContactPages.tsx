@@ -2,6 +2,9 @@ import Link from "next/link";
 import { FormPrivacyConsent } from "@/components/forms/FormPrivacyConsent";
 import type { AboutPageContent, ContactPageContent } from "@/content/aboutContact";
 import type { Locale } from "@/i18n/config";
+import { LocationDetails } from "@/components/location/LocationDetails";
+import { LocationMap } from "@/components/location/LocationMap";
+import { BUSINESS_PHONE_E164 } from "@/content/business";
 
 type AboutPageViewProps = {
   content: AboutPageContent;
@@ -79,20 +82,10 @@ export function ContactPageView({ locale, content }: ContactPageViewProps) {
             <div className="col-md-4">
               <div className="content-card">
                 <h3>{content.details.title}</h3>
-                <p>
-                  <strong>{content.details.company}</strong>
-                  <br />
-                  {content.details.addressLines.map((line) => (
-                    <span key={line}>
-                      {line}
-                      <br />
-                    </span>
-                  ))}
-                </p>
+                <LocationDetails locale={locale} showContact={false} />
                 {content.details.extraBlockTitle && content.details.extraBlockLines ? (
-                  <p>
-                    <strong>{content.details.extraBlockTitle}</strong>
-                    <br />
+                  <p className="location-secondary">
+                    <span className="location-label">{content.details.extraBlockTitle}</span>
                     {content.details.extraBlockLines.map((line) => (
                       <span key={line}>
                         {line}
@@ -101,11 +94,16 @@ export function ContactPageView({ locale, content }: ContactPageViewProps) {
                     ))}
                   </p>
                 ) : null}
-                <p>
-                  {content.details.phoneLabel}: {content.details.phoneValue}
-                  <br />
-                  {content.details.emailLabel}: {content.details.emailValue}
-                </p>
+                <ul className="location-contact-lines">
+                  <li>
+                    {content.details.phoneLabel}:{" "}
+                    <a href={`tel:${BUSINESS_PHONE_E164}`}>{content.details.phoneValue}</a>
+                  </li>
+                  <li>
+                    {content.details.emailLabel}:{" "}
+                    <a href={`mailto:${content.details.emailValue}`}>{content.details.emailValue}</a>
+                  </li>
+                </ul>
               </div>
               <div className="cta-panel">
                 <h3>{content.quickInfo.title}</h3>
@@ -169,6 +167,8 @@ export function ContactPageView({ locale, content }: ContactPageViewProps) {
           </div>
         </div>
       </section>
+
+      <LocationMap locale={locale} />
     </>
   );
 }

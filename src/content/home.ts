@@ -79,7 +79,6 @@ export type HomeContent = {
     title: string;
     phoneLabel: string;
     emailLabel: string;
-    addressLines: string[];
     subject: string;
     placeholders: {
       name: string;
@@ -280,7 +279,7 @@ const homeContentByLocale: Record<Locale, HomeContent> = {
       lead: "Technik verstehen. Prozesse verbessern. Partnerschaftlich arbeiten.",
       imageAlt: "Machinco Werkstatt und Team",
       imageCaption: "Bildplatzhalter: Maschinen in Produktion, Werkstatt, Team vor Ort",
-      heading: "Machinco GmbH aus Muenchen",
+      heading: "Machinco GmbH – Hauptstandort Gablingen bei Augsburg",
       paragraphs: [
         "Wir wurden mit einem klaren Anspruch gegruendet: Industrieunternehmen nicht nur Maschinen zu liefern, sondern Prozesse messbar zu verbessern. Deshalb verbinden wir technische Praxiserfahrung mit verbindlicher Projektarbeit.",
         "Unser Fokus liegt auf belastbaren Entscheidungen: Welche Maschine passt wirklich zu Werkstoff, Takt und Qualitaetsziel? Diese Klarheit reduziert Investitionsrisiko und beschleunigt den Weg zur stabilen Serienleistung."
@@ -318,7 +317,6 @@ const homeContentByLocale: Record<Locale, HomeContent> = {
       title: "Kontakt",
       phoneLabel: "Telefon",
       emailLabel: "E-Mail",
-      addressLines: ["Machinco GmbH", "Plaentschweg 13, 81247 Muenchen", "+49 163 0133066", "info@machincogmbh.com"],
       subject: "Machinco DE - Kontaktformular (Homepage)",
       placeholders: {
         name: "Name*",
@@ -414,7 +412,7 @@ const homeContentByLocale: Record<Locale, HomeContent> = {
       lead: "Understand technology. Improve processes. Work in partnership.",
       imageAlt: "Machinco workshop and team",
       imageCaption: "Image placeholders: machines in operation, workshop, field team",
-      heading: "Machinco GmbH from Munich",
+      heading: "Machinco GmbH – Based in Gablingen near Augsburg",
       paragraphs: [
         "We were founded with one clear mission: not just to supply machines, but to measurably improve production processes. That is why we combine practical technical know-how with reliable project execution.",
         "Our focus is on robust decisions: which machine truly matches your material, cycle time, and quality targets? That clarity reduces investment risk and shortens your path to stable serial performance."
@@ -450,7 +448,6 @@ const homeContentByLocale: Record<Locale, HomeContent> = {
       title: "Contact",
       phoneLabel: "Phone",
       emailLabel: "Email",
-      addressLines: ["Machinco GmbH", "Plaentschweg 13, 81247 Muenchen", "+49 163 0133066", "info@machincogmbh.com"],
       subject: "Machinco EN - Contact Form (Homepage)",
       placeholders: {
         name: "Name*",

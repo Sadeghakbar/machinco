@@ -405,6 +405,10 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
         paragraphs: ["Machinco GmbH", "Plaentschweg 13", "81247 Muenchen", "Deutschland"]
       },
       {
+        title: "Hauptstandort & Lager",
+        paragraphs: ["Machinco GmbH", "Dornierstraße 9, Halle 13", "86456 Gablingen", "Deutschland"]
+      },
+      {
         title: "Showroom-Adresse",
         paragraphs: ["Nr.29-040, Derchinger Str. 120/1/2", "86165 Augsburg"]
       },
@@ -461,6 +465,10 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
       {
         title: "Information according to § 5 TMG",
         paragraphs: ["Machinco GmbH", "Plaentschweg 13", "81247 Munich", "Germany"]
+      },
+      {
+        title: "Main Warehouse & Business Location",
+        paragraphs: ["Machinco GmbH", "Dornierstraße 9, Halle 13", "86456 Gablingen", "Germany"]
       },
       {
         title: "Showroom Address",
@@ -562,7 +570,8 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
         title: "6. Empfaenger und Auftragsverarbeitung",
         paragraphs: [
           "Wir setzen Dienstleister fuer Hosting (GitHub Pages) und Formularverarbeitung (Web3Forms) ein. Diese verarbeiten Daten ggf. in unserem Auftrag. Mit Auftragsverarbeitern schliessen wir Vertraege gemaess Art. 28 DSGVO, soweit erforderlich.",
-          "Eine Uebermittlung in Drittlaender kann bei Cloud-Dienstleistern nicht ausgeschlossen werden. In diesem Fall erfolgt sie nur unter den Voraussetzungen der Art. 44 ff. DSGVO (z. B. Standardvertragsklauseln)."
+          "Eine Uebermittlung in Drittlaender kann bei Cloud-Dienstleistern nicht ausgeschlossen werden. In diesem Fall erfolgt sie nur unter den Voraussetzungen der Art. 44 ff. DSGVO (z. B. Standardvertragsklauseln).",
+          "Google Maps: Auf unserer Kontaktseite koennen Sie eine Karte unseres Standorts in Gablingen anzeigen. Die Karte des Anbieters Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, wird erst geladen, wenn Sie auf \"Karte laden\" klicken. Erst dann werden Daten wie Ihre IP-Adresse an Google uebermittelt und ggf. in den USA verarbeitet. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG), die Sie durch Neuladen der Seite jederzeit fuer die Zukunft beenden koennen. Links \"In Google Maps oeffnen\" fuehren direkt zu Google; dort gelten die Datenschutzhinweise von Google (https://policies.google.com/privacy)."
         ]
       },
       {
@@ -644,7 +653,8 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
         title: "6. Recipients and Processing on Our Behalf",
         paragraphs: [
           "We use service providers for hosting (GitHub Pages) and form processing (Web3Forms). They may process data on our behalf. We conclude data processing agreements under Art. 28 GDPR where required.",
-          "Transfers to third countries cannot be ruled out for cloud services and take place only under Art. 44 et seq. GDPR (e.g., standard contractual clauses)."
+          "Transfers to third countries cannot be ruled out for cloud services and take place only under Art. 44 et seq. GDPR (e.g., standard contractual clauses).",
+          "Google Maps: On our contact page you can display a map of our Gablingen location. The map, provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, is only loaded after you click \"Load map\". Only then is data such as your IP address transmitted to Google and possibly processed in the USA. The legal basis is your consent (Art. 6(1)(a) GDPR, Section 25(1) TDDDG), which you can end at any time for the future by reloading the page. \"Open in Google Maps\" links take you directly to Google, where Google's privacy policy applies (https://policies.google.com/privacy)."
         ]
       },
       {

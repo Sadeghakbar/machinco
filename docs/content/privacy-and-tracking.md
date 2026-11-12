@@ -6,6 +6,7 @@
 - **No** analytics, GTM, or marketing pixels on page load
 - **No** cookie consent banner (not required while optional trackers are absent)
 - Contact forms submit to **Web3Forms** only when the user sends a form
+- Contact page map (Gablingen) is **click-to-load**: no request goes to Google until the visitor clicks "Karte laden" / "Load map" (`src/components/location/LocationMap.tsx`); disclosed in privacy policy section 6
 
 Legal copy lives in `src/content/blogLegal.ts` (`/de/privacy/`, `/en/privacy/`, `/de/imprint/`).
 

@@ -17,7 +17,11 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
   }
 
   const content = getContactContent(locale as Locale);
-  return buildRouteMetadata(locale as Locale, "contact", content.hero.description);
+  const locationSentence =
+    locale === "de"
+      ? " Hauptstandort & Lager: Dornierstraße 9, 86456 Gablingen bei Augsburg."
+      : " Main warehouse & business location: Dornierstraße 9, 86456 Gablingen near Augsburg, Germany.";
+  return buildRouteMetadata(locale as Locale, "contact", `${content.hero.description}${locationSentence}`);
 }
 
 export default async function ContactPage({ params }: ContactPageProps) {
