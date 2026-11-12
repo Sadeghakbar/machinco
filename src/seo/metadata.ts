@@ -9,10 +9,11 @@ export const SITE_TITLE = "Machinco GmbH";
 export function buildRouteMetadata(
   locale: Locale,
   routeKey: RouteKey,
-  description: string
+  description: string,
+  title: string = SITE_TITLE
 ): Metadata {
   return {
-    title: SITE_TITLE,
+    title,
     description,
     alternates: {
       canonical: getPathForRouteKey(locale, routeKey),
@@ -39,5 +40,26 @@ export function buildMachineMetadata(
         en: getMachinePath("en", slug)
       }
     }
+  };
+}
+
+export function buildProjectMetadata(
+  locale: Locale,
+  slug: string,
+  title: string,
+  description: string,
+  image?: string
+): Metadata {
+  const path = (target: Locale) => `/${target}/projects/${slug}/`;
+  return {
+    title: `${title} | ${SITE_TITLE}`,
+    description,
+    alternates: {
+      canonical: path(locale),
+      languages: { de: path("de"), en: path("en") }
+    },
+    openGraph: image
+      ? { title: `${title} | ${SITE_TITLE}`, description, images: [{ url: image }], type: "article" }
+      : undefined
   };
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FormPrivacyConsent } from "@/components/forms/FormPrivacyConsent";
 import { LocationDetails } from "@/components/location/LocationDetails";
+import { HomeProjectsTeaser } from "@/components/projects/HomeProjectsTeaser";
 import type { HomeContent } from "@/content/home";
 import type { Locale } from "@/i18n/config";
 import { getPathForRouteKey } from "@/i18n/routes";
@@ -92,6 +93,8 @@ export function HomePage({ locale, content }: HomePageProps) {
           </div>
         </div>
       </section>
+
+      <HomeProjectsTeaser locale={locale} />
 
       <section id="business-stats">
         <div className="container">

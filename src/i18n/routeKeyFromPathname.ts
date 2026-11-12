@@ -20,6 +20,10 @@ export function getRouteKeyFromPathname(pathname: string): RouteKey {
     return "machines.index";
   }
 
+  if (/^\/(de|en)\/projects\/[^/]+$/.test(cleanPath)) {
+    return "projects.index";
+  }
+
   if (cleanPath.startsWith("/de/blog/") || cleanPath.startsWith("/en/blog/")) {
     if (cleanPath.endsWith("/machine-selection")) return "blog.machine-selection";
     if (cleanPath.endsWith("/industrial-machine-costs")) return "blog.industrial-machine-costs";

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getProductSlugs } from "@/content/machinesCatalog";
 import { routePathByKey } from "@/i18n/routes";
+import { getVisibleProjectSlugs, hasVisibleProjects } from "@/content/projects";
 
 const siteUrl = "https://www.machinco.de";
 export const dynamic = "force-static";
@@ -9,7 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const urls = new Set<string>();
   const lastModified = new Date();
 
-  for (const paths of Object.values(routePathByKey)) {
+  const showProjects = hasVisibleProjects();
+
+  for (const [routeKey, paths] of Object.entries(routePathByKey)) {
+    if (routeKey === "projects.index" && !showProjects) {
+      continue;
+    }
     urls.add(`${siteUrl}${paths.de}`);
     urls.add(`${siteUrl}${paths.en}`);
   }
@@ -17,6 +23,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const slug of getProductSlugs()) {
     urls.add(`${siteUrl}/de/machines/${slug}`);
     urls.add(`${siteUrl}/en/machines/${slug}`);
+  }
+
+  for (const slug of getVisibleProjectSlugs()) {
+    urls.add(`${siteUrl}/de/projects/${slug}`);
+    urls.add(`${siteUrl}/en/projects/${slug}`);
   }
 
   return Array.from(urls).map((url) => ({ url, lastModified }));

@@ -4,6 +4,7 @@ export type RouteKey =
   | "machines.belt-grinding"
   | "machines.surface-grinding"
   | "machines.deburring"
+  | "projects.index"
   | "about"
   | "contact"
   | "blog.index"

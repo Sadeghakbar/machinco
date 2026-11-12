@@ -9,6 +9,7 @@ import { getLocalizedPath } from "@/i18n/localizedPath";
 import { getRouteKeyFromPathname } from "@/i18n/routeKeyFromPathname";
 import type { RouteKey } from "@/content/types";
 import type { LocaleMessages } from "@/i18n/getMessages";
+import { hasVisibleProjects } from "@/content/projects";
 
 type HeaderProps = {
   locale: Locale;
@@ -18,10 +19,16 @@ type HeaderProps = {
 const navItems: Array<{ routeKey: RouteKey; labelKey: keyof LocaleMessages["nav"] }> = [
   { routeKey: "home", labelKey: "home" },
   { routeKey: "machines.index", labelKey: "machines" },
+  { routeKey: "projects.index", labelKey: "projects" },
   { routeKey: "about", labelKey: "about" },
   { routeKey: "contact", labelKey: "contact" },
   { routeKey: "blog.index", labelKey: "blog" }
 ];
+
+// The Projects link only appears once at least one project is visible (published, or draft in dev).
+const visibleNavItems = hasVisibleProjects()
+  ? navItems
+  : navItems.filter((item) => item.routeKey !== "projects.index");
 
 const MOBILE_NAV_ID = "main-nav-collapse";
 const DESKTOP_BREAKPOINT = 768;
@@ -97,7 +104,7 @@ export function Header({ locale, messages }: HeaderProps) {
           </div>
           <div id={MOBILE_NAV_ID} className={`collapse navbar-collapse navbar-right${menuOpen ? " in" : ""}`}>
             <ul className="nav navbar-nav">
-              {navItems.map((item) => {
+              {visibleNavItems.map((item) => {
                 const isActive = activeRouteKey === item.routeKey;
                 return (
                   <li key={item.routeKey} className={isActive ? "active" : ""}>

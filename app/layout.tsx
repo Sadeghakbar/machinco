@@ -30,6 +30,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link href="/css/prettyphoto.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <link href="/css/refinements.css" rel="stylesheet" />
+        <link href="/css/projects.css" rel="stylesheet" />
       </head>
       <body>
         <script

@@ -15,6 +15,7 @@ export const routePathByKey: Record<RouteKey, RoutePaths> = {
     en: "/en/machines/surface-grinding"
   },
   "machines.deburring": { de: "/de/machines/deburring", en: "/en/machines/deburring" },
+  "projects.index": { de: "/de/projects", en: "/en/projects" },
   about: { de: "/de/about", en: "/en/about" },
   contact: { de: "/de/contact", en: "/en/contact" },
   "blog.index": { de: "/de/blog", en: "/en/blog" },
