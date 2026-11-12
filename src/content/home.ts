@@ -149,6 +149,14 @@ function machineCardsDe(): HomeMachineCard[] {
       imageAlt: "1969 Leopoldo Pontiggia H 600 x 5000 Schwerdrehmaschine",
       href: "/de/machines/pontiggia-h-600-x-5000/",
       status: "sold"
+    },
+    {
+      title: "1998 AMADA Promecam ITPS 80-25",
+      description: "Abkantpresse mit 80 t Presskraft, 2500 mm Abkantlänge und Delem-DA-58-Steuerung.",
+      imageSrc: "/machines/amada-promecam-itps-80-25/main-pic.png",
+      imageAlt: "1998 AMADA Promecam ITPS 80-25 Abkantpresse",
+      href: "/de/machines/amada-promecam-itps-80-25/",
+      status: "sold"
     }
   ]);
 }
@@ -201,6 +209,14 @@ function machineCardsEn(): HomeMachineCard[] {
       imageSrc: "/machines/pontiggia-h-600-x-5000/main-pic.png",
       imageAlt: "1969 Leopoldo Pontiggia H 600 x 5000 heavy-duty lathe",
       href: "/en/machines/pontiggia-h-600-x-5000/",
+      status: "sold"
+    },
+    {
+      title: "1998 AMADA Promecam ITPS 80-25",
+      description: "Press brake with 80 t pressing force, 2500 mm bending length, and Delem DA 58 control.",
+      imageSrc: "/machines/amada-promecam-itps-80-25/main-pic.png",
+      imageAlt: "1998 AMADA Promecam ITPS 80-25 press brake",
+      href: "/en/machines/amada-promecam-itps-80-25/",
       status: "sold"
     }
   ]);

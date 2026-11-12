@@ -1059,6 +1059,118 @@ const productCatalog: ProductDefinition[] = [
         ctaLabel: "Request a Quote"
       }
     }
+  },
+  {
+    id: "amada-promecam-itps-80-25",
+    slug: "amada-promecam-itps-80-25",
+    category: {
+      de: "Abkantpresse",
+      en: "Press brake"
+    },
+    reference: "ITPS 80-25",
+    brand: "AMADA",
+    year: 1998,
+    featured: true,
+    status: "sold",
+    heroImage: "/machines/amada-promecam-itps-80-25/main-pic.png",
+    galleryMedia: [
+      { src: "/machines/amada-promecam-itps-80-25/main-pic.png", type: "image" },
+      { src: "/machines/amada-promecam-itps-80-25/img-01.jpg", type: "image" },
+      { src: "/machines/amada-promecam-itps-80-25/img-02.jpg", type: "image" },
+      { src: "/machines/amada-promecam-itps-80-25/img-03.jpg", type: "image" },
+      { src: "/machines/amada-promecam-itps-80-25/img-04.jpg", type: "image" },
+      { src: "/machines/amada-promecam-itps-80-25/img-05.jpg", type: "image" }
+    ],
+    locale: {
+      de: {
+        title: "1998 AMADA Promecam ITPS 80-25 Abkantpresse",
+        summary:
+          "Robuste Abkantpresse von AMADA Promecam (Made in France) mit 80 t Presskraft, 2500 mm Abkantlänge und Delem-DA-58-Steuerung.",
+        highlights: [
+          "Presskraft 80 t (800 kN), Abkantlänge 2500 mm",
+          "Delem DA 58 Steuerung mit grafischer Programmierung",
+          "Maximaler Hub 100 mm, Motorleistung 7,5 kW",
+          "Regelmäßige UVV-Prüfung, Prüfplaketten vorhanden"
+        ],
+        specGroups: [
+          {
+            title: "Maschinendaten",
+            specs: [
+              { label: "Hersteller", value: "AMADA (Promecam)" },
+              { label: "Typ", value: "ITPS 80-25" },
+              { label: "Bauart", value: "Abkantpresse" },
+              { label: "Baujahr", value: "1998" },
+              { label: "Herkunft", value: "Made in France" }
+            ]
+          },
+          {
+            title: "Leistungsdaten",
+            specs: [
+              { label: "Presskraft", value: "80 t (800 kN)" },
+              { label: "Abkantlänge", value: "2500 mm" },
+              { label: "Maximaler Hub", value: "100 mm" },
+              { label: "Motorleistung", value: "7,5 kW" }
+            ]
+          },
+          {
+            title: "Steuerung und Ausstattung",
+            specs: [
+              { label: "CNC-Steuerung", value: "Delem DA 58 (grafische Programmierung)" },
+              { label: "UVV-Prüfung", value: "Regelmäßig geprüft, Prüfplaketten vorhanden" }
+            ]
+          }
+        ],
+        dimensions: [{ label: "Maschinengewicht", value: "11000 kg" }],
+        applications: [],
+        ctaTitle: "AMADA Promecam ITPS 80-25 anfragen",
+        ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
+        ctaLabel: "Jetzt Angebot anfordern"
+      },
+      en: {
+        title: "1998 AMADA Promecam ITPS 80-25 Press Brake",
+        summary:
+          "Robust AMADA Promecam press brake (made in France) with 80 t pressing force, 2500 mm bending length and Delem DA 58 control.",
+        highlights: [
+          "Pressing force 80 t (800 kN), bending length 2500 mm",
+          "Delem DA 58 control with graphical programming",
+          "Maximum stroke 100 mm, motor power 7.5 kW",
+          "Regular statutory safety inspections (UVV), inspection labels present"
+        ],
+        specGroups: [
+          {
+            title: "Machine data",
+            specs: [
+              { label: "Brand", value: "AMADA (Promecam)" },
+              { label: "Type", value: "ITPS 80-25" },
+              { label: "Machine type", value: "Press brake" },
+              { label: "Year of build", value: "1998" },
+              { label: "Origin", value: "Made in France" }
+            ]
+          },
+          {
+            title: "Performance data",
+            specs: [
+              { label: "Pressing force", value: "80 t (800 kN)" },
+              { label: "Bending length", value: "2500 mm" },
+              { label: "Maximum stroke", value: "100 mm" },
+              { label: "Motor power", value: "7.5 kW" }
+            ]
+          },
+          {
+            title: "Control and equipment",
+            specs: [
+              { label: "CNC control", value: "Delem DA 58 (graphical programming)" },
+              { label: "Safety inspection (UVV)", value: "Regularly inspected, labels present" }
+            ]
+          }
+        ],
+        dimensions: [{ label: "Machine weight", value: "11000 kg" }],
+        applications: [],
+        ctaTitle: "Enquire About the AMADA Promecam ITPS 80-25",
+        ctaDescription: "Request more information or arrange a viewing of this machine.",
+        ctaLabel: "Request a Quote"
+      }
+    }
   }
 ];
 
