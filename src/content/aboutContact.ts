@@ -147,9 +147,7 @@ const contactByLocale: Record<Locale, ContactPageContent> = {
       phoneLabel: "Telefon",
       phoneValue: "+49 163 0133066",
       emailLabel: "E-Mail",
-      emailValue: "info@machincogmbh.com",
-      extraBlockTitle: "Showroom-Adresse",
-      extraBlockLines: ["No.29-040, Derchinger Str. 120/1/2", "86165 Augsburg"]
+      emailValue: "info@machincogmbh.com"
     },
     quickInfo: {
       title: "Schnelle Angebotsanfrage",
@@ -186,9 +184,7 @@ const contactByLocale: Record<Locale, ContactPageContent> = {
       phoneLabel: "Phone",
       phoneValue: "+49 (0)163-0133066",
       emailLabel: "Email",
-      emailValue: "info@machincogmbh.com",
-      extraBlockTitle: "Showroom Address",
-      extraBlockLines: ["No.29-040, Derchinger Str. 120/1/2", "86165 Augsburg"]
+      emailValue: "info@machincogmbh.com"
     },
     quickInfo: {
       title: "Fast Quote Request",

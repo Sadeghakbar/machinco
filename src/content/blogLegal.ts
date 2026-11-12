@@ -401,16 +401,12 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
     legalNote: "Hinweis: Die englische Impressumsseite ist eine Orientierungsuebersetzung.",
     sections: [
       {
-        title: "Angaben gemaess § 5 TMG",
+        title: "Angaben gemaess § 5 DDG",
         paragraphs: ["Machinco GmbH", "Plaentschweg 13", "81247 Muenchen", "Deutschland"]
       },
       {
         title: "Hauptstandort & Lager",
         paragraphs: ["Machinco GmbH", "Dornierstraße 9, Halle 13", "86456 Gablingen", "Deutschland"]
-      },
-      {
-        title: "Showroom-Adresse",
-        paragraphs: ["Nr.29-040, Derchinger Str. 120/1/2", "86165 Augsburg"]
       },
       {
         title: "Vertreten durch",
@@ -420,7 +416,7 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
         title: "Kontakt",
         paragraphs: [
           "Telefon: +49 (0)163 0133066",
-          "E-Mail: info@machincogmbh.de",
+          "E-Mail: info@machincogmbh.com",
           "Website: www.machinco.de"
         ]
       },
@@ -441,12 +437,6 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
         paragraphs: ["Mohammad Sadegh Akbar, Anschrift wie oben"]
       },
       {
-        title: "EU-Streitschlichtung",
-        paragraphs: [
-          "Die Europaeische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: https://ec.europa.eu/consumers/odr/"
-        ]
-      },
-      {
         title: "Verbraucherstreitbeilegung",
         paragraphs: [
           "Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
@@ -463,16 +453,12 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
       "Note: This page is an English convenience translation. The German version remains legally authoritative.",
     sections: [
       {
-        title: "Information according to § 5 TMG",
+        title: "Information according to § 5 DDG",
         paragraphs: ["Machinco GmbH", "Plaentschweg 13", "81247 Munich", "Germany"]
       },
       {
         title: "Main Warehouse & Business Location",
         paragraphs: ["Machinco GmbH", "Dornierstraße 9, Halle 13", "86456 Gablingen", "Germany"]
-      },
-      {
-        title: "Showroom Address",
-        paragraphs: ["No.29-040, Derchinger Str. 120/1/2", "86165 Augsburg"]
       },
       {
         title: "Represented by",
@@ -482,7 +468,7 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
         title: "Contact",
         paragraphs: [
           "Phone: +49 (0)163 0133066",
-          "Email: info@machincogmbh.de",
+          "Email: info@machincogmbh.com",
           "Website: www.machinco.de"
         ]
       },
@@ -501,12 +487,6 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
       {
         title: "Content Responsible according to § 18 Abs. 2 MStV",
         paragraphs: ["Mohammad Sadegh Akbar, address as above"]
-      },
-      {
-        title: "EU Online Dispute Resolution",
-        paragraphs: [
-          "The European Commission provides a platform for online dispute resolution: https://ec.europa.eu/consumers/odr/"
-        ]
       },
       {
         title: "Consumer Dispute Resolution",
@@ -531,7 +511,7 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
         title: "1. Verantwortlicher",
         paragraphs: [
           "Machinco GmbH, Plaentschweg 13, 81247 Muenchen, Deutschland",
-          "E-Mail: info@machincogmbh.de, Telefon: +49 (0)163 0133066"
+          "E-Mail: info@machincogmbh.com, Telefon: +49 (0)163 0133066"
         ]
       },
       {
@@ -598,7 +578,7 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
       },
       {
         title: "10. Stand",
-        paragraphs: ["Stand dieser Datenschutzerklaerung: Mai 2026"]
+        paragraphs: ["Stand dieser Datenschutzerklaerung: November 2026"]
       }
     ]
   },
@@ -614,7 +594,7 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
         title: "1. Controller",
         paragraphs: [
           "Machinco GmbH, Plaentschweg 13, 81247 Munich, Germany",
-          "Email: info@machincogmbh.de, Phone: +49 (0)163 0133066"
+          "Email: info@machincogmbh.com, Phone: +49 (0)163 0133066"
         ]
       },
       {
@@ -681,7 +661,7 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
       },
       {
         title: "10. Last Updated",
-        paragraphs: ["Last updated: May 2026"]
+        paragraphs: ["Last updated: November 2026"]
       }
     ]
   }
