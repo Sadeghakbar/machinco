@@ -916,6 +916,149 @@ const productCatalog: ProductDefinition[] = [
         ctaLabel: "Request a Quote"
       }
     }
+  },
+  {
+    id: "pontiggia-h-600-x-5000",
+    slug: "pontiggia-h-600-x-5000",
+    category: {
+      de: "Schwerdrehmaschine",
+      en: "Heavy-duty lathe"
+    },
+    reference: "H 600 x 5000",
+    brand: "Leopoldo Pontiggia",
+    year: 1969,
+    featured: true,
+    status: "sold",
+    heroImage: "/machines/pontiggia-h-600-x-5000/main-pic.png",
+    galleryMedia: [
+      { src: "/machines/pontiggia-h-600-x-5000/main-pic.png", type: "image" },
+      { src: "/machines/pontiggia-h-600-x-5000/img-01.jpg", type: "image" },
+      { src: "/machines/pontiggia-h-600-x-5000/img-02.jpg", type: "image" },
+      { src: "/machines/pontiggia-h-600-x-5000/img-03.jpg", type: "image" },
+      { src: "/machines/pontiggia-h-600-x-5000/img-04.jpg", type: "image" },
+      { src: "/machines/pontiggia-h-600-x-5000/img-05.jpg", type: "image" },
+      { src: "/machines/pontiggia-h-600-x-5000/img-06.jpg", type: "image" }
+    ],
+    locale: {
+      de: {
+        title: "1969 Leopoldo Pontiggia H 600 x 5000 Schwer\u00ADdreh\u00ADmaschine",
+        summary:
+          "Konventionelle Schwerdrehmaschine aus italienischer Fertigung mit 5000 mm Spitzenweite, 600 mm Spitzenhöhe und großer Vierbacken-Planscheibe – für lange Wellen, Walzen und schwere Bauteile.",
+        highlights: [
+          "Spitzenweite 5000 mm, Spitzenhöhe 600 mm",
+          "Umlaufdurchmesser über Bett ca. 1200 mm",
+          "Große Vierbacken-Planscheibe mit Einzelverstellung",
+          "Massive Gussbauweise, Made in Italy (UCIMU-Plakette)"
+        ],
+        specGroups: [
+          {
+            title: "Maschinendaten",
+            specs: [
+              { label: "Hersteller", value: "Leopoldo Pontiggia (Italien)" },
+              { label: "Typ", value: "H 600 x 5000" },
+              { label: "Maschinennummer", value: "2071169" },
+              { label: "Baujahr", value: "1969" },
+              { label: "Herkunft", value: "Made in Italy (UCIMU-Plakette)" }
+            ]
+          },
+          {
+            title: "Arbeitsbereich",
+            specs: [
+              { label: "Spitzenweite", value: "5000 mm" },
+              { label: "Spitzenhöhe", value: "600 mm" },
+              { label: "Umlaufdurchmesser über Bett", value: "ca. 1200 mm" }
+            ]
+          },
+          {
+            title: "Ausstattung",
+            specs: [
+              { label: "Spannmittel", value: "Vierbacken-Planscheibe mit Einzelverstellung" },
+              { label: "Planscheiben-Ø", value: "ca. 1000 - 1200 mm (geschätzt)" }
+            ]
+          },
+          {
+            title: "Typische Modelldaten (Richtwerte)",
+            specs: [
+              { label: "Hauptantrieb", value: "ca. 26 kW (35 PS)" },
+              { label: "Spindeldrehzahlen", value: "18 Stufen, 7 - 662 U/min" }
+            ]
+          }
+        ],
+        dimensions: [
+          { label: "Länge", value: "ca. 7,5 - 8,5 m (geschätzt)" },
+          { label: "Breite", value: "ca. 1,5 - 2 m (geschätzt)" },
+          { label: "Höhe", value: "ca. 2 m (geschätzt)" },
+          { label: "Transportgewicht", value: "ca. 12 - 18 t (geschätzt)" }
+        ],
+        applications: [
+          "Lange Wellen",
+          "Industriewalzen",
+          "Schwere Bauteile für Stahlindustrie, Öl- und Gasindustrie sowie Schiffbau"
+        ],
+        ctaTitle: "Leopoldo Pontiggia H 600 x 5000 anfragen",
+        ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
+        ctaLabel: "Jetzt Angebot anfordern"
+      },
+      en: {
+        title: "1969 Leopoldo Pontiggia H 600 x 5000 Heavy-Duty Lathe",
+        summary:
+          "Italian-built conventional heavy-duty lathe with 5000 mm between centres, 600 mm centre height and a large 4-jaw independent chuck – for long shafts, rolls and heavy components.",
+        highlights: [
+          "5000 mm between centres, 600 mm centre height",
+          "Swing over bed approx. 1200 mm",
+          "Large 4-jaw independent chuck",
+          "Heavy cast-iron construction, made in Italy (UCIMU plate)"
+        ],
+        specGroups: [
+          {
+            title: "Machine data",
+            specs: [
+              { label: "Brand", value: "Leopoldo Pontiggia (Italy)" },
+              { label: "Type", value: "H 600 x 5000" },
+              { label: "Machine number", value: "2071169" },
+              { label: "Year of build", value: "1969" },
+              { label: "Origin", value: "Made in Italy (UCIMU plate)" }
+            ]
+          },
+          {
+            title: "Working range",
+            specs: [
+              { label: "Distance between centres", value: "5000 mm" },
+              { label: "Centre height", value: "600 mm" },
+              { label: "Swing over bed", value: "approx. 1200 mm" }
+            ]
+          },
+          {
+            title: "Equipment",
+            specs: [
+              { label: "Chuck", value: "4-jaw independent chuck" },
+              { label: "Chuck diameter", value: "approx. 1000 - 1200 mm (estimated)" }
+            ]
+          },
+          {
+            title: "Typical model data (guide values)",
+            specs: [
+              { label: "Main drive", value: "approx. 26 kW (35 hp)" },
+              { label: "Spindle speeds", value: "18 steps, 7 - 662 rpm" }
+            ]
+          }
+        ],
+        dimensions: [
+          { label: "Length", value: "approx. 7.5 - 8.5 m (estimated)" },
+          { label: "Width", value: "approx. 1.5 - 2 m (estimated)" },
+          { label: "Height", value: "approx. 2 m (estimated)" },
+          { label: "Transport weight", value: "approx. 12 - 18 t (estimated)" }
+        ],
+        applications: [
+          "Long shafts",
+          "Industrial rolls",
+          "Heavy components for the steel, oil & gas and shipbuilding industries"
+        ],
+        ctaTitle: "Enquire About the Leopoldo Pontiggia H 600 x 5000",
+        ctaDescription: "Request more information or arrange a viewing of this machine.",
+        ctaLabel: "Request a Quote"
+      }
+    }
   }
 ];
 

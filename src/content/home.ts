@@ -141,6 +141,14 @@ function machineCardsDe(): HomeMachineCard[] {
       imageAlt: "UNION BFP 130/6 Horizontal-Tischbohrwerk",
       href: "/de/machines/union-bfp-130-6/",
       status: "available"
+    },
+    {
+      title: "1969 Leopoldo Pontiggia H 600 x 5000",
+      description: "Konventionelle Schwerdrehmaschine mit 5000 mm Spitzenweite, 600 mm Spitzenhöhe und Vierbacken-Planscheibe.",
+      imageSrc: "/machines/pontiggia-h-600-x-5000/main-pic.png",
+      imageAlt: "1969 Leopoldo Pontiggia H 600 x 5000 Schwerdrehmaschine",
+      href: "/de/machines/pontiggia-h-600-x-5000/",
+      status: "sold"
     }
   ]);
 }
@@ -186,6 +194,14 @@ function machineCardsEn(): HomeMachineCard[] {
       imageAlt: "UNION BFP 130/6 horizontal table-type boring mill",
       href: "/en/machines/union-bfp-130-6/",
       status: "available"
+    },
+    {
+      title: "1969 Leopoldo Pontiggia H 600 x 5000",
+      description: "Conventional heavy-duty lathe with 5000 mm between centres, 600 mm centre height, and 4-jaw chuck.",
+      imageSrc: "/machines/pontiggia-h-600-x-5000/main-pic.png",
+      imageAlt: "1969 Leopoldo Pontiggia H 600 x 5000 heavy-duty lathe",
+      href: "/en/machines/pontiggia-h-600-x-5000/",
+      status: "sold"
     }
   ]);
 }
