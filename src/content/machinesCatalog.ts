@@ -1171,6 +1171,158 @@ const productCatalog: ProductDefinition[] = [
         ctaLabel: "Request a Quote"
       }
     }
+  },
+  {
+    id: "fortuna-r26-h-3000-a-45",
+    slug: "fortuna-r26-h-3000-a-45",
+    category: {
+      de: "Rundschleifmaschine",
+      en: "Cylindrical grinding machine"
+    },
+    reference: "R26 H 3000 A 45",
+    brand: "FORTUNA",
+    year: 1976,
+    featured: true,
+    status: "sold",
+    heroImage: "/machines/fortuna-r26-h-3000-a-45/main-pic.png",
+    galleryMedia: [
+      { src: "/machines/fortuna-r26-h-3000-a-45/main-pic.png", type: "image" },
+      { src: "/machines/fortuna-r26-h-3000-a-45/img-01.jpg", type: "image" },
+      { src: "/machines/fortuna-r26-h-3000-a-45/img-02.jpg", type: "image" },
+      { src: "/machines/fortuna-r26-h-3000-a-45/img-03.jpg", type: "image" },
+      { src: "/machines/fortuna-r26-h-3000-a-45/img-04.jpg", type: "image" },
+      { src: "/machines/fortuna-r26-h-3000-a-45/img-05.jpg", type: "image" },
+      { src: "/machines/fortuna-r26-h-3000-a-45/img-06.jpg", type: "image" },
+      { src: "/machines/fortuna-r26-h-3000-a-45/img-07.jpg", type: "image" },
+      { src: "/machines/fortuna-r26-h-3000-a-45/img-08.jpg", type: "image" },
+      { src: "/machines/fortuna-r26-h-3000-a-45/img-09.jpg", type: "image" }
+    ],
+    locale: {
+      de: {
+        title: "1976 FORTUNA R26 H 3000 A 45 Rund\u00ADschleif\u00ADmaschine",
+        summary:
+          "Rundschleifmaschine für das Außenschleifen mit 3000 mm Schleiflänge, 250 mm Spitzenhöhe und Schleifscheibe Ø 750 mm – für Werkstücke bis 500 kg.",
+        highlights: [
+          "Schleiflänge 10 - 3000 mm, Spitzenhöhe 250 mm",
+          "Schleif-Ø bis 500 mm (mit Setzstock 200 mm)",
+          "Schleifscheibe Ø 750 mm, Breite bis 150 mm",
+          "Werkstückgewicht zwischen den Spitzen bis 500 kg"
+        ],
+        specGroups: [
+          {
+            title: "Maschinendaten",
+            specs: [
+              { label: "Hersteller", value: "FORTUNA" },
+              { label: "Typ", value: "R26 H 3000 A 45" },
+              { label: "Bauart", value: "Rundschleifmaschine (Außenschleifen)" },
+              { label: "Baujahr", value: "1976" }
+            ]
+          },
+          {
+            title: "Arbeitsbereich",
+            specs: [
+              { label: "Spitzenhöhe", value: "250 mm" },
+              { label: "Schleiflänge", value: "10 - 3000 mm" },
+              { label: "Größte Schleiflänge beim Einstechschleifen", value: "150 mm" },
+              { label: "Größter Schleif-Ø ohne Setzstock", value: "500 mm" },
+              { label: "Größter Schleif-Ø mit Setzstock", value: "200 mm" },
+              { label: "Werkstückgewicht zwischen den Spitzen", value: "max. 500 kg" },
+              { label: "Tischschlittenlängsweg", value: "max. 3280 mm" },
+              { label: "Spitzenkegel", value: "MK 5" }
+            ]
+          },
+          {
+            title: "Schleifscheibe",
+            specs: [
+              { label: "Durchmesser", value: "750 mm" },
+              { label: "Größte Breite", value: "150 mm" },
+              { label: "Bohrung", value: "304,8 mm" },
+              { label: "Drehzahl", value: "1500 1/min" }
+            ]
+          },
+          {
+            title: "Zubehör",
+            specs: [
+              { label: "Körnerspitzen", value: "Diverse, zum Teil unbenutzte Neuware" },
+              { label: "Tamponöler", value: "Ja" },
+              { label: "Schleifscheibenmontageschlüssel", value: "Ja" }
+            ]
+          }
+        ],
+        dimensions: [
+          { label: "Länge", value: "ca. 7586 mm" },
+          { label: "Breite", value: "ca. 2500 mm" },
+          { label: "Höhe", value: "ca. 2330 mm" },
+          { label: "Gewicht", value: "ca. 11000 kg" }
+        ],
+        applications: [],
+        ctaTitle: "FORTUNA R26 H 3000 A 45 anfragen",
+        ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
+        ctaLabel: "Jetzt Angebot anfordern"
+      },
+      en: {
+        title: "1976 FORTUNA R26 H 3000 A 45 Cylindrical Grinding Machine",
+        summary:
+          "Cylindrical grinding machine for external grinding with 3000 mm grinding length, 250 mm centre height and 750 mm grinding wheel – for workpieces up to 500 kg.",
+        highlights: [
+          "Grinding length 10 - 3000 mm, centre height 250 mm",
+          "Grinding diameter up to 500 mm (200 mm with steady rest)",
+          "Grinding wheel diameter 750 mm, width up to 150 mm",
+          "Workpiece weight between centres up to 500 kg"
+        ],
+        specGroups: [
+          {
+            title: "Machine data",
+            specs: [
+              { label: "Brand", value: "FORTUNA" },
+              { label: "Type", value: "R26 H 3000 A 45" },
+              { label: "Machine type", value: "Cylindrical grinding machine (external grinding)" },
+              { label: "Year of build", value: "1976" }
+            ]
+          },
+          {
+            title: "Working range",
+            specs: [
+              { label: "Centre height", value: "250 mm" },
+              { label: "Grinding length", value: "10 - 3000 mm" },
+              { label: "Max. plunge grinding length", value: "150 mm" },
+              { label: "Max. grinding diameter without steady rest", value: "500 mm" },
+              { label: "Max. grinding diameter with steady rest", value: "200 mm" },
+              { label: "Workpiece weight between centres", value: "max. 500 kg" },
+              { label: "Longitudinal table travel", value: "max. 3280 mm" },
+              { label: "Centre taper", value: "MT 5" }
+            ]
+          },
+          {
+            title: "Grinding wheel",
+            specs: [
+              { label: "Diameter", value: "750 mm" },
+              { label: "Max. width", value: "150 mm" },
+              { label: "Bore", value: "304.8 mm" },
+              { label: "Speed", value: "1500 rpm" }
+            ]
+          },
+          {
+            title: "Accessories",
+            specs: [
+              { label: "Centres", value: "Various, partly unused new parts" },
+              { label: "Pad oiler", value: "Yes" },
+              { label: "Grinding wheel mounting wrench", value: "Yes" }
+            ]
+          }
+        ],
+        dimensions: [
+          { label: "Length", value: "approx. 7586 mm" },
+          { label: "Width", value: "approx. 2500 mm" },
+          { label: "Height", value: "approx. 2330 mm" },
+          { label: "Weight", value: "approx. 11000 kg" }
+        ],
+        applications: [],
+        ctaTitle: "Enquire About the FORTUNA R26 H 3000 A 45",
+        ctaDescription: "Request more information or arrange a viewing of this machine.",
+        ctaLabel: "Request a Quote"
+      }
+    }
   }
 ];
 

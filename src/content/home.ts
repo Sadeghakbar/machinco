@@ -157,6 +157,14 @@ function machineCardsDe(): HomeMachineCard[] {
       imageAlt: "1998 AMADA Promecam ITPS 80-25 Abkantpresse",
       href: "/de/machines/amada-promecam-itps-80-25/",
       status: "sold"
+    },
+    {
+      title: "1976 FORTUNA R26 H 3000 A 45",
+      description: "Rundschleifmaschine mit 3000 mm Schleiflänge, 250 mm Spitzenhöhe und Schleifscheibe Ø 750 mm.",
+      imageSrc: "/machines/fortuna-r26-h-3000-a-45/main-pic.png",
+      imageAlt: "1976 FORTUNA R26 H 3000 A 45 Rundschleifmaschine",
+      href: "/de/machines/fortuna-r26-h-3000-a-45/",
+      status: "sold"
     }
   ]);
 }
@@ -217,6 +225,14 @@ function machineCardsEn(): HomeMachineCard[] {
       imageSrc: "/machines/amada-promecam-itps-80-25/main-pic.png",
       imageAlt: "1998 AMADA Promecam ITPS 80-25 press brake",
       href: "/en/machines/amada-promecam-itps-80-25/",
+      status: "sold"
+    },
+    {
+      title: "1976 FORTUNA R26 H 3000 A 45",
+      description: "Cylindrical grinding machine with 3000 mm grinding length, 250 mm centre height, and 750 mm wheel.",
+      imageSrc: "/machines/fortuna-r26-h-3000-a-45/main-pic.png",
+      imageAlt: "1976 FORTUNA R26 H 3000 A 45 cylindrical grinding machine",
+      href: "/en/machines/fortuna-r26-h-3000-a-45/",
       status: "sold"
     }
   ]);
