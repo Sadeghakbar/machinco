@@ -47,21 +47,21 @@ export type LegalPageContent = {
 const blogIndexByLocale: Record<Locale, BlogIndexContent> = {
   de: {
     hero: {
-      title: "Ratgeber fuer industrielle Maschinenentscheidungen",
+      title: "Ratgeber für industrielle Maschinenentscheidungen",
       description:
-        "Praxisnahe Inhalte fuer technische Entscheider mit Fokus auf Prozesssicherheit, Wirtschaftlichkeit und Umsetzbarkeit."
+        "Praxisnahe Inhalte für technische Entscheider mit Fokus auf Prozesssicherheit, Wirtschaftlichkeit und Umsetzbarkeit."
     },
     cards: [
       {
         badge: "Artikel",
-        title: "Welche Maschine ist die richtige fuer mein Unternehmen?",
-        description: "Entscheidungshilfe nach Werkstoff, Stueckzahl, Toleranz und Automatisierungsgrad.",
+        title: "Welche Maschine ist die richtige für mein Unternehmen?",
+        description: "Entscheidungshilfe nach Werkstoff, Stückzahl, Toleranz und Automatisierungsgrad.",
         href: getPathForRouteKey("de", "blog.machine-selection"),
         cta: "Artikel lesen"
       },
       {
         badge: "Artikel",
-        title: "Kosten von Industriemaschinen im Ueberblick",
+        title: "Kosten von Industriemaschinen im Überblick",
         description: "Von Investition bis Betrieb: Welche Kostenfaktoren wirklich entscheidend sind.",
         href: getPathForRouteKey("de", "blog.industrial-machine-costs"),
         cta: "Artikel lesen"
@@ -69,7 +69,7 @@ const blogIndexByLocale: Record<Locale, BlogIndexContent> = {
       {
         badge: "Artikel",
         title: "Tipps zur Auswahl der richtigen Schleifmaschine",
-        description: "Konkrete Kriterien fuer eine sichere Entscheidung ohne teure Fehlinvestitionen.",
+        description: "Konkrete Kriterien für eine sichere Entscheidung ohne teure Fehlinvestitionen.",
         href: getPathForRouteKey("de", "blog.grinding-machine-selection-tips"),
         cta: "Artikel lesen"
       }
@@ -116,25 +116,25 @@ const blogArticleByLocale: Record<Locale, Record<string, BlogArticleContent>> = 
   de: {
     "machine-selection": {
       hero: {
-        title: "Welche Maschine ist die richtige fuer mein Unternehmen?",
+        title: "Welche Maschine ist die richtige für mein Unternehmen?",
         description:
-          "Die richtige Wahl entscheidet ueber Qualitaet, Durchsatz und Kosten je Bauteil. Dieser Leitfaden zeigt, worauf es ankommt."
+          "Die richtige Wahl entscheidet über Qualität, Durchsatz und Kosten je Bauteil. Dieser Leitfaden zeigt, worauf es ankommt."
       },
       sections: [
         {
-          title: "1. Werkstoff und Bauteilgeometrie zuerst klaeren",
+          title: "1. Werkstoff und Bauteilgeometrie zuerst klären",
           paragraphs: [
-            "Materialverhalten, Kantenanforderungen und Oberflaechenguete bestimmen die technische Grundrichtung Ihrer Maschinenwahl."
+            "Materialverhalten, Kantenanforderungen und Oberflächengüte bestimmen die technische Grundrichtung Ihrer Maschinenwahl."
           ]
         },
         {
-          title: "2. Stueckzahl und Schichtmodell beruecksichtigen",
+          title: "2. Stückzahl und Schichtmodell berücksichtigen",
           paragraphs: [
-            "Ob Prototypen, Kleinserie oder hoher Ausstoss: Die Auslegung muss zu Ihrem realen Lastprofil passen."
+            "Ob Prototypen, Kleinserie oder hoher Ausstoß: Die Auslegung muss zu Ihrem realen Lastprofil passen."
           ]
         },
         {
-          title: "3. Qualitaetsziele messbar machen",
+          title: "3. Qualitätsziele messbar machen",
           paragraphs: [
             "Nur mit konkreten Zielwerten zu Toleranz, Rauheit und Wiederholgenauigkeit werden Angebote belastbar vergleichbar."
           ]
@@ -142,27 +142,27 @@ const blogArticleByLocale: Record<Locale, Record<string, BlogArticleContent>> = 
         {
           title: "4. Gesamtkosten statt Anschaffungspreis betrachten",
           paragraphs: [
-            "Energie, Wartung, Ruestzeiten und Ausschuss beeinflussen die Wirtschaftlichkeit oft staerker als der reine Kaufpreis."
+            "Energie, Wartung, Rüstzeiten und Ausschuss beeinflussen die Wirtschaftlichkeit oft stärker als der reine Kaufpreis."
           ]
         },
         {
           title: "Fazit",
           paragraphs: [
-            "Die passende Maschine erfuellt Ihre technischen Anforderungen und verbessert gleichzeitig Ihre Wirtschaftlichkeit."
+            "Die passende Maschine erfüllt Ihre technischen Anforderungen und verbessert gleichzeitig Ihre Wirtschaftlichkeit."
           ]
         }
       ],
       ctaPanel: {
         title: "Sie wollen eine fundierte Empfehlung?",
-        cta: "Kostenlose Beratung sichern",
+        cta: "Kontakt aufnehmen",
         href: getPathForRouteKey("de", "contact")
       }
     },
     "industrial-machine-costs": {
       hero: {
-        title: "Kosten von Industriemaschinen im Ueberblick",
+        title: "Kosten von Industriemaschinen im Überblick",
         description:
-          "Wer nur den Kaufpreis vergleicht, uebersieht oft die groessten Kostentreiber im laufenden Betrieb."
+          "Wer nur den Kaufpreis vergleicht, übersieht oft die größten Kostentreiber im laufenden Betrieb."
       },
       sections: [
         {
@@ -174,23 +174,23 @@ const blogArticleByLocale: Record<Locale, Record<string, BlogArticleContent>> = 
         {
           title: "2. Integrationskosten",
           paragraphs: [
-            "Transport, Installation, Inbetriebnahme und Schulung muessen von Anfang an in die Bewertung einfliessen."
+            "Transport, Installation, Inbetriebnahme und Schulung müssen von Anfang an in die Bewertung einfließen."
           ]
         },
         {
           title: "3. Betriebskosten",
           paragraphs: [
-            "Energiebedarf, Verschleissteile und Bedienaufwand beeinflussen die Kosten je Teil taeglich."
+            "Energiebedarf, Verschleißteile und Bedienaufwand beeinflussen die Kosten je Teil täglich."
           ]
         },
         {
-          title: "4. Wartung und Verfuegbarkeit",
+          title: "4. Wartung und Verfügbarkeit",
           paragraphs: [
-            "Stillstandskosten sind in vielen Betrieben der teuerste Faktor - Servicefaehigkeit ist deshalb entscheidend."
+            "Stillstandskosten sind in vielen Betrieben der teuerste Faktor - Servicefähigkeit ist deshalb entscheidend."
           ]
         },
         {
-          title: "5. Qualitaetskosten",
+          title: "5. Qualitätskosten",
           paragraphs: [
             "Ausschuss, Nacharbeit und Reklamationen wirken direkt auf Ihre Marge und Lieferperformance."
           ]
@@ -198,7 +198,7 @@ const blogArticleByLocale: Record<Locale, Record<string, BlogArticleContent>> = 
         {
           title: "Fazit",
           paragraphs: [
-            "Vergleichen Sie Loesungen auf Basis der Gesamtkosten ueber die geplante Nutzungsdauer, nicht nur auf den Kaufpreis."
+            "Vergleichen Sie Lösungen auf Basis der Gesamtkosten über die geplante Nutzungsdauer, nicht nur auf den Kaufpreis."
           ]
         }
       ],
@@ -212,49 +212,49 @@ const blogArticleByLocale: Record<Locale, Record<string, BlogArticleContent>> = 
       hero: {
         title: "Tipps zur Auswahl der richtigen Schleifmaschine",
         description:
-          "Mit einer strukturierten Bewertung vermeiden Sie Fehlentscheidungen und sichern langfristig Produktivitaet und Qualitaet."
+          "Mit einer strukturierten Bewertung vermeiden Sie Fehlentscheidungen und sichern langfristig Produktivität und Qualität."
       },
       sections: [
         {
           title: "1. Anforderungen klar priorisieren",
           paragraphs: [
-            "Definieren Sie frueh, ob Taktzeit, Oberflaechenguete, Flexibilitaet oder Automatisierung im Vordergrund steht."
+            "Definieren Sie früh, ob Taktzeit, Oberflächengüte, Flexibilität oder Automatisierung im Vordergrund steht."
           ]
         },
         {
           title: "2. Prozesskette als Ganzes betrachten",
           paragraphs: [
-            "Die Maschine muss zu vor- und nachgelagerten Schritten passen, damit keine neuen Engpaesse entstehen."
+            "Die Maschine muss zu vor- und nachgelagerten Schritten passen, damit keine neuen Engpässe entstehen."
           ]
         },
         {
-          title: "3. Bedienbarkeit und Ruestzeiten pruefen",
+          title: "3. Bedienbarkeit und Rüstzeiten prüfen",
           paragraphs: [
-            "Kurze Umruestung und klare Bedienkonzepte senken Fehlerquoten und steigern die Tagesleistung."
+            "Kurze Umrüstung und klare Bedienkonzepte senken Fehlerquoten und steigern die Tagesleistung."
           ]
         },
         {
           title: "4. Service und Ersatzteile absichern",
           paragraphs: [
-            "Verfuegbare Teile und schnelle Reaktionszeiten sind entscheidend fuer Betriebssicherheit im Schichtbetrieb."
+            "Verfügbare Teile und schnelle Reaktionszeiten sind entscheidend für Betriebssicherheit im Schichtbetrieb."
           ]
         },
         {
-          title: "5. Zukunftsfaehigkeit einplanen",
+          title: "5. Zukunftsfähigkeit einplanen",
           paragraphs: [
-            "Planen Sie Reserven fuer wachsende Stueckzahlen, neue Bauteile und moegliche Automatisierung."
+            "Planen Sie Reserven für wachsende Stückzahlen, neue Bauteile und mögliche Automatisierung."
           ]
         },
         {
           title: "Fazit",
           paragraphs: [
-            "Die richtige Schleifmaschine verbessert nicht nur die Oberflaechenqualitaet, sondern staerkt nachhaltig Ihre Wettbewerbsfaehigkeit."
+            "Die richtige Schleifmaschine verbessert nicht nur die Oberflächenqualität, sondern stärkt nachhaltig Ihre Wettbewerbsfähigkeit."
           ]
         }
       ],
       ctaPanel: {
-        title: "Technische Auswahlhilfe fuer Ihr Team",
-        cta: "Kostenlose Beratung sichern",
+        title: "Technische Auswahlhilfe für Ihr Team",
+        cta: "Kontakt aufnehmen",
         href: getPathForRouteKey("de", "contact")
       }
     }
@@ -300,7 +300,7 @@ const blogArticleByLocale: Record<Locale, Record<string, BlogArticleContent>> = 
       ],
       ctaPanel: {
         title: "Need a technical recommendation?",
-        cta: "Book a Free Consultation",
+        cta: "Contact us",
         href: getPathForRouteKey("en", "contact")
       }
     },
@@ -385,7 +385,7 @@ const blogArticleByLocale: Record<Locale, Record<string, BlogArticleContent>> = 
       ],
       ctaPanel: {
         title: "Need support with technical selection?",
-        cta: "Book a Free Consultation",
+        cta: "Contact us",
         href: getPathForRouteKey("en", "contact")
       }
     }
@@ -396,13 +396,13 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
   de: {
     hero: {
       title: "Impressum",
-      description: "Angaben gemaess den gesetzlichen Informationspflichten in Deutschland."
+      description: "Angaben gemäß den gesetzlichen Informationspflichten in Deutschland."
     },
-    legalNote: "Hinweis: Die englische Impressumsseite ist eine Orientierungsuebersetzung.",
+    legalNote: "Hinweis: Die englische Impressumsseite ist eine Orientierungsübersetzung.",
     sections: [
       {
-        title: "Angaben gemaess § 5 DDG",
-        paragraphs: ["Machinco GmbH", "Plaentschweg 13", "81247 Muenchen", "Deutschland"]
+        title: "Angaben gemäß § 5 DDG",
+        paragraphs: ["Machinco GmbH", "Pläntschweg 13", "81247 München", "Deutschland"]
       },
       {
         title: "Hauptstandort & Lager",
@@ -410,7 +410,7 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
       },
       {
         title: "Vertreten durch",
-        paragraphs: ["Geschaeftsfuehrer: Mohammad Sadegh Akbar"]
+        paragraphs: ["Geschäftsführer: Mohammad Sadegh Akbar"]
       },
       {
         title: "Kontakt",
@@ -424,16 +424,16 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
         title: "Registereintrag",
         paragraphs: [
           "Eintragung im Handelsregister",
-          "Registergericht: Amtsgericht Muenchen",
+          "Registergericht: Amtsgericht München",
           "Registernummer: HRB 289032"
         ]
       },
       {
         title: "Umsatzsteuer-ID",
-        paragraphs: ["Umsatzsteuer-Identifikationsnummer gemaess § 27 a Umsatzsteuergesetz: DE407250572"]
+        paragraphs: ["Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE407250572"]
       },
       {
-        title: "Inhaltlich verantwortlich gemaess § 18 Abs. 2 MStV",
+        title: "Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV",
         paragraphs: ["Mohammad Sadegh Akbar, Anschrift wie oben"]
       },
       {
@@ -454,7 +454,7 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
     sections: [
       {
         title: "Information according to § 5 DDG",
-        paragraphs: ["Machinco GmbH", "Plaentschweg 13", "81247 Munich", "Germany"]
+        paragraphs: ["Machinco GmbH", "Pläntschweg 13", "81247 Munich", "Germany"]
       },
       {
         title: "Main Warehouse & Business Location",
@@ -476,7 +476,7 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
         title: "Register Entry",
         paragraphs: [
           "Entry in the commercial register",
-          "Register court: Amtsgericht Muenchen",
+          "Register court: Amtsgericht München",
           "Register number: HRB 289032"
         ]
       },
@@ -501,7 +501,7 @@ const imprintByLocale: Record<Locale, LegalPageContent> = {
 const privacyByLocale: Record<Locale, LegalPageContent> = {
   de: {
     hero: {
-      title: "Datenschutzerklaerung",
+      title: "Datenschutzerklärung",
       description: "Informationen zur Verarbeitung personenbezogener Daten nach DSGVO und BDSG."
     },
     legalNote:
@@ -510,7 +510,7 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
       {
         title: "1. Verantwortlicher",
         paragraphs: [
-          "Machinco GmbH, Plaentschweg 13, 81247 Muenchen, Deutschland",
+          "Machinco GmbH, Pläntschweg 13, 81247 München, Deutschland",
           "E-Mail: info@machincogmbh.com, Telefon: +49 (0)163 0133066"
         ]
       },
@@ -518,23 +518,23 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
         title: "2. Allgemeine Hinweise",
         paragraphs: [
           "Wir verarbeiten personenbezogene Daten nur im erforderlichen Umfang und auf Grundlage der DSGVO sowie des BDSG.",
-          "Diese Erklaerung beschreibt den aktuellen Stand unserer Website unter www.machinco.de (statische Auslieferung, ohne Webanalyse- oder Werbe-Tracking beim Seitenaufruf)."
+          "Diese Erklärung beschreibt den aktuellen Stand unserer Website unter www.machinco.de (statische Auslieferung, ohne Webanalyse- oder Werbe-Tracking beim Seitenaufruf)."
         ]
       },
       {
         title: "3. Hosting und Server-Logfiles",
         paragraphs: [
-          "Die Website wird als statische Seite ueber GitHub Pages bereitgestellt. Beim Aufruf koennen beim Hosting-Anbieter technisch erforderliche Verbindungsdaten verarbeitet werden (z. B. IP-Adresse, Datum/Uhrzeit, aufgerufene URL, Browser- und Geraeteinformationen).",
-          "Anbieter: GitHub, Inc. (bzw. die fuer GitHub Pages eingesetzte Infrastruktur, u. a. Microsoft).",
+          "Die Website wird als statische Seite über GitHub Pages bereitgestellt. Beim Aufruf können beim Hosting-Anbieter technisch erforderliche Verbindungsdaten verarbeitet werden (z. B. IP-Adresse, Datum/Uhrzeit, aufgerufene URL, Browser- und Geräteinformationen).",
+          "Anbieter: GitHub, Inc. (bzw. die für GitHub Pages eingesetzte Infrastruktur, u. a. Microsoft).",
           "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren und stabilen Webauftritt)."
         ]
       },
       {
         title: "4. Kontaktformulare und Anfragen",
         paragraphs: [
-          "Wenn Sie uns ueber ein Formular auf der Website kontaktieren, verarbeiten wir die von Ihnen eingegebenen Daten (z. B. Name, E-Mail, Telefon, Unternehmen, Nachricht, ggf. Produktbezug) zur Bearbeitung Ihrer Anfrage.",
-          "Die Uebermittlung erfolgt an unseren Formular-Dienst Web3Forms (api.web3forms.com). Die Verarbeitung startet erst, wenn Sie das Formular absenden.",
-          "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Massnahmen bzw. Anbahnung) und Art. 6 Abs. 1 lit. f DSGVO.",
+          "Wenn Sie uns über ein Formular auf der Website kontaktieren, verarbeiten wir die von Ihnen eingegebenen Daten (z. B. Name, E-Mail, Telefon, Unternehmen, Nachricht, ggf. Produktbezug) zur Bearbeitung Ihrer Anfrage.",
+          "Die Übermittlung erfolgt an unseren Formular-Dienst Web3Forms (api.web3forms.com). Die Verarbeitung startet erst, wenn Sie das Formular absenden.",
+          "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen bzw. Anbahnung) und Art. 6 Abs. 1 lit. f DSGVO.",
           "Bei Kontakt per E-Mail oder Telefon gelten die gleichen Zwecke und Speicherfristen entsprechend dem jeweiligen Kommunikationskanal."
         ]
       },
@@ -542,43 +542,43 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
         title: "5. Cookies und lokale Speicherung",
         paragraphs: [
           "Beim reinen Besuch der Website setzen wir derzeit keine Cookies zu Statistik- oder Marketingzwecken ein.",
-          "Fuer den Betrieb der Website sind keine optionalen Tracking-Cookies erforderlich. Sollten wir kuenftig Analyse- oder Marketing-Tools einsetzen, werden diese erst nach Ihrer Einwilligung aktiviert und in dieser Datenschutzerklaerung sowie ueber ein Cookie-Banner dokumentiert.",
-          "Rechtsgrundlage fuer kuenftige optionale Cookies: Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG."
+          "Für den Betrieb der Website sind keine optionalen Tracking-Cookies erforderlich. Sollten wir künftig Analyse- oder Marketing-Tools einsetzen, werden diese erst nach Ihrer Einwilligung aktiviert und in dieser Datenschutzerklärung sowie über ein Cookie-Banner dokumentiert.",
+          "Rechtsgrundlage für künftige optionale Cookies: Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG."
         ]
       },
       {
-        title: "6. Empfaenger und Auftragsverarbeitung",
+        title: "6. Empfänger und Auftragsverarbeitung",
         paragraphs: [
-          "Wir setzen Dienstleister fuer Hosting (GitHub Pages) und Formularverarbeitung (Web3Forms) ein. Diese verarbeiten Daten ggf. in unserem Auftrag. Mit Auftragsverarbeitern schliessen wir Vertraege gemaess Art. 28 DSGVO, soweit erforderlich.",
-          "Eine Uebermittlung in Drittlaender kann bei Cloud-Dienstleistern nicht ausgeschlossen werden. In diesem Fall erfolgt sie nur unter den Voraussetzungen der Art. 44 ff. DSGVO (z. B. Standardvertragsklauseln).",
-          "Google Maps: Auf unserer Kontaktseite koennen Sie eine Karte unseres Standorts in Gablingen anzeigen. Die Karte des Anbieters Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, wird erst geladen, wenn Sie auf \"Karte laden\" klicken. Erst dann werden Daten wie Ihre IP-Adresse an Google uebermittelt und ggf. in den USA verarbeitet. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG), die Sie durch Neuladen der Seite jederzeit fuer die Zukunft beenden koennen. Links \"In Google Maps oeffnen\" fuehren direkt zu Google; dort gelten die Datenschutzhinweise von Google (https://policies.google.com/privacy)."
+          "Wir setzen Dienstleister für Hosting (GitHub Pages) und Formularverarbeitung (Web3Forms) ein. Diese verarbeiten Daten ggf. in unserem Auftrag. Mit Auftragsverarbeitern schließen wir Verträge gemäß Art. 28 DSGVO, soweit erforderlich.",
+          "Eine Übermittlung in Drittländer kann bei Cloud-Dienstleistern nicht ausgeschlossen werden. In diesem Fall erfolgt sie nur unter den Voraussetzungen der Art. 44 ff. DSGVO (z. B. Standardvertragsklauseln).",
+          "Google Maps: Auf unserer Kontaktseite können Sie eine Karte unseres Standorts in Gablingen anzeigen. Die Karte des Anbieters Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, wird erst geladen, wenn Sie auf \"Karte laden\" klicken. Erst dann werden Daten wie Ihre IP-Adresse an Google übermittelt und ggf. in den USA verarbeitet. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG), die Sie durch Neuladen der Seite jederzeit für die Zukunft beenden können. Wenn Sie die Option \"Karte auf diesem Gerät künftig automatisch laden\" wählen, speichern wir diese Entscheidung ausschließlich lokal in Ihrem Browser (localStorage); Sie können sie jederzeit über \"Automatisches Laden der Karte beenden\" auf der Kontaktseite oder durch Löschen Ihrer Browserdaten widerrufen. Links \"In Google Maps öffnen\" führen direkt zu Google; dort gelten die Datenschutzhinweise von Google (https://policies.google.com/privacy)."
         ]
       },
       {
         title: "7. Speicherdauer",
         paragraphs: [
-          "Anfragen aus Formularen und E-Mails speichern wir nur so lange, wie es fuer die Bearbeitung, Nachverfolgung und ggf. gesetzliche Aufbewahrungspflichten erforderlich ist.",
-          "Hosting-Logdaten werden durch den Anbieter nach dessen Richtlinien fuer einen begrenzten Zeitraum vorgehalten."
+          "Anfragen aus Formularen und E-Mails speichern wir nur so lange, wie es für die Bearbeitung, Nachverfolgung und ggf. gesetzliche Aufbewahrungspflichten erforderlich ist.",
+          "Hosting-Logdaten werden durch den Anbieter nach dessen Richtlinien für einen begrenzten Zeitraum vorgehalten."
         ]
       },
       {
         title: "8. Ihre Rechte",
         paragraphs: [
-          "Sie haben das Recht auf Auskunft, Berichtigung, Loeschung, Einschraenkung der Verarbeitung, Datenuebertragbarkeit und Widerspruch gegen Verarbeitungen auf Basis von Art. 6 Abs. 1 lit. f DSGVO.",
-          "Sie koennen eine erteilte Einwilligung jederzeit mit Wirkung fuer die Zukunft widerrufen.",
-          "Sie haben das Recht auf Beschwerde bei einer Aufsichtsbehoerde, z. B. beim Bayerischen Landesamt fuer Datenschutzaufsicht."
+          "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gegen Verarbeitungen auf Basis von Art. 6 Abs. 1 lit. f DSGVO.",
+          "Sie können eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.",
+          "Sie haben das Recht auf Beschwerde bei einer Aufsichtsbehörde, z. B. beim Bayerischen Landesamt für Datenschutzaufsicht."
         ]
       },
       {
-        title: "9. Aenderungen",
+        title: "9. Änderungen",
         paragraphs: [
-          "Wir passen diese Datenschutzerklaerung an, wenn sich unsere Website, eingesetzte Dienste oder rechtliche Anforderungen aendern.",
+          "Wir passen diese Datenschutzerklärung an, wenn sich unsere Website, eingesetzte Dienste oder rechtliche Anforderungen ändern.",
           "Vor Aktivierung von Webanalyse, Remarketing oder vergleichbaren Diensten aktualisieren wir diese Seite und implementieren ein Opt-in-Cookie-Banner."
         ]
       },
       {
         title: "10. Stand",
-        paragraphs: ["Stand dieser Datenschutzerklaerung: November 2026"]
+        paragraphs: ["Stand dieser Datenschutzerklärung: November 2026"]
       }
     ]
   },
@@ -593,7 +593,7 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
       {
         title: "1. Controller",
         paragraphs: [
-          "Machinco GmbH, Plaentschweg 13, 81247 Munich, Germany",
+          "Machinco GmbH, Pläntschweg 13, 81247 Munich, Germany",
           "Email: info@machincogmbh.com, Phone: +49 (0)163 0133066"
         ]
       },
@@ -634,7 +634,7 @@ const privacyByLocale: Record<Locale, LegalPageContent> = {
         paragraphs: [
           "We use service providers for hosting (GitHub Pages) and form processing (Web3Forms). They may process data on our behalf. We conclude data processing agreements under Art. 28 GDPR where required.",
           "Transfers to third countries cannot be ruled out for cloud services and take place only under Art. 44 et seq. GDPR (e.g., standard contractual clauses).",
-          "Google Maps: On our contact page you can display a map of our Gablingen location. The map, provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, is only loaded after you click \"Load map\". Only then is data such as your IP address transmitted to Google and possibly processed in the USA. The legal basis is your consent (Art. 6(1)(a) GDPR, Section 25(1) TDDDG), which you can end at any time for the future by reloading the page. \"Open in Google Maps\" links take you directly to Google, where Google's privacy policy applies (https://policies.google.com/privacy)."
+          "Google Maps: On our contact page you can display a map of our Gablingen location. The map, provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, is only loaded after you click \"Load map\". Only then is data such as your IP address transmitted to Google and possibly processed in the USA. The legal basis is your consent (Art. 6(1)(a) GDPR, Section 25(1) TDDDG), which you can end at any time for the future by reloading the page. If you choose \"Load the map automatically on this device in future\", this choice is stored only locally in your browser (localStorage); you can withdraw it at any time via \"Stop loading the map automatically\" on the contact page or by clearing your browser data. \"Open in Google Maps\" links take you directly to Google, where Google's privacy policy applies (https://policies.google.com/privacy)."
         ]
       },
       {

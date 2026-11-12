@@ -26,25 +26,19 @@ export function MachinesIndexPage({ content, locale }: MachinesIndexPageProps) {
             {content.products.map((product) => (
               <div key={product.id} className="col-md-4 col-sm-6">
                 <article className="product-card">
-                  <Link href={product.href} className="product-card-image-link">
+                  <Link href={product.href} className="product-card-image-link machine-card-media">
                     <img
                       src={product.heroImage}
                       alt={product.title}
+                      loading="lazy"
+                      decoding="async"
                       className="product-card-image"
                     />
+                    <span className={`product-status product-status-${product.status}`}>
+                      {content.statusLabels[product.status]}
+                    </span>
                   </Link>
                   <div className="product-card-body">
-                    <div className="product-card-badges">
-                      <span className="inline-badge">{content.listingBadge}</span>
-                      {product.featured ? (
-                        <span className="inline-badge product-badge-featured">
-                          {content.featuredBadge}
-                        </span>
-                      ) : null}
-                      <span className={`product-status product-status-${product.status}`}>
-                        {content.statusLabels[product.status]}
-                      </span>
-                    </div>
                     <h3>
                       <Link href={product.href}>{product.title}</Link>
                     </h3>

@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: MachineDetailPageProps): Prom
     return {};
   }
 
-  return buildMachineMetadata(locale as Locale, machineSlug, content.summary);
+  return buildMachineMetadata(locale as Locale, machineSlug, content.summary, content.title, content.heroImage);
 }
 
 export default async function MachineDetailPage({ params }: MachineDetailPageProps) {

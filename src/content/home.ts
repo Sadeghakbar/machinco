@@ -12,12 +12,20 @@ type HomeMachineCard = {
   status: ProductStatus;
 };
 
+export type HomeServiceItem = {
+  icon: string;
+  title: string;
+  description: string;
+};
+
 export type HomeContent = {
-  inquiryId: string;
   labels: {
     learnMore: string;
+    statusAvailable: string;
+    statusSold: string;
   };
   hero: {
+    eyebrow: string;
     title: string;
     description: string;
     videoFallbackText: string;
@@ -25,49 +33,28 @@ export type HomeContent = {
     secondaryCta: string;
     proofPoints: string[];
   };
-  advantages: {
+  services: {
+    eyebrow: string;
     title: string;
     description: string;
-    items: Array<{ title: string; description: string }>;
+    items: HomeServiceItem[];
+    cta: string;
   };
   machines: {
+    eyebrow: string;
     title: string;
     description: string;
     cards: HomeMachineCard[];
-  };
-  stats: {
-    title: string;
-    description: string;
-    values: Array<{ value: number; label: string }>;
-    badges: string[];
-  };
-  testimonials: {
-    title: string;
-    description: string;
-    items: Array<{ quote: string; role: string; company: string }>;
-  };
-  about: {
-    title: string;
-    lead: string;
-    imageAlt: string;
-    imageCaption: string;
-    heading: string;
-    paragraphs: string[];
     cta: string;
   };
-  quickInquiry: {
+  about: {
+    eyebrow: string;
     title: string;
-    description: string;
-    subject: string;
-    privacyConsent: PrivacyConsentCopy;
-    placeholders: {
-      name: string;
-      email: string;
-      phone: string;
-      company: string;
-      message: string;
-    };
-    submitCta: string;
+    imageSrc: string;
+    imageAlt: string;
+    paragraphs: string[];
+    facts: Array<{ label: string; value: string }>;
+    cta: string;
   };
   finalCta: {
     title: string;
@@ -77,13 +64,17 @@ export type HomeContent = {
   };
   contact: {
     title: string;
-    phoneLabel: string;
-    emailLabel: string;
+    intro: string;
     subject: string;
-    placeholders: {
+    privacyConsent: PrivacyConsentCopy;
+    fields: {
       name: string;
       email: string;
       phone: string;
+      company: string;
+      message: string;
+    };
+    placeholders: {
       message: string;
     };
     submitCta: string;
@@ -240,268 +231,203 @@ function machineCardsEn(): HomeMachineCard[] {
 
 const homeContentByLocale: Record<Locale, HomeContent> = {
   de: {
-    inquiryId: "schnellanfrage",
     labels: {
-      learnMore: "Mehr erfahren"
+      learnMore: "Details ansehen",
+      statusAvailable: "Verfügbar",
+      statusSold: "Verkauft"
     },
     hero: {
-      title: "Höhere Produktivität. Geringere Kosten. Maschinen, die in der Praxis überzeugen.",
+      eyebrow: "Handel & Export gebrauchter Industriemaschinen",
+      title: "Gebrauchte Industrie\u00ADmaschinen. Beschafft, geprüft und weltweit geliefert.",
       description:
-        "Wir unterstützen Fertigungsbetriebe mit sorgfältig geprüften, gebrauchten CNC- und konventionellen Werkzeugmaschinen. Für stabile Prozesse und eine wirtschaftliche Produktion.",
-      videoFallbackText: "Ihr Browser unterstuetzt das Video-Tag nicht.",
-      primaryCta: "Aktuelle Maschinen ansehen",
-      secondaryCta: "Kontakt aufnehmen",
+        "Die Machinco GmbH handelt mit gebrauchten CNC- und konventionellen Werkzeugmaschinen. Von unserem Lager in Gablingen bei Augsburg aus kümmern wir uns um Besichtigung, Demontage, Verladung und den internationalen Export.",
+      videoFallbackText: "Ihr Browser unterstützt keine Videowiedergabe.",
+      primaryCta: "Maschinen ansehen",
+      secondaryCta: "Maschine anfragen",
       proofPoints: [
-        "Schnelle Reaktion & unkomplizierte B2B-Abwicklung",
-        "Geprüfte Industriequalität von europäischen Premium-Marken",
-        "Besichtigung vor Ort & professionelle Verladehilfe"
+        "Hauptstandort & Lager in Gablingen bei Augsburg",
+        "Besichtigung nach Vereinbarung",
+        "Verladung, Transport & Exportdokumente aus einer Hand"
       ]
     },
-    advantages: {
-      title: "Warum Machinco",
-      description: "Technik, die messbar zu Ihrer Produktion passt - wirtschaftlich, robust und planbar.",
+    services: {
+      eyebrow: "Leistungen",
+      title: "Von der Beschaffung bis zum Export",
+      description:
+        "Wir übernehmen den gesamten Ablauf oder einzelne Schritte – je nachdem, was Sie für Ihre Maschine benötigen.",
       items: [
         {
-          title: "Prozesssicherheit",
-          description:
-            "Analyse von Werkstoff, Bauteilgeometrie und Toleranzen fuer eine belastbare Maschinenauswahl."
+          icon: "fa-cogs",
+          title: "Maschinenhandel",
+          description: "Gebrauchte CNC- und konventionelle Werkzeugmaschinen namhafter Hersteller."
         },
         {
-          title: "Wirtschaftlichkeit",
-          description:
-            "Fokus auf Stueckkosten, Durchsatz und Verfuegbarkeit statt auf ueberdimensionierte Technik."
+          icon: "fa-search",
+          title: "Beschaffung & Besichtigung",
+          description: "Gezielte Suche nach der passenden Maschine und Zustandsbewertung vor Ort."
         },
         {
-          title: "Industriequalitaet",
-          description: "Belastbare Komponenten und servicefreundlicher Aufbau fuer den Schichtbetrieb."
+          icon: "fa-wrench",
+          title: "Demontage & Verladung",
+          description: "Koordination der Demontage, Kran- und Staplerverladung sowie Ladungssicherung."
         },
         {
-          title: "Persoenliche Betreuung",
-          description: "Ein fester Ansprechpartner von der Anfrage bis zur Umsetzung im laufenden Betrieb."
+          icon: "fa-globe",
+          title: "Transport & Export",
+          description: "Transportorganisation, Exportdokumente und internationaler Versand."
         }
-      ]
+      ],
+      cta: "Alle Leistungen & Projekte"
     },
     machines: {
-      title: "Maschinen im Ueberblick",
+      eyebrow: "Maschinen",
+      title: "Aktuelle und verkaufte Maschinen",
       description:
-        "Drei Kernbereiche fuer die industrielle Oberflaechenbearbeitung und Kantenqualitaet.",
-      cards: machineCardsDe()
-    },
-    stats: {
-      title: "Vertrauen durch Leistung",
-      description: "Zuverlaessigkeit, Qualitaet und technische Erfahrung fuer industrielle Entscheider.",
-      values: [
-        { value: 10, label: "Jahre Markterfahrung" },
-        { value: 250, label: "Realisierte Maschinenprojekte" },
-        { value: 98, label: "Prozent termingerechte Umsetzung" },
-        { value: 24, label: "Stunden bis zur Erstreaktion" }
-      ],
-      badges: ["Qualitaet", "Zuverlaessigkeit", "Erfahrung", "Industriestandards"]
-    },
-    testimonials: {
-      title: "Stimmen aus der Praxis",
-      description: "Realistische Referenzstimmen als Platzhalter bis finale Kundenfreigaben vorliegen.",
-      items: [
-        {
-          quote:
-            "Durch die neue Loesung von Machinco konnten wir die Nacharbeit deutlich reduzieren und die Teilequalitaet stabilisieren.",
-          role: "Produktionsleiter",
-          company: "Metallverarbeitung, Bayern"
-        },
-        {
-          quote:
-            "Uns hat die strukturierte Beratung ueberzeugt. Keine Ueberdimensionierung, sondern eine Loesung passend zu unseren Losgroessen.",
-          role: "Technischer Leiter",
-          company: "Zulieferbetrieb Automotive, Baden-Wuerttemberg"
-        },
-        {
-          quote:
-            "Von der Anfrage bis zur Inbetriebnahme lief alles terminsicher und transparent. Genau so muss B2B-Zusammenarbeit sein.",
-          role: "Geschaeftsfuehrer",
-          company: "Maschinenbauunternehmen, NRW"
-        }
-      ]
+        "Ein Auszug aus unserem Handel – mit technischen Daten, Fotos und der Möglichkeit zur Besichtigung verfügbarer Maschinen.",
+      cards: machineCardsDe(),
+      cta: "Alle Maschinen ansehen"
     },
     about: {
-      title: "Ueber uns",
-      lead: "Technik verstehen. Prozesse verbessern. Partnerschaftlich arbeiten.",
-      imageAlt: "Machinco Werkstatt und Team",
-      imageCaption: "Bildplatzhalter: Maschinen in Produktion, Werkstatt, Team vor Ort",
-      heading: "Machinco GmbH – Hauptstandort Gablingen bei Augsburg",
+      eyebrow: "Über uns",
+      title: "Machinco GmbH – Hauptstandort Gablingen bei Augsburg",
+      imageSrc: "/images/about/machine-loading.jpg",
+      imageAlt: "Kran hebt eine Werkzeugmaschine beim Verladen auf einen Schwerlastanhänger",
       paragraphs: [
-        "Wir wurden mit einem klaren Anspruch gegruendet: Industrieunternehmen nicht nur Maschinen zu liefern, sondern Prozesse messbar zu verbessern. Deshalb verbinden wir technische Praxiserfahrung mit verbindlicher Projektarbeit.",
-        "Unser Fokus liegt auf belastbaren Entscheidungen: Welche Maschine passt wirklich zu Werkstoff, Takt und Qualitaetsziel? Diese Klarheit reduziert Investitionsrisiko und beschleunigt den Weg zur stabilen Serienleistung."
+        "Die Machinco GmbH ist ein Handels- und Exportunternehmen für gebrauchte Industriemaschinen. Unser Hauptstandort mit Lager befindet sich in Gablingen bei Augsburg, unser Büro in München.",
+        "Wir bieten gebrauchte CNC- und konventionelle Werkzeugmaschinen an und unterstützen Käufer im In- und Ausland bei Besichtigung, Demontage, Verladung, Transport und Exportabwicklung."
       ],
-      cta: "Mehr ueber Machinco"
+      facts: [
+        { label: "Hauptstandort & Lager", value: "Gablingen bei Augsburg" },
+        { label: "Büro", value: "München" },
+        { label: "Schwerpunkt", value: "Handel & Export gebrauchter Werkzeugmaschinen" }
+      ],
+      cta: "Mehr über Machinco"
     },
-    quickInquiry: {
-      title: "Schnellanfrage in 2 Minuten",
+    finalCta: {
+      title: "Sie suchen eine bestimmte Maschine oder planen einen Export?",
       description:
-        "Teilen Sie uns kurz Ihre Anforderungen mit. Wir melden uns zeitnah mit einer fundierten Einschaetzung.",
-      subject: "Machinco DE - Schnellanfrage in 2 Minuten (Homepage)",
+        "Senden Sie uns Ihre Anfrage – wir melden uns mit Verfügbarkeit, Details und den nächsten Schritten.",
+      primaryCta: "Anfrage senden",
+      secondaryCta: "Maschinen ansehen"
+    },
+    contact: {
+      title: "Kontakt",
+      intro: "Fragen Sie Maschinendetails, Preise, Besichtigungstermine oder Versandinformationen an.",
+      subject: "Machinco DE - Kontaktformular (Startseite)",
       privacyConsent: {
         before: "Ich habe die ",
-        linkLabel: "Datenschutzerklaerung",
+        linkLabel: "Datenschutzerklärung",
         after: " gelesen und akzeptiere die Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage."
       },
-      placeholders: {
+      fields: {
         name: "Name*",
         email: "E-Mail*",
         phone: "Telefon",
         company: "Unternehmen",
-        message: "Welche Bauteile bearbeiten Sie? Welche Anforderungen sind entscheidend?*"
+        message: "Nachricht*"
       },
-      submitCta: "Jetzt Angebot anfordern"
-    },
-    finalCta: {
-      title:
-        "Sie erhalten keine Standardempfehlung, sondern eine Loesung fuer Ihren realen Produktionsalltag.",
-      description:
-        "Starten Sie mit einem unverbindlichen Gespraech - klar, technisch fundiert und mit transparenter Einschaetzung.",
-      primaryCta: "Jetzt Angebot anfordern",
-      secondaryCta: "Kostenlose Beratung sichern"
-    },
-    contact: {
-      title: "Kontakt",
-      phoneLabel: "Telefon",
-      emailLabel: "E-Mail",
-      subject: "Machinco DE - Kontaktformular (Homepage)",
       placeholders: {
-        name: "Name*",
-        email: "E-Mail*",
-        phone: "Telefon",
-        message: "Ihre Nachricht*"
+        message: "Welche Maschine suchen oder verkaufen Sie? Wohin soll sie geliefert werden?"
       },
       submitCta: "Anfrage senden"
     }
   },
   en: {
-    inquiryId: "quick-inquiry",
     labels: {
-      learnMore: "Learn more"
+      learnMore: "View details",
+      statusAvailable: "Available",
+      statusSold: "Sold"
     },
     hero: {
-      title: "Higher productivity. Lower costs. Machines that perform in practice.",
+      eyebrow: "Used industrial machinery trading & export",
+      title: "Used Industrial Machinery. Sourced, Inspected and Delivered Worldwide.",
       description:
-        "We support manufacturing companies with carefully inspected used CNC and conventional machine tools. For stable processes and cost-efficient production.",
-      videoFallbackText: "Your browser does not support the video tag.",
-      primaryCta: "View available machines",
-      secondaryCta: "Contact us",
+        "Machinco GmbH trades used CNC and conventional machine tools. From our warehouse in Gablingen near Augsburg, Germany, we handle inspection, dismantling, loading and international export.",
+      videoFallbackText: "Your browser does not support video playback.",
+      primaryCta: "View machines",
+      secondaryCta: "Request a machine",
       proofPoints: [
-        "Fast response and straightforward B2B processing",
-        "Inspected industrial quality from premium European brands",
-        "On-site inspection and professional loading support"
+        "Main warehouse in Gablingen near Augsburg, Germany",
+        "Machine inspection by appointment",
+        "Loading, transport & export documents from one partner"
       ]
     },
-    advantages: {
-      title: "Why Machinco",
-      description: "Technology that measurably fits your production - economical, robust, and reliable.",
+    services: {
+      eyebrow: "Services",
+      title: "From Purchase to Export",
+      description: "We handle the entire process or individual steps – whatever your machine requires.",
       items: [
         {
-          title: "Process Reliability",
-          description: "Analysis of material, part geometry, and tolerances for a robust machine recommendation."
+          icon: "fa-cogs",
+          title: "Machinery trading",
+          description: "Used CNC and conventional machine tools from established manufacturers."
         },
         {
-          title: "Cost Efficiency",
-          description:
-            "Focus on unit economics, throughput, and availability instead of oversized solutions."
+          icon: "fa-search",
+          title: "Sourcing & inspection",
+          description: "Targeted search for the right machine and on-site condition assessment."
         },
         {
-          title: "Industrial Quality",
-          description: "Durable components and service-friendly design for multi-shift operations."
+          icon: "fa-wrench",
+          title: "Dismantling & loading",
+          description: "Coordination of dismantling, crane and forklift loading, and load securing."
         },
         {
-          title: "Personal Support",
-          description: "One dedicated contact from inquiry to implementation in day-to-day operations."
+          icon: "fa-globe",
+          title: "Transport & export",
+          description: "Transport organisation, export documents and international shipping."
         }
-      ]
+      ],
+      cta: "All services & projects"
     },
     machines: {
-      title: "Machine Portfolio",
-      description: "Three core categories for industrial surface finishing and edge quality.",
-      cards: machineCardsEn()
-    },
-    stats: {
-      title: "Trust Through Performance",
-      description: "Reliability, quality, and technical expertise for industrial decision-makers.",
-      values: [
-        { value: 10, label: "Years of market experience" },
-        { value: 250, label: "Completed machine projects" },
-        { value: 98, label: "Percent on-time delivery" },
-        { value: 24, label: "Hours to first response" }
-      ],
-      badges: ["Quality", "Reliability", "Experience", "Industrial Standards"]
-    },
-    testimonials: {
-      title: "What Customers Say",
-      description: "Realistic reference placeholders until final customer approvals are available.",
-      items: [
-        {
-          quote: "The new setup from Machinco significantly reduced our rework and stabilized part quality.",
-          role: "Production Manager",
-          company: "Metal Processing, Bavaria"
-        },
-        {
-          quote:
-            "What convinced us was the structured consulting. No overengineering, just a setup that fits our batch sizes.",
-          role: "Technical Director",
-          company: "Automotive Supplier, Baden-Wuerttemberg"
-        },
-        {
-          quote:
-            "From inquiry to commissioning, everything was transparent and on schedule. Exactly what strong B2B collaboration should be.",
-          role: "Managing Director",
-          company: "Mechanical Engineering Company, NRW"
-        }
-      ]
+      eyebrow: "Machines",
+      title: "Current and Sold Machines",
+      description:
+        "A selection from our trading business – with technical data, photos and inspection of available machines by appointment.",
+      cards: machineCardsEn(),
+      cta: "View all machines"
     },
     about: {
-      title: "About Us",
-      lead: "Understand technology. Improve processes. Work in partnership.",
-      imageAlt: "Machinco workshop and team",
-      imageCaption: "Image placeholders: machines in operation, workshop, field team",
-      heading: "Machinco GmbH – Based in Gablingen near Augsburg",
+      eyebrow: "About us",
+      title: "Machinco GmbH – Based in Gablingen near Augsburg",
+      imageSrc: "/images/about/machine-loading.jpg",
+      imageAlt: "Crane lifting a machine tool onto a heavy-duty trailer during loading",
       paragraphs: [
-        "We were founded with one clear mission: not just to supply machines, but to measurably improve production processes. That is why we combine practical technical know-how with reliable project execution.",
-        "Our focus is on robust decisions: which machine truly matches your material, cycle time, and quality targets? That clarity reduces investment risk and shortens your path to stable serial performance."
+        "Machinco GmbH is a trading and export company for used industrial machinery. Our main warehouse and business location is in Gablingen near Augsburg, with an office in Munich.",
+        "We offer used CNC and conventional machine tools and support buyers in Germany and abroad with inspection, dismantling, loading, transport and export handling."
+      ],
+      facts: [
+        { label: "Main warehouse & location", value: "Gablingen near Augsburg" },
+        { label: "Office", value: "Munich" },
+        { label: "Focus", value: "Trading & export of used machine tools" }
       ],
       cta: "More about Machinco"
     },
-    quickInquiry: {
-      title: "Quick Inquiry in 2 Minutes",
-      description: "Share your key requirements and we will respond with a solid first assessment.",
-      subject: "Machinco EN - Quick Inquiry in 2 Minutes (Homepage)",
+    finalCta: {
+      title: "Looking for a specific machine or planning an export?",
+      description: "Send us your request – we will get back to you with availability, details and the next steps.",
+      primaryCta: "Send a request",
+      secondaryCta: "View machines"
+    },
+    contact: {
+      title: "Contact",
+      intro: "Ask for machine details, prices, inspection appointments or shipping information.",
+      subject: "Machinco EN - Contact form (Homepage)",
       privacyConsent: {
         before: "I have read the ",
         linkLabel: "privacy policy",
         after: " and agree to the processing of my data for handling my inquiry."
       },
-      placeholders: {
+      fields: {
         name: "Name*",
         email: "Email*",
         phone: "Phone",
         company: "Company",
-        message: "What parts are you processing? Which requirements are critical?*"
+        message: "Message*"
       },
-      submitCta: "Request a quote now"
-    },
-    finalCta: {
-      title:
-        "You do not get a generic recommendation, but a solution for your real production environment.",
-      description: "Start with a no-obligation conversation - clear, technical, and transparent.",
-      primaryCta: "Request a quote now",
-      secondaryCta: "Book a free consultation"
-    },
-    contact: {
-      title: "Contact",
-      phoneLabel: "Phone",
-      emailLabel: "Email",
-      subject: "Machinco EN - Contact Form (Homepage)",
       placeholders: {
-        name: "Name*",
-        email: "Email*",
-        phone: "Phone",
-        message: "Your message*"
+        message: "Which machine are you looking for or selling? Where should it be delivered?"
       },
       submitCta: "Send inquiry"
     }

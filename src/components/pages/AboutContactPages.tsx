@@ -40,11 +40,24 @@ export function AboutPageView({ content }: AboutPageViewProps) {
               </div>
             </div>
             <div className="col-md-5">
-              <div className="content-card">
+              <div className="content-card about-media">
                 <h3>{content.media.title}</h3>
-                {content.media.placeholders.map((item) => (
-                  <p key={item}>{item}</p>
-                ))}
+                <div className="about-media-grid">
+                  {content.media.images.map((image) => (
+                    <img
+                      key={image.src}
+                      src={image.src}
+                      alt={image.alt}
+                      width={800}
+                      height={600}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ))}
+                </div>
+                <Link className="home-text-link" href={content.media.ctaHref}>
+                  {content.media.cta} <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </Link>
               </div>
               <div className="cta-panel">
                 <h3>{content.ctaPanel.title}</h3>

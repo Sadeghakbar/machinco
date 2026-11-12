@@ -36,6 +36,16 @@ export const SITE_URL = "https://www.machinco.de";
 export const GABLINGEN_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Machinco%20GmbH%2C%20Dornierstra%C3%9Fe%209%2C%2086456%20Gablingen";
 
+/** Google Maps route planner with the Gablingen warehouse as destination. */
+export const GABLINGEN_DIRECTIONS_URL =
+  "https://www.google.com/maps/dir/?api=1&destination=Machinco%20GmbH%2C%20Dornierstra%C3%9Fe%209%2C%2086456%20Gablingen";
+
+/**
+ * Locally hosted static map (SVG) rendered from OpenStreetMap data (ODbL) – shown immediately,
+ * no third-party request. Pin = Google business profile coordinates above.
+ */
+export const GABLINGEN_STATIC_MAP = "/maps/machinco-gablingen.svg";
+
 /** Keyless Google Maps embed for the same location (loaded only after visitor consent). */
 export const GABLINGEN_MAPS_EMBED_URL =
   "https://www.google.com/maps?q=Machinco%20GmbH%2C%20Dornierstra%C3%9Fe%209%2C%2086456%20Gablingen&z=16&output=embed";
@@ -46,6 +56,7 @@ export type LocationCopy = {
   officeLabel: string;
   officeLines: string[];
   mapsCta: string;
+  directionsCta: string;
   phoneLabel: string;
   emailLabel: string;
 };
@@ -57,6 +68,7 @@ const locationCopyByLocale: Record<Locale, LocationCopy> = {
     officeLabel: "Büro",
     officeLines: [MUNICH_OFFICE.streetAddress, `${MUNICH_OFFICE.postalCode} ${MUNICH_OFFICE.locality}`],
     mapsCta: "In Google Maps öffnen",
+    directionsCta: "Route planen",
     phoneLabel: "Telefon",
     emailLabel: "E-Mail"
   },
@@ -66,6 +78,7 @@ const locationCopyByLocale: Record<Locale, LocationCopy> = {
     officeLabel: "Office",
     officeLines: [MUNICH_OFFICE.streetAddress, `${MUNICH_OFFICE.postalCode} ${MUNICH_OFFICE.localityEn}`],
     mapsCta: "Open in Google Maps",
+    directionsCta: "Get directions",
     phoneLabel: "Phone",
     emailLabel: "Email"
   }

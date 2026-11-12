@@ -52,6 +52,7 @@ export type MachineDetailContent = ProductDetail & {
     quoteCtaLabel: string;
     inspectCtaLabel: string;
     galleryCtaLabel: string;
+    inspectionNote: string;
     highlightsTitle: string;
     specsTitle: string;
     dimensionsTitle: string;
@@ -70,11 +71,12 @@ const detailLabelsByLocale: Record<
   MachineDetailContent["detailLabels"]
 > = {
   de: {
-    priceLabel: "Machinco Preis",
+    priceLabel: "Preis",
     priceNote: "(ab Werk)",
-    quoteCtaLabel: "Offizielles Angebot erhalten",
-    inspectCtaLabel: "Maschine besichtigen",
-    galleryCtaLabel: "Foto Galerie",
+    quoteCtaLabel: "Details & Preis anfragen",
+    inspectCtaLabel: "Besichtigung vereinbaren",
+    galleryCtaLabel: "Fotogalerie",
+    inspectionNote: "Besichtigung nach Vereinbarung möglich. Verladung und Export organisieren wir auf Wunsch.",
     highlightsTitle: "Technische Highlights",
     specsTitle: "Technische Daten",
     dimensionsTitle: "Abmessungen und Gewicht",
@@ -88,11 +90,12 @@ const detailLabelsByLocale: Record<
       "Die Maschine ist nicht mehr verfügbar. Die technischen Daten und Bilder bleiben als Referenz sichtbar."
   },
   en: {
-    priceLabel: "Machinco price",
-    priceNote: "(Ex works)",
-    quoteCtaLabel: "Get official quote",
-    inspectCtaLabel: "Request machine viewing",
+    priceLabel: "Price",
+    priceNote: "(ex works)",
+    quoteCtaLabel: "Request details & price",
+    inspectCtaLabel: "Arrange an inspection",
     galleryCtaLabel: "Photo gallery",
+    inspectionNote: "Inspection possible by appointment. We can arrange loading and export on request.",
     highlightsTitle: "Technical Highlights",
     specsTitle: "Technical Details",
     dimensionsTitle: "Dimensions and Weight",
@@ -116,12 +119,12 @@ const productFormCopyByLocale: Record<
 > = {
   de: {
     title: "Kontakt zu diesem Produkt",
-    intro: "Senden Sie uns Ihre Anfrage zu dieser Maschine. Wir melden uns zeitnah mit einer technischen Ersteinschaetzung.",
+    intro: "Senden Sie uns Ihre Anfrage zu dieser Maschine. Wir melden uns zeitnah mit einer technischen Ersteinschätzung.",
     productFieldLabel: "Produkt",
     submitLabel: "Anfrage senden",
     privacyConsent: {
       before: "Ich habe die ",
-      linkLabel: "Datenschutzerklaerung",
+      linkLabel: "Datenschutzerklärung",
       after: " gelesen und akzeptiere die Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage."
     },
     fields: {
@@ -202,11 +205,11 @@ export function getMachineDetailContent(
       privacyConsent: formCopy.privacyConsent,
       defaultMessage:
         locale === "de"
-          ? `Ich interessiere mich fuer die Maschine "${product.title}". Bitte kontaktieren Sie mich mit weiteren Informationen.`
+          ? `Ich interessiere mich für die Maschine "${product.title}". Bitte kontaktieren Sie mich mit weiteren Informationen.`
           : `I am interested in the machine "${product.title}". Please contact me with more information.`,
       viewingMessage:
         locale === "de"
-          ? `Ich moechte die Maschine "${product.title}" besichtigen. Bitte schlagen Sie mir einen passenden Termin vor.`
+          ? `Ich möchte die Maschine "${product.title}" besichtigen. Bitte schlagen Sie mir einen passenden Termin vor.`
           : `I would like to view the machine "${product.title}". Please suggest a suitable appointment.`,
       viewingSubject:
         locale === "de"

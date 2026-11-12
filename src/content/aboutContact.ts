@@ -17,7 +17,9 @@ export type AboutPageContent = {
   };
   media: {
     title: string;
-    placeholders: string[];
+    images: Array<{ src: string; alt: string }>;
+    cta: string;
+    ctaHref: string;
   };
   ctaPanel: {
     title: string;
@@ -65,70 +67,84 @@ export type ContactPageContent = {
 const aboutByLocale: Record<Locale, AboutPageContent> = {
   de: {
     hero: {
-      title: "Technik verstehen. Prozesse verbessern. Partnerschaftlich arbeiten.",
+      title: "Über Machinco",
       description:
-        "Machinco begleitet produzierende Unternehmen mit technischer Klarheit, verbindlicher Kommunikation und Fokus auf nachhaltige Wirtschaftlichkeit."
+        "Handel und Export gebrauchter Industriemaschinen – mit Hauptstandort und Lager in Gablingen bei Augsburg."
     },
     story: {
-      title: "Unsere Geschichte",
+      title: "Wer wir sind",
       paragraphs: [
-        "Machinco wurde mit dem Anspruch gegruendet, industrielle Investitionsentscheidungen sicherer zu machen. Statt Standardkatalogen setzen wir auf technische Einordnung entlang realer Produktionsanforderungen.",
-        "Wir verbinden Erfahrung aus Maschinenprojekten mit einem klaren Blick auf das, was im Werk wirklich zaehlt: reproduzierbare Qualitaet, stabile Taktzeiten und planbare Gesamtkosten."
+        "Die Machinco GmbH ist ein Handels- und Exportunternehmen für gebrauchte Industriemaschinen. Unser Schwerpunkt liegt auf CNC- und konventionellen Werkzeugmaschinen wie Drehmaschinen, Bearbeitungszentren, Bohrwerken, Schleifmaschinen und Abkantpressen.",
+        "Unser Hauptstandort mit Lager befindet sich in Gablingen bei Augsburg, unser Büro in München. Von hier aus unterstützen wir Käufer im In- und Ausland – vom Ankauf über die Besichtigung bis zur Verladung und Exportabwicklung."
       ]
     },
     values: {
-      title: "Wofuer wir stehen",
+      title: "Was wir für Sie übernehmen",
       items: [
-        "Loesungsorientierte Beratung statt Produktdruck",
-        "Transparenz bei Machbarkeit, Aufwand und Nutzen",
-        "Verlaessliche Begleitung von Anfrage bis Inbetriebnahme",
-        "Langfristiges Denken im Sinne Ihrer Produktion"
+        "Handel mit gebrauchten CNC- und konventionellen Werkzeugmaschinen",
+        "Beschaffung von Maschinen im Kundenauftrag",
+        "Besichtigung und Zustandsbewertung vor Ort",
+        "Koordination von Demontage, Kran- und Staplerverladung",
+        "Verladung auf Lkw, Auflieger und Container mit Ladungssicherung",
+        "Transportkoordination, Exportdokumente und internationaler Versand"
       ]
     },
     media: {
-      title: "Bildmaterial (Platzhalter)",
-      placeholders: [
-        "[Bildplatzhalter: Maschinen in Produktion]",
-        "[Bildplatzhalter: Werkstatt und Serviceteam]",
-        "[Bildplatzhalter: Beratung vor Ort beim Kunden]"
-      ]
+      title: "Einblicke in unsere Arbeit",
+      images: [
+        { src: "/projects/portfolio/p01-sm.jpg", alt: "Mobilkran hebt eine Abkantpresse auf einen Sattelauflieger" },
+        { src: "/projects/portfolio/p08-sm.jpg", alt: "Gabelstapler beim Beladen eines Tiefladers" },
+        { src: "/projects/portfolio/p02-sm.jpg", alt: "Mit Spanngurten gesicherte Maschinen auf einem Planen-Sattelauflieger" }
+      ],
+      cta: "Alle Projektfotos ansehen",
+      ctaHref: getPathForRouteKey("de", "projects.index")
     },
     ctaPanel: {
-      title: "Lassen Sie uns ueber Ihr Projekt sprechen",
-      description: "In einem Erstgespraech klaeren wir schnell, welche Loesung zu Ihren Anforderungen passt.",
-      cta: "Kostenlose Beratung sichern",
+      title: "Sprechen Sie uns an",
+      description:
+        "Ob Maschinenanfrage, Besichtigung oder Export – wir melden uns mit den passenden Informationen.",
+      cta: "Kontakt aufnehmen",
       ctaHref: getPathForRouteKey("de", "contact")
     }
   },
   en: {
     hero: {
-      title: "We understand technology. We improve processes.",
+      title: "About Machinco",
       description:
-        "Machinco combines technical know-how with practical project execution to reduce investment risk and increase production reliability."
+        "Trading and export of used industrial machinery – with our main warehouse and business location in Gablingen near Augsburg, Germany."
     },
     story: {
-      title: "Our story",
+      title: "Who we are",
       paragraphs: [
-        "Machinco was founded to help manufacturers make better machine decisions - based on real production requirements, not catalog promises."
+        "Machinco GmbH is a trading and export company for used industrial machinery. We focus on CNC and conventional machine tools such as lathes, machining centres, boring mills, grinding machines and press brakes.",
+        "Our main warehouse and business location is in Gablingen near Augsburg, with an office in Munich. From here we support buyers in Germany and abroad – from purchase and inspection to loading and export handling."
       ]
     },
     values: {
-      title: "What we stand for",
+      title: "What we take care of",
       items: [
-        "Solution-first consulting",
-        "Transparent feasibility and costs",
-        "Reliable support from inquiry to commissioning",
-        "Long-term production thinking"
+        "Trading of used CNC and conventional machine tools",
+        "Machine sourcing on behalf of customers",
+        "On-site inspection and condition assessment",
+        "Coordination of dismantling, crane and forklift loading",
+        "Loading onto trucks, trailers and containers with load securing",
+        "Transport coordination, export documents and international shipping"
       ]
     },
     media: {
-      title: "Image placeholders",
-      placeholders: ["[Machines in production]", "[Workshop and service team]", "[On-site customer consultation]"]
+      title: "Insights into our work",
+      images: [
+        { src: "/projects/portfolio/p01-sm.jpg", alt: "Mobile crane lifting a press brake onto a semi-trailer" },
+        { src: "/projects/portfolio/p08-sm.jpg", alt: "Forklift loading a low-bed trailer" },
+        { src: "/projects/portfolio/p02-sm.jpg", alt: "Machines secured with lashing straps on a curtain-side trailer" }
+      ],
+      cta: "View all project photos",
+      ctaHref: getPathForRouteKey("en", "projects.index")
     },
     ctaPanel: {
-      title: "Talk to our team",
-      description: "In a first call, we quickly align on the right solution for your requirements.",
-      cta: "Book a free consultation",
+      title: "Get in touch",
+      description: "Whether it is a machine request, an inspection or an export – we will get back to you with the right information.",
+      cta: "Contact us",
       ctaHref: getPathForRouteKey("en", "contact")
     }
   }
@@ -139,7 +155,7 @@ const contactByLocale: Record<Locale, ContactPageContent> = {
     hero: {
       title: "Kontaktieren Sie uns",
       description:
-        "Beschreiben Sie kurz Ihre Anforderungen. Wir melden uns zeitnah mit einer technischen Ersteinschaetzung."
+        "Ob Maschinenanfrage, Preis, Besichtigung oder Versand – beschreiben Sie kurz Ihr Anliegen. Wir melden uns schnellstmöglich."
     },
     details: {
       title: "Kontaktdaten",
@@ -150,8 +166,8 @@ const contactByLocale: Record<Locale, ContactPageContent> = {
       emailValue: "info@machincogmbh.com"
     },
     quickInfo: {
-      title: "Schnelle Angebotsanfrage",
-      description: "Bei dringenden Projekten priorisieren wir eine Rueckmeldung innerhalb von 24 Stunden."
+      title: "Dringende Anfrage?",
+      description: "Rufen Sie uns direkt an – telefonisch erreichen Sie uns am schnellsten."
     },
     form: {
       title: "Anfrageformular",
@@ -160,7 +176,7 @@ const contactByLocale: Record<Locale, ContactPageContent> = {
       submitLabel: "Anfrage senden",
       privacyConsent: {
         before: "Ich habe die ",
-        linkLabel: "Datenschutzerklaerung",
+        linkLabel: "Datenschutzerklärung",
         after: " gelesen und akzeptiere die Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage."
       },
       fields: {
@@ -176,25 +192,25 @@ const contactByLocale: Record<Locale, ContactPageContent> = {
     hero: {
       title: "Contact Us",
       description:
-        "Briefly describe your requirements. We will respond quickly with a technically grounded first assessment."
+        "Machine request, price, inspection or shipping – briefly describe what you need. We will get back to you as soon as possible."
     },
     details: {
       title: "Contact Details",
       company: "Machinco GmbH",
       phoneLabel: "Phone",
-      phoneValue: "+49 (0)163-0133066",
+      phoneValue: "+49 163 0133066",
       emailLabel: "Email",
       emailValue: "info@machincogmbh.com"
     },
     quickInfo: {
-      title: "Fast Quote Request",
-      description: "For urgent projects, we prioritize a response within 24 hours."
+      title: "Urgent request?",
+      description: "Call us directly – phone is the fastest way to reach us."
     },
     form: {
-      title: "Inquiry Form",
+      title: "Inquiry form",
       formId: "contact-form",
       subject: "Machinco EN - Contact Form (Contact Page)",
-      submitLabel: "Send Inquiry",
+      submitLabel: "Send inquiry",
       privacyConsent: {
         before: "I have read the ",
         linkLabel: "privacy policy",

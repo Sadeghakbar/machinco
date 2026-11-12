@@ -104,20 +104,21 @@ export type MachinesIndexCopy = {
 const machinesIndexCopyByLocale: Record<Locale, MachinesIndexCopy> = {
   de: {
     hero: {
-      title: "Maschinen fuer praezise Oberflaechen und stabile Prozesse",
+      title: "Gebrauchte Industriemaschinen",
       description:
-        "Von Bandschliff bis Entgraten: Machinco unterstuetzt Sie bei der Auswahl der passenden Loesung fuer Ihren Produktionsalltag."
+        "Verfügbare und bereits verkaufte Maschinen aus unserem Handel – mit technischen Daten, Fotos und Besichtigung nach Vereinbarung."
     },
     ctaPanel: {
-      title: "Nicht sicher, welche Maschine passt?",
-      description: "Wir klaeren Anforderungen, Werkstoffe, Toleranzen und Stueckzahlen gemeinsam mit Ihrem Team.",
-      cta: "Kostenlose Beratung sichern",
+      title: "Ihre Wunschmaschine ist nicht dabei?",
+      description:
+        "Wir suchen gezielt nach der passenden gebrauchten Maschine für Sie und organisieren auf Wunsch Besichtigung, Verladung und Export.",
+      cta: "Suchanfrage senden",
       ctaHref: getPathForRouteKey("de", "contact")
     },
-    listingBadge: "Produkt",
+    listingBadge: "Maschine",
     featuredBadge: "Empfohlen",
     statusLabels: {
-      available: "Verfuegbar",
+      available: "Verfügbar",
       "on-request": "Auf Anfrage",
       sold: "Verkauft"
     },
@@ -126,16 +127,18 @@ const machinesIndexCopyByLocale: Record<Locale, MachinesIndexCopy> = {
   },
   en: {
     hero: {
-      title: "Machines for precision surfaces and stable processes",
-      description: "From belt grinding to deburring, we help you select the right setup for your production reality."
+      title: "Used Industrial Machinery",
+      description:
+        "Available and already sold machines from our trading business – with technical data, photos and inspection by appointment."
     },
     ctaPanel: {
-      title: "Not sure which machine fits?",
-      description: "We assess material, tolerances, volume, and throughput together with your team.",
-      cta: "Book a free consultation",
+      title: "Can't find the machine you need?",
+      description:
+        "We search specifically for the right used machine for you and can arrange inspection, loading and export on request.",
+      cta: "Send a search request",
       ctaHref: getPathForRouteKey("en", "contact")
     },
-    listingBadge: "Product",
+    listingBadge: "Machine",
     featuredBadge: "Featured",
     statusLabels: {
       available: "Available",
@@ -255,7 +258,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "Deckel Maho DMC 635V anfragen",
         ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
-        ctaLabel: "Jetzt Angebot anfordern"
+        ctaLabel: "Details & Preis anfragen"
       },
       en: {
         title: "2007 Deckel Maho DMC 635V CNC Vertical Machining Centre",
@@ -315,7 +318,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "Enquire About the Deckel Maho DMC 635V",
         ctaDescription: "Request more information or arrange a viewing of this machine.",
-        ctaLabel: "Request a Quote"
+        ctaLabel: "Request details & price"
       }
     }
   },
@@ -409,7 +412,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "Leadwell T7 anfragen",
         ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
-        ctaLabel: "Jetzt Angebot anfordern"
+        ctaLabel: "Details & Preis anfragen"
       },
       en: {
         title: "1999 Leadwell T7 CNC Lathe",
@@ -468,7 +471,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "Enquire About the Leadwell T7",
         ctaDescription: "Request more information or arrange a viewing of this machine.",
-        ctaLabel: "Request a Quote"
+        ctaLabel: "Request details & price"
       }
     }
   },
@@ -569,7 +572,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "Mori Seiki MV-40B anfragen",
         ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
-        ctaLabel: "Jetzt Angebot anfordern"
+        ctaLabel: "Details & Preis anfragen"
       },
       en: {
         title: "1991 Mori Seiki MV-40B CNC Universal Machine Centre",
@@ -632,7 +635,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "Enquire About the Mori Seiki MV-40B",
         ctaDescription: "Request more information or arrange a viewing of this machine.",
-        ctaLabel: "Request a Quote"
+        ctaLabel: "Request details & price"
       }
     }
   },
@@ -736,7 +739,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "Biglia B131 S2 CNC anfragen",
         ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
-        ctaLabel: "Jetzt Angebot anfordern"
+        ctaLabel: "Details & Preis anfragen"
       },
       en: {
         title: "1991 Biglia B131 S2 CNC Lathe",
@@ -788,7 +791,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "Enquire About the Biglia B131 S2 CNC",
         ctaDescription: "Request more information or arrange a viewing of this machine.",
-        ctaLabel: "Request a Quote"
+        ctaLabel: "Request details & price"
       }
     }
   },
@@ -865,7 +868,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "UNION BFP 130/6 anfragen",
         ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
-        ctaLabel: "Jetzt Angebot anfordern"
+        ctaLabel: "Details & Preis anfragen"
       },
       en: {
         title: "UNION BFP 130/6 Horizontal Table-Type Boring Mill",
@@ -913,7 +916,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "Enquire About the UNION BFP 130/6",
         ctaDescription: "Request more information or arrange a viewing of this machine.",
-        ctaLabel: "Request a Quote"
+        ctaLabel: "Request details & price"
       }
     }
   },
@@ -997,7 +1000,7 @@ const productCatalog: ProductDefinition[] = [
         ],
         ctaTitle: "Leopoldo Pontiggia H 600 x 5000 anfragen",
         ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
-        ctaLabel: "Jetzt Angebot anfordern"
+        ctaLabel: "Details & Preis anfragen"
       },
       en: {
         title: "1969 Leopoldo Pontiggia H 600 x 5000 Heavy-Duty Lathe",
@@ -1056,7 +1059,7 @@ const productCatalog: ProductDefinition[] = [
         ],
         ctaTitle: "Enquire About the Leopoldo Pontiggia H 600 x 5000",
         ctaDescription: "Request more information or arrange a viewing of this machine.",
-        ctaLabel: "Request a Quote"
+        ctaLabel: "Request details & price"
       }
     }
   },
@@ -1124,7 +1127,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "AMADA Promecam ITPS 80-25 anfragen",
         ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
-        ctaLabel: "Jetzt Angebot anfordern"
+        ctaLabel: "Details & Preis anfragen"
       },
       en: {
         title: "1998 AMADA Promecam ITPS 80-25 Press Brake",
@@ -1168,7 +1171,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "Enquire About the AMADA Promecam ITPS 80-25",
         ctaDescription: "Request more information or arrange a viewing of this machine.",
-        ctaLabel: "Request a Quote"
+        ctaLabel: "Request details & price"
       }
     }
   },
@@ -1258,7 +1261,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "FORTUNA R26 H 3000 A 45 anfragen",
         ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
-        ctaLabel: "Jetzt Angebot anfordern"
+        ctaLabel: "Details & Preis anfragen"
       },
       en: {
         title: "1976 FORTUNA R26 H 3000 A 45 Cylindrical Grinding Machine",
@@ -1320,7 +1323,7 @@ const productCatalog: ProductDefinition[] = [
         applications: [],
         ctaTitle: "Enquire About the FORTUNA R26 H 3000 A 45",
         ctaDescription: "Request more information or arrange a viewing of this machine.",
-        ctaLabel: "Request a Quote"
+        ctaLabel: "Request details & price"
       }
     }
   }

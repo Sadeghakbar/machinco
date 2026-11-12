@@ -1,7 +1,7 @@
 {
   "header": {
     "navigationSrOnly": "Navigation",
-    "logoAlt": "Machinco Logo"
+    "logoAlt": "Machinco GmbH – home"
   },
   "nav": {
     "home": "Home",
@@ -15,6 +15,6 @@
     "contact": "Contact",
     "imprint": "Imprint",
     "privacy": "Privacy",
-    "copyrightSuffix": "Industrial Machines for B2B Production"
+    "copyrightSuffix": "Trading & export of used industrial machinery"
   }
 }

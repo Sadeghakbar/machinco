@@ -64,9 +64,9 @@ export function ProductDetailHero({ content, locale }: ProductDetailHeroProps) {
     };
   }, [galleryOpen, closeGallery, showNext, showPrevious]);
 
-  const closeLabel = locale === "de" ? "Galerie schliessen" : "Close gallery";
+  const closeLabel = locale === "de" ? "Galerie schließen" : "Close gallery";
   const previousLabel = locale === "de" ? "Vorheriges Bild" : "Previous image";
-  const nextLabel = locale === "de" ? "Naechstes Bild" : "Next image";
+  const nextLabel = locale === "de" ? "Nächstes Bild" : "Next image";
 
   return (
     <>

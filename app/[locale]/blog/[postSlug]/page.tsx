@@ -25,7 +25,12 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
     return {};
   }
 
-  return buildRouteMetadata(locale as Locale, routeKey, content.hero.description);
+  return buildRouteMetadata(
+    locale as Locale,
+    routeKey,
+    content.hero.description,
+    `${content.hero.title} | Machinco GmbH`
+  );
 }
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {

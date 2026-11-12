@@ -21,6 +21,6 @@ Legal copy lives in `src/content/blogLegal.ts` (`/de/privacy/`, `/en/privacy/`, 
 
 All inquiry forms use `FormPrivacyConsent` with a link to the privacy policy. Copy is in:
 
-- `src/content/home.ts` (`quickInquiry.privacyConsent`)
+- `src/content/home.ts` (`contact.privacyConsent`)
 - `src/content/aboutContact.ts` (`form.privacyConsent`)
 - `src/content/machines.ts` (`productForm.privacyConsent`)

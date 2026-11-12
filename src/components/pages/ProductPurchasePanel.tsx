@@ -31,6 +31,12 @@ export function ProductPurchasePanel({ content }: ProductPurchasePanelProps) {
       </div>
 
       {content.status !== "sold" ? (
+        <p className="product-purchase-note">
+          <i className="fa fa-info-circle" aria-hidden="true"></i> {content.detailLabels.inspectionNote}
+        </p>
+      ) : null}
+
+      {content.status !== "sold" ? (
         <div className="product-purchase-actions">
           <Link className="btn show product-purchase-btn-primary" href={content.inquiryLinks.quote}>
             {content.detailLabels.quoteCtaLabel}
