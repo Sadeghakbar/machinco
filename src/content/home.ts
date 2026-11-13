@@ -299,7 +299,7 @@ const homeContentByLocale: Record<Locale, HomeContent> = {
       facts: [
         { label: "Hauptstandort & Lager", value: "Gablingen bei Augsburg" },
         { label: "Büro", value: "München" },
-        { label: "Schwerpunkt", value: "Handel & Export gebrauchter Werkzeugmaschinen" }
+        { label: "Schwerpunkt", value: "Handel & Export gebrauchter Werkzeug\u00ADmaschinen" }
       ],
       cta: "Mehr über Machinco"
     },
@@ -316,7 +316,7 @@ const homeContentByLocale: Record<Locale, HomeContent> = {
       subject: "Machinco DE - Kontaktformular (Startseite)",
       privacyConsent: {
         before: "Ich habe die ",
-        linkLabel: "Datenschutzerklärung",
+        linkLabel: "Datenschutz\u00ADerklärung",
         after: " gelesen und akzeptiere die Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage."
       },
       fields: {

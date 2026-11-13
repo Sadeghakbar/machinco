@@ -124,7 +124,7 @@ const productFormCopyByLocale: Record<
     submitLabel: "Anfrage senden",
     privacyConsent: {
       before: "Ich habe die ",
-      linkLabel: "Datenschutzerklärung",
+      linkLabel: "Datenschutz\u00ADerklärung",
       after: " gelesen und akzeptiere die Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage."
     },
     fields: {

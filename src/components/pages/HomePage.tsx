@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FormPrivacyConsent } from "@/components/forms/FormPrivacyConsent";
+import { HeroVideo } from "@/components/home/HeroVideo";
 import { LocationDetails } from "@/components/location/LocationDetails";
 import { HomeProjectsTeaser } from "@/components/projects/HomeProjectsTeaser";
 import type { HomeContent } from "@/content/home";
@@ -20,19 +21,7 @@ export function HomePage({ locale, content }: HomePageProps) {
   return (
     <>
       <section id="hero-banner">
-        <video
-          width="100%"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/vids/0503-poster.jpg"
-          aria-hidden="true"
-        >
-          <source src="/vids/0503.mov" type="video/mp4" />
-          {content.hero.videoFallbackText}
-        </video>
+        <HeroVideo fallbackText={content.hero.videoFallbackText} />
         <div className="container hero-content">
           <div className="row">
             <div className="col-md-9 col-sm-11">
