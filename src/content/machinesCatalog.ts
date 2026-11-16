@@ -1596,6 +1596,139 @@ const productCatalog: ProductDefinition[] = [
         ctaLabel: "Request details & price"
       }
     }
+  },
+  {
+    id: "heidenreich-harbeck-21-ro",
+    slug: "heidenreich-harbeck-21-ro",
+    category: {
+      de: "Leit- und Zugspindeldrehmaschine",
+      en: "Engine lathe"
+    },
+    reference: "VDF 21 RO",
+    brand: "Heidenreich & Harbeck",
+    year: 1958,
+    featured: true,
+    status: "available",
+    heroImage: "/machines/heidenreich-harbeck-21-ro/main-pic.jpg",
+    galleryMedia: [
+      { src: "/machines/heidenreich-harbeck-21-ro/main-pic.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-01.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-02.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-03.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-04.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-05.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-06.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-07.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-08.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-09.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-10.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-11.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-12.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-13.jpg", type: "image" },
+      { src: "/machines/heidenreich-harbeck-21-ro/img-14.jpg", type: "image" }
+    ],
+    locale: {
+      de: {
+        title: "1958 Heidenreich & Harbeck VDF 21 RO Dreh­maschine",
+        summary:
+          "Leit- und Zugspindeldrehmaschine (VDF-Standard) von Heidenreich & Harbeck, Hamburg, mit ca. 210 mm Spitzenhöhe, Dreibackenfutter ca. Ø 315 mm und nachgerüsteter HEIDENHAIN-Digitalanzeige.",
+        highlights: [
+          "Spitzenhöhe ca. 210 mm (Umlaufdurchmesser über Bett ca. 420 mm)",
+          "Dreibackenfutter ca. Ø 315 mm",
+          "Nachgerüstete HEIDENHAIN-Digitalanzeige",
+          "Deutsche Fertigung, VDF-Gruppe"
+        ],
+        specGroups: [
+          {
+            title: "Maschinendaten",
+            specs: [
+              { label: "Hersteller", value: "Heidenreich & Harbeck, Hamburg (VDF-Gruppe)" },
+              { label: "Typ", value: "21 RO" },
+              { label: "Bauart", value: "Leit- und Zugspindeldrehmaschine (VDF-Standard)" },
+              { label: "Baujahr", value: "1958" },
+              { label: "Herkunft", value: "Made in Germany" }
+            ]
+          },
+          {
+            title: "Arbeitsbereich",
+            specs: [
+              { label: "Spitzenhöhe", value: "ca. 210 mm" },
+              { label: "Umlaufdurchmesser über Bett", value: "ca. 420 mm" },
+              { label: "Spannfutter", value: "Dreibackenfutter, ca. Ø 315 mm" }
+            ]
+          },
+          {
+            title: "Ausstattung",
+            specs: [{ label: "Digitalanzeige", value: "HEIDENHAIN (nachgerüstet)" }]
+          },
+          {
+            title: "Elektrische Daten (laut Typenschild)",
+            specs: [
+              { label: "Betriebsspannung", value: "380 V / 50 Hz (3-phasig)" },
+              { label: "Steuerspannung", value: "220 V" },
+              { label: "Gesamtnennstrom", value: "12 A" },
+              { label: "Zuleitungsquerschnitt", value: "2,5 mm² Cu" },
+              { label: "Absicherung träge", value: "20 A" }
+            ]
+          }
+        ],
+        dimensions: [],
+        applications: [],
+        ctaTitle: "Heidenreich & Harbeck VDF 21 RO anfragen",
+        ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
+        ctaLabel: "Details & Preis anfragen"
+      },
+      en: {
+        title: "1958 Heidenreich & Harbeck VDF 21 RO Engine Lathe",
+        summary:
+          "VDF-standard engine lathe by Heidenreich & Harbeck, Hamburg, with approx. 210 mm centre height, approx. 315 mm three-jaw chuck and a retrofitted HEIDENHAIN digital readout.",
+        highlights: [
+          "Centre height approx. 210 mm (swing over bed approx. 420 mm)",
+          "Three-jaw chuck approx. 315 mm",
+          "Retrofitted HEIDENHAIN digital readout",
+          "German-built, member of the VDF group"
+        ],
+        specGroups: [
+          {
+            title: "Machine data",
+            specs: [
+              { label: "Brand", value: "Heidenreich & Harbeck, Hamburg (VDF group)" },
+              { label: "Type", value: "21 RO" },
+              { label: "Machine type", value: "Engine lathe / centre lathe (VDF standard)" },
+              { label: "Year of build", value: "1958" },
+              { label: "Origin", value: "Made in Germany" }
+            ]
+          },
+          {
+            title: "Working range",
+            specs: [
+              { label: "Centre height", value: "approx. 210 mm" },
+              { label: "Swing over bed", value: "approx. 420 mm" },
+              { label: "Chuck", value: "Three-jaw chuck, approx. 315 mm" }
+            ]
+          },
+          {
+            title: "Equipment",
+            specs: [{ label: "Digital readout", value: "HEIDENHAIN (retrofitted)" }]
+          },
+          {
+            title: "Electrical data (per nameplate)",
+            specs: [
+              { label: "Operating voltage", value: "380 V / 50 Hz (3-phase)" },
+              { label: "Control voltage", value: "220 V" },
+              { label: "Total nominal current", value: "12 A" },
+              { label: "Supply wire cross-section", value: "2.5 mm² Cu" },
+              { label: "Supply fuse (slow)", value: "20 A" }
+            ]
+          }
+        ],
+        dimensions: [],
+        applications: [],
+        ctaTitle: "Enquire About the Heidenreich & Harbeck VDF 21 RO",
+        ctaDescription: "Request more information or arrange a viewing of this machine.",
+        ctaLabel: "Request details & price"
+      }
+    }
   }
 ];
 

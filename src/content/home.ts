@@ -172,6 +172,14 @@ function machineCardsDe(): HomeMachineCard[] {
       imageAlt: "VEB Mikromat SFW 200x600 Flachschleifmaschine",
       href: "/de/machines/mikromat-sfw-200x600/",
       status: "available"
+    },
+    {
+      title: "1958 Heidenreich & Harbeck VDF 21 RO",
+      description: "Leit- und Zugspindeldrehmaschine mit ca. 210 mm Spitzenhöhe, Dreibackenfutter ca. Ø 315 mm und HEIDENHAIN-Digitalanzeige.",
+      imageSrc: "/machines/heidenreich-harbeck-21-ro/main-pic.jpg",
+      imageAlt: "1958 Heidenreich & Harbeck VDF 21 RO Drehmaschine",
+      href: "/de/machines/heidenreich-harbeck-21-ro/",
+      status: "available"
     }
   ]);
 }
@@ -256,6 +264,14 @@ function machineCardsEn(): HomeMachineCard[] {
       imageSrc: "/machines/mikromat-sfw-200x600/main-pic.jpg",
       imageAlt: "VEB Mikromat SFW 200x600 surface grinding machine",
       href: "/en/machines/mikromat-sfw-200x600/",
+      status: "available"
+    },
+    {
+      title: "1958 Heidenreich & Harbeck VDF 21 RO",
+      description: "Engine lathe with approx. 210 mm centre height, approx. 315 mm three-jaw chuck and HEIDENHAIN digital readout.",
+      imageSrc: "/machines/heidenreich-harbeck-21-ro/main-pic.jpg",
+      imageAlt: "1958 Heidenreich & Harbeck VDF 21 RO engine lathe",
+      href: "/en/machines/heidenreich-harbeck-21-ro/",
       status: "available"
     }
   ]);
