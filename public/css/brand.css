@@ -1051,3 +1051,136 @@ select:focus-visible {
     padding-bottom: 44px;
   }
 }
+
+/* ---------- Contact: "Visit us" split section (photo + visit details) ---------- */
+.contact-visit {
+  background: #ffffff;
+}
+
+.contact-visit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contact-visit-row > [class*="col-"] {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .contact-visit-row > .col-md-6 {
+    width: 50%;
+  }
+}
+
+.contact-visit-media {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: var(--machinco-shadow);
+}
+
+.contact-visit-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contact-visit-badge {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--machinco-ink, #101928);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact-visit-badge .fa {
+  color: var(--machinco-accent);
+}
+
+.contact-visit-body {
+  padding: 8px 0 8px 32px;
+}
+
+.contact-visit-body h2 {
+  margin: 10px 0 16px;
+}
+
+.contact-visit-body p {
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.contact-visit-points {
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-visit-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 6px 0;
+  color: var(--machinco-ink);
+  font-weight: 700;
+}
+
+.contact-visit-points .fa {
+  margin-top: 4px;
+  color: var(--machinco-accent);
+}
+
+.contact-visit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-visit-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-visit .contact-visit-secondary,
+.contact-visit .contact-visit-secondary:visited {
+  border: 2px solid var(--machinco-ink);
+  background: transparent;
+  color: var(--machinco-ink);
+}
+
+.contact-visit .contact-visit-secondary:hover,
+.contact-visit .contact-visit-secondary:focus {
+  background: var(--machinco-ink);
+  color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  .contact-visit-body {
+    padding: 28px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-visit-actions .btn {
+    width: 100%;
+  }
+
+  .contact-visit-body p {
+    font-size: 16px;
+  }
+}

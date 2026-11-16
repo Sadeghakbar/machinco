@@ -4,7 +4,7 @@ import type { AboutPageContent, ContactPageContent } from "@/content/aboutContac
 import type { Locale } from "@/i18n/config";
 import { LocationDetails } from "@/components/location/LocationDetails";
 import { LocationMap } from "@/components/location/LocationMap";
-import { BUSINESS_PHONE_E164 } from "@/content/business";
+import { BUSINESS_EMAIL, BUSINESS_PHONE_E164, GABLINGEN } from "@/content/business";
 
 type AboutPageViewProps = {
   content: AboutPageContent;
@@ -78,6 +78,78 @@ type ContactPageViewProps = {
   locale: Locale;
   content: ContactPageContent;
 };
+
+const visitCopy = {
+  de: {
+    eyebrow: "Besuch vor Ort",
+    title: "Maschinen in Gablingen besichtigen",
+    text: "An unserem Hauptstandort mit Lager in Gablingen bei Augsburg können Sie Maschinen nach Vereinbarung persönlich besichtigen. Bitte melden Sie Ihren Besuch vorab telefonisch oder per E-Mail an.",
+    points: ["Besichtigung nach Vereinbarung", `${GABLINGEN.streetAddress}, ${GABLINGEN.postalCode} ${GABLINGEN.locality}`],
+    call: "Termin vereinbaren",
+    mail: "E-Mail schreiben",
+    alt: "Eingang der Machinco GmbH mit Firmenschild in Gablingen",
+    badge: "Machinco GmbH · Gablingen"
+  },
+  en: {
+    eyebrow: "Visit us",
+    title: "Inspect machines in Gablingen",
+    text: "At our main warehouse and business location in Gablingen near Augsburg, you can inspect machines in person by appointment. Please arrange your visit in advance by phone or email.",
+    points: ["Inspection by appointment", `${GABLINGEN.streetAddress}, ${GABLINGEN.postalCode} ${GABLINGEN.locality}, Germany`],
+    call: "Arrange a visit",
+    mail: "Send an email",
+    alt: "Machinco GmbH entrance with company sign in Gablingen",
+    badge: "Machinco GmbH · Gablingen"
+  }
+} as const;
+
+function ContactVisitSection({ locale }: { locale: Locale }) {
+  const copy = visitCopy[locale];
+  return (
+    <section className="page-section contact-visit" aria-labelledby="contact-visit-title">
+      <div className="container">
+        <div className="row contact-visit-row">
+          <div className="col-md-6">
+            <figure className="contact-visit-media">
+              <img
+                src="/images/contact/entrance-gablingen.jpg"
+                alt={copy.alt}
+                width={1440}
+                height={1083}
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption className="contact-visit-badge">
+                <i className="fa fa-map-marker" aria-hidden="true"></i> {copy.badge}
+              </figcaption>
+            </figure>
+          </div>
+          <div className="col-md-6">
+            <div className="contact-visit-body">
+              <span className="projects-eyebrow">{copy.eyebrow}</span>
+              <h2 id="contact-visit-title">{copy.title}</h2>
+              <p>{copy.text}</p>
+              <ul className="contact-visit-points">
+                {copy.points.map((point) => (
+                  <li key={point}>
+                    <i className="fa fa-check" aria-hidden="true"></i> {point}
+                  </li>
+                ))}
+              </ul>
+              <div className="contact-visit-actions">
+                <a className="btn btn-warning btn-lg hero-cta-primary" href={`tel:${BUSINESS_PHONE_E164}`}>
+                  <i className="fa fa-phone" aria-hidden="true"></i>&nbsp; {copy.call}
+                </a>
+                <a className="btn btn-lg contact-visit-secondary" href={`mailto:${BUSINESS_EMAIL}`}>
+                  <i className="fa fa-envelope-o" aria-hidden="true"></i>&nbsp; {copy.mail}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export function ContactPageView({ locale, content }: ContactPageViewProps) {
   return (
@@ -180,6 +252,8 @@ export function ContactPageView({ locale, content }: ContactPageViewProps) {
           </div>
         </div>
       </section>
+
+      <ContactVisitSection locale={locale} />
 
       <LocationMap locale={locale} />
     </>
