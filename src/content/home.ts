@@ -156,6 +156,14 @@ function machineCardsDe(): HomeMachineCard[] {
       imageAlt: "1976 FORTUNA R26 H 3000 A 45 Rundschleifmaschine",
       href: "/de/machines/fortuna-r26-h-3000-a-45/",
       status: "sold"
+    },
+    {
+      title: "1991 WMW Auerbach F250/2-FU",
+      description: "Universalfräsmaschine mit Aufspannfläche 1130 x 255 mm, SK 40 und Drehzahlen von ca. 28 bis 2800 1/min.",
+      imageSrc: "/machines/auerbach-f250-2-fu/main-pic.jpg",
+      imageAlt: "1991 WMW Auerbach F250/2-FU Universalfräsmaschine",
+      href: "/de/machines/auerbach-f250-2-fu/",
+      status: "available"
     }
   ]);
 }
@@ -225,6 +233,14 @@ function machineCardsEn(): HomeMachineCard[] {
       imageAlt: "1976 FORTUNA R26 H 3000 A 45 cylindrical grinding machine",
       href: "/en/machines/fortuna-r26-h-3000-a-45/",
       status: "sold"
+    },
+    {
+      title: "1991 WMW Auerbach F250/2-FU",
+      description: "Universal milling machine with a 1130 x 255 mm table, SK 40 spindle taper and speeds of approx. 28 to 2800 rpm.",
+      imageSrc: "/machines/auerbach-f250-2-fu/main-pic.jpg",
+      imageAlt: "1991 WMW Auerbach F250/2-FU universal milling machine",
+      href: "/en/machines/auerbach-f250-2-fu/",
+      status: "available"
     }
   ]);
 }

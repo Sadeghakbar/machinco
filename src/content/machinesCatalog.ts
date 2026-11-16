@@ -1326,6 +1326,157 @@ const productCatalog: ProductDefinition[] = [
         ctaLabel: "Request details & price"
       }
     }
+  },
+  {
+    id: "auerbach-f250-2-fu",
+    slug: "auerbach-f250-2-fu",
+    category: {
+      de: "Universalfräsmaschine",
+      en: "Universal milling machine"
+    },
+    reference: "F250/2-FU",
+    brand: "WMW Auerbach",
+    year: 1991,
+    featured: true,
+    status: "available",
+    heroImage: "/machines/auerbach-f250-2-fu/main-pic.jpg",
+    galleryMedia: [
+      { src: "/machines/auerbach-f250-2-fu/main-pic.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-01.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-02.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-03.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-04.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-05.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-06.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-07.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-08.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-09.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-10.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-11.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-12.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-13.jpg", type: "image" },
+      { src: "/machines/auerbach-f250-2-fu/img-14.jpg", type: "image" }
+    ],
+    locale: {
+      de: {
+        title: "1991 WMW Auerbach F250/2-FU Universal­fräs­maschine",
+        summary:
+          "Universalfräsmaschine aus deutscher Fertigung (WMW Auerbach / Fritz Heckert) mit Aufspannfläche 1130 x 255 mm, SK 40 und Spindeldrehzahlen von ca. 28 bis 2800 1/min.",
+        highlights: [
+          "Aufspannfläche 1130 x 255 mm",
+          "Spindelaufnahme SK 40 (ISO 40)",
+          "Spindeldrehzahlen ca. 28 - 2800 1/min",
+          "Verfahrwege X/Y/Z ca. 700 / 250 / 460 mm"
+        ],
+        specGroups: [
+          {
+            title: "Maschinendaten",
+            specs: [
+              { label: "Hersteller", value: "WMW Auerbach / Fritz Heckert" },
+              { label: "Typ", value: "F250/2-FU (Baureihe FU 250)" },
+              { label: "Bauart", value: "Universalfräsmaschine" },
+              { label: "Baujahr", value: "1991" },
+              { label: "Herkunft", value: "Made in Germany" }
+            ]
+          },
+          {
+            title: "Arbeitsbereich",
+            specs: [
+              { label: "Aufspannfläche", value: "1130 x 255 mm (innerhalb der Kühlmittelrinne gemessen)" },
+              { label: "Verfahrweg X (längs)", value: "ca. 700 mm" },
+              { label: "Verfahrweg Y (quer)", value: "ca. 250 mm" },
+              { label: "Verfahrweg Z (vertikal)", value: "ca. 460 mm" }
+            ]
+          },
+          {
+            title: "Spindel",
+            specs: [
+              { label: "Spindelaufnahme", value: "SK 40 (ISO 40)" },
+              { label: "Spindeldrehzahlen", value: "ca. 28 - 2800 1/min" }
+            ]
+          },
+          {
+            title: "Elektrische Daten (laut Typenschild)",
+            specs: [
+              { label: "Betriebsspannung", value: "380 V / 50 Hz (3-phasig)" },
+              { label: "Steuerspannung", value: "220 V / 50 Hz" },
+              { label: "Anschlussleistung", value: "6,5 kW" },
+              { label: "Absicherung", value: "25 A" },
+              { label: "Schutzart", value: "IP 43" }
+            ]
+          }
+        ],
+        dimensions: [
+          { label: "Länge", value: "ca. 1800 mm" },
+          { label: "Breite", value: "ca. 1600 mm" },
+          { label: "Höhe", value: "ca. 1900 mm" },
+          { label: "Gewicht", value: "ca. 1700 kg" }
+        ],
+        applications: [],
+        ctaTitle: "WMW Auerbach F250/2-FU anfragen",
+        ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
+        ctaLabel: "Details & Preis anfragen"
+      },
+      en: {
+        title: "1991 WMW Auerbach F250/2-FU Universal Milling Machine",
+        summary:
+          "German-built universal milling machine (WMW Auerbach / Fritz Heckert) with a 1130 x 255 mm table, SK 40 spindle taper and spindle speeds of approx. 28 to 2800 rpm.",
+        highlights: [
+          "Table clamping surface 1130 x 255 mm",
+          "Spindle taper SK 40 (ISO 40)",
+          "Spindle speeds approx. 28 - 2800 rpm",
+          "X/Y/Z travels approx. 700 / 250 / 460 mm"
+        ],
+        specGroups: [
+          {
+            title: "Machine data",
+            specs: [
+              { label: "Brand", value: "WMW Auerbach / Fritz Heckert" },
+              { label: "Type", value: "F250/2-FU (FU 250 series)" },
+              { label: "Machine type", value: "Universal milling machine" },
+              { label: "Year of build", value: "1991" },
+              { label: "Origin", value: "Made in Germany" }
+            ]
+          },
+          {
+            title: "Working range",
+            specs: [
+              { label: "Table clamping surface", value: "1130 x 255 mm (measured inside the coolant groove)" },
+              { label: "X-axis travel (longitudinal)", value: "approx. 700 mm" },
+              { label: "Y-axis travel (cross)", value: "approx. 250 mm" },
+              { label: "Z-axis travel (vertical)", value: "approx. 460 mm" }
+            ]
+          },
+          {
+            title: "Spindle",
+            specs: [
+              { label: "Spindle taper", value: "SK 40 (ISO 40)" },
+              { label: "Spindle speeds", value: "approx. 28 - 2800 rpm" }
+            ]
+          },
+          {
+            title: "Electrical data (per nameplate)",
+            specs: [
+              { label: "Operating voltage", value: "380 V / 50 Hz (3-phase)" },
+              { label: "Control voltage", value: "220 V / 50 Hz" },
+              { label: "Connected load", value: "6.5 kW" },
+              { label: "Fuse protection", value: "25 A" },
+              { label: "Protection class", value: "IP 43" }
+            ]
+          }
+        ],
+        dimensions: [
+          { label: "Length", value: "approx. 1800 mm" },
+          { label: "Width", value: "approx. 1600 mm" },
+          { label: "Height", value: "approx. 1900 mm" },
+          { label: "Weight", value: "approx. 1700 kg" }
+        ],
+        applications: [],
+        ctaTitle: "Enquire About the WMW Auerbach F250/2-FU",
+        ctaDescription: "Request more information or arrange a viewing of this machine.",
+        ctaLabel: "Request details & price"
+      }
+    }
   }
 ];
 
