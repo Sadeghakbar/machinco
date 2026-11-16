@@ -1477,6 +1477,125 @@ const productCatalog: ProductDefinition[] = [
         ctaLabel: "Request details & price"
       }
     }
+  },
+  {
+    id: "mikromat-sfw-200x600",
+    slug: "mikromat-sfw-200x600",
+    category: {
+      de: "Flachschleifmaschine",
+      en: "Surface grinding machine"
+    },
+    reference: "SFW 200x600",
+    brand: "VEB Mikromat Dresden",
+    featured: true,
+    status: "available",
+    heroImage: "/machines/mikromat-sfw-200x600/main-pic.jpg",
+    galleryMedia: [
+      { src: "/machines/mikromat-sfw-200x600/main-pic.jpg", type: "image" },
+      { src: "/machines/mikromat-sfw-200x600/img-01.jpg", type: "image" },
+      { src: "/machines/mikromat-sfw-200x600/img-02.jpg", type: "image" },
+      { src: "/machines/mikromat-sfw-200x600/img-03.jpg", type: "image" },
+      { src: "/machines/mikromat-sfw-200x600/img-04.jpg", type: "image" },
+      { src: "/machines/mikromat-sfw-200x600/img-05.jpg", type: "image" },
+      { src: "/machines/mikromat-sfw-200x600/img-06.jpg", type: "image" },
+      { src: "/machines/mikromat-sfw-200x600/img-07.jpg", type: "image" },
+      { src: "/machines/mikromat-sfw-200x600/img-08.jpg", type: "image" },
+      { src: "/machines/mikromat-sfw-200x600/img-09.jpg", type: "image" },
+      { src: "/machines/mikromat-sfw-200x600/img-10.jpg", type: "image" },
+      { src: "/machines/mikromat-sfw-200x600/img-11.jpg", type: "image" }
+    ],
+    locale: {
+      de: {
+        title: "VEB Mikromat SFW 200x600 Flach­schleif­maschine",
+        summary:
+          "Flachschleifmaschine aus deutscher Fertigung (VEB Mikromat Dresden / WMW) mit 600 mm Schleiflänge und 200 mm Schleifbreite, Anschlussleistung 3,0 kW.",
+        highlights: [
+          "Max. Schleiflänge 600 mm",
+          "Max. Schleifbreite 200 mm",
+          "Anschlussleistung 3,0 kW, 380 V / 50 Hz",
+          "Maschinengewicht ca. 1010 kg"
+        ],
+        specGroups: [
+          {
+            title: "Maschinendaten",
+            specs: [
+              { label: "Hersteller", value: "VEB Mikromat Dresden / WMW" },
+              { label: "Typ", value: "SFW 200x600" },
+              { label: "Bauart", value: "Flachschleifmaschine" },
+              { label: "Herkunft", value: "Made in Germany" }
+            ]
+          },
+          {
+            title: "Arbeitsbereich",
+            specs: [
+              { label: "Max. Schleiflänge", value: "600 mm" },
+              { label: "Max. Schleifbreite", value: "200 mm" }
+            ]
+          },
+          {
+            title: "Elektrische Daten (laut Typenschild)",
+            specs: [
+              { label: "Betriebsspannung", value: "380 V / 50 Hz (3-phasig)" },
+              { label: "Steuerspannung", value: "220 V" },
+              { label: "Anschlussleistung", value: "3,0 kW" },
+              { label: "Nennstrom", value: "6 A" },
+              { label: "Netzsicherung flink", value: "20 A" },
+              { label: "Netzsicherung träge", value: "10 A" }
+            ]
+          }
+        ],
+        dimensions: [{ label: "Gewicht", value: "ca. 1010 kg" }],
+        applications: [],
+        ctaTitle: "VEB Mikromat SFW 200x600 anfragen",
+        ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
+        ctaLabel: "Details & Preis anfragen"
+      },
+      en: {
+        title: "VEB Mikromat SFW 200x600 Surface Grinding Machine",
+        summary:
+          "German-built surface grinding machine (VEB Mikromat Dresden / WMW) with 600 mm grinding length and 200 mm grinding width, 3.0 kW connected load.",
+        highlights: [
+          "Max. grinding length 600 mm",
+          "Max. grinding width 200 mm",
+          "Connected load 3.0 kW, 380 V / 50 Hz",
+          "Machine weight approx. 1010 kg"
+        ],
+        specGroups: [
+          {
+            title: "Machine data",
+            specs: [
+              { label: "Brand", value: "VEB Mikromat Dresden / WMW" },
+              { label: "Type", value: "SFW 200x600" },
+              { label: "Machine type", value: "Surface grinding machine" },
+              { label: "Origin", value: "Made in Germany" }
+            ]
+          },
+          {
+            title: "Working range",
+            specs: [
+              { label: "Max. grinding length", value: "600 mm" },
+              { label: "Max. grinding width", value: "200 mm" }
+            ]
+          },
+          {
+            title: "Electrical data (per nameplate)",
+            specs: [
+              { label: "Operating voltage", value: "380 V / 50 Hz (3-phase)" },
+              { label: "Control voltage", value: "220 V" },
+              { label: "Connected load", value: "3.0 kW" },
+              { label: "Nominal current", value: "6 A" },
+              { label: "Supply fuse (fast)", value: "20 A" },
+              { label: "Supply fuse (slow)", value: "10 A" }
+            ]
+          }
+        ],
+        dimensions: [{ label: "Weight", value: "approx. 1010 kg" }],
+        applications: [],
+        ctaTitle: "Enquire About the VEB Mikromat SFW 200x600",
+        ctaDescription: "Request more information or arrange a viewing of this machine.",
+        ctaLabel: "Request details & price"
+      }
+    }
   }
 ];
 

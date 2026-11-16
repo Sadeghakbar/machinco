@@ -164,6 +164,14 @@ function machineCardsDe(): HomeMachineCard[] {
       imageAlt: "1991 WMW Auerbach F250/2-FU Universalfräsmaschine",
       href: "/de/machines/auerbach-f250-2-fu/",
       status: "available"
+    },
+    {
+      title: "VEB Mikromat SFW 200x600",
+      description: "Flachschleifmaschine mit 600 mm Schleiflänge, 200 mm Schleifbreite und 3,0 kW Anschlussleistung.",
+      imageSrc: "/machines/mikromat-sfw-200x600/main-pic.jpg",
+      imageAlt: "VEB Mikromat SFW 200x600 Flachschleifmaschine",
+      href: "/de/machines/mikromat-sfw-200x600/",
+      status: "available"
     }
   ]);
 }
@@ -240,6 +248,14 @@ function machineCardsEn(): HomeMachineCard[] {
       imageSrc: "/machines/auerbach-f250-2-fu/main-pic.jpg",
       imageAlt: "1991 WMW Auerbach F250/2-FU universal milling machine",
       href: "/en/machines/auerbach-f250-2-fu/",
+      status: "available"
+    },
+    {
+      title: "VEB Mikromat SFW 200x600",
+      description: "Surface grinding machine with 600 mm grinding length, 200 mm grinding width and 3.0 kW connected load.",
+      imageSrc: "/machines/mikromat-sfw-200x600/main-pic.jpg",
+      imageAlt: "VEB Mikromat SFW 200x600 surface grinding machine",
+      href: "/en/machines/mikromat-sfw-200x600/",
       status: "available"
     }
   ]);
