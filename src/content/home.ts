@@ -180,6 +180,14 @@ function machineCardsDe(): HomeMachineCard[] {
       imageAlt: "1958 Heidenreich & Harbeck VDF 21 RO Drehmaschine",
       href: "/de/machines/heidenreich-harbeck-21-ro/",
       status: "available"
+    },
+    {
+      title: "G. Breda R 50-1600",
+      description: "Radialbohrmaschine mit 1600 mm Ausladung, Bohrleistung Ø 50 mm in Stahl und Spindelaufnahme MK 5.",
+      imageSrc: "/machines/breda-r50-1600/main-pic.jpg",
+      imageAlt: "G. Breda R 50-1600 Radialbohrmaschine",
+      href: "/de/machines/breda-r50-1600/",
+      status: "available"
     }
   ]);
 }
@@ -272,6 +280,14 @@ function machineCardsEn(): HomeMachineCard[] {
       imageSrc: "/machines/heidenreich-harbeck-21-ro/main-pic.jpg",
       imageAlt: "1958 Heidenreich & Harbeck VDF 21 RO engine lathe",
       href: "/en/machines/heidenreich-harbeck-21-ro/",
+      status: "available"
+    },
+    {
+      title: "G. Breda R 50-1600",
+      description: "Radial drilling machine with 1600 mm arm reach, 50 mm drilling capacity in steel and MT 5 spindle taper.",
+      imageSrc: "/machines/breda-r50-1600/main-pic.jpg",
+      imageAlt: "G. Breda R 50-1600 radial drilling machine",
+      href: "/en/machines/breda-r50-1600/",
       status: "available"
     }
   ]);

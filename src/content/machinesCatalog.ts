@@ -1729,6 +1729,130 @@ const productCatalog: ProductDefinition[] = [
         ctaLabel: "Request details & price"
       }
     }
+  },
+  {
+    id: "breda-r50-1600",
+    slug: "breda-r50-1600",
+    category: {
+      de: "Radialbohrmaschine",
+      en: "Radial drilling machine"
+    },
+    reference: "R 50-1600",
+    brand: "G. Breda",
+    featured: true,
+    status: "available",
+    heroImage: "/machines/breda-r50-1600/main-pic.jpg",
+    galleryMedia: [
+      { src: "/machines/breda-r50-1600/main-pic.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-01.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-02.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-03.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-04.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-05.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-06.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-07.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-08.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-09.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-10.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-11.jpg", type: "image" },
+      { src: "/machines/breda-r50-1600/img-12.jpg", type: "image" }
+    ],
+    locale: {
+      de: {
+        title: "G. Breda R 50-1600 Radial­bohr­maschine",
+        summary:
+          "Radialbohrmaschine von Ing. G. Breda S.p.A. (Padua, Italien) mit 1600 mm Ausladung, Bohrleistung Ø 50 mm in Stahl bzw. Ø 65 mm in Guss und Spindelaufnahme MK 5.",
+        highlights: [
+          "Ausladung 1600 mm",
+          "Bohrleistung Ø 50 mm in Stahl, Ø 65 mm in Guss",
+          "Spindelaufnahme MK 5, Pinolenhub 310 mm",
+          "Vorschübe 0,06 - 1,0 mm/U"
+        ],
+        specGroups: [
+          {
+            title: "Maschinendaten",
+            specs: [
+              { label: "Hersteller", value: "Ing. G. Breda S.p.A., Padua (Italien)" },
+              { label: "Vertrieb", value: "Steinbeck, Bielefeld" },
+              { label: "Typ", value: "R 50-1600" },
+              { label: "Bauart", value: "Radialbohrmaschine" }
+            ]
+          },
+          {
+            title: "Arbeitsbereich",
+            specs: [
+              { label: "Ausladung", value: "1600 mm" },
+              { label: "Bohrleistung in Stahl", value: "Ø 50 mm" },
+              { label: "Bohrleistung in Guss", value: "Ø 65 mm" }
+            ]
+          },
+          {
+            title: "Spindel und Vorschub",
+            specs: [
+              { label: "Spindelaufnahme", value: "MK 5" },
+              { label: "Pinolenhub", value: "310 mm" },
+              { label: "Vorschübe", value: "0,06 - 1,0 mm/U" }
+            ]
+          },
+          {
+            title: "Ausstattung",
+            specs: [{ label: "Klemmung", value: "Elektromechanische Klemmung von Arm und Bohrkopf" }]
+          }
+        ],
+        dimensions: [],
+        applications: [],
+        ctaTitle: "G. Breda R 50-1600 anfragen",
+        ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
+        ctaLabel: "Details & Preis anfragen"
+      },
+      en: {
+        title: "G. Breda R 50-1600 Radial Drilling Machine",
+        summary:
+          "Radial drilling machine by Ing. G. Breda S.p.A. (Padua, Italy) with 1600 mm arm reach, drilling capacity of 50 mm in steel or 65 mm in cast iron and MT 5 spindle taper.",
+        highlights: [
+          "Arm reach 1600 mm",
+          "Drilling capacity 50 mm in steel, 65 mm in cast iron",
+          "Spindle taper MT 5, quill stroke 310 mm",
+          "Feeds 0.06 - 1.0 mm/rev"
+        ],
+        specGroups: [
+          {
+            title: "Machine data",
+            specs: [
+              { label: "Brand", value: "Ing. G. Breda S.p.A., Padua (Italy)" },
+              { label: "Distributor", value: "Steinbeck, Bielefeld (Germany)" },
+              { label: "Type", value: "R 50-1600" },
+              { label: "Machine type", value: "Radial drilling machine" }
+            ]
+          },
+          {
+            title: "Working range",
+            specs: [
+              { label: "Arm reach", value: "1600 mm" },
+              { label: "Drilling capacity in steel", value: "50 mm" },
+              { label: "Drilling capacity in cast iron", value: "65 mm" }
+            ]
+          },
+          {
+            title: "Spindle and feed",
+            specs: [
+              { label: "Spindle taper", value: "MT 5" },
+              { label: "Quill stroke", value: "310 mm" },
+              { label: "Feeds", value: "0.06 - 1.0 mm/rev" }
+            ]
+          },
+          {
+            title: "Equipment",
+            specs: [{ label: "Clamping", value: "Electromechanical clamping of arm and drilling head" }]
+          }
+        ],
+        dimensions: [],
+        applications: [],
+        ctaTitle: "Enquire About the G. Breda R 50-1600",
+        ctaDescription: "Request more information or arrange a viewing of this machine.",
+        ctaLabel: "Request details & price"
+      }
+    }
   }
 ];
 
