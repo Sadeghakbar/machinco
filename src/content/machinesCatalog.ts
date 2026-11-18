@@ -1853,6 +1853,169 @@ const productCatalog: ProductDefinition[] = [
         ctaLabel: "Request details & price"
       }
     }
+  },
+  {
+    id: "elha-r55",
+    slug: "elha-r55",
+    category: {
+      de: "Radialbohrmaschine",
+      en: "Radial drilling machine"
+    },
+    reference: "R 55",
+    brand: "ELHA",
+    year: 1971,
+    featured: true,
+    status: "available",
+    heroImage: "/machines/elha-r55/main-pic.jpg",
+    galleryMedia: [
+      { src: "/machines/elha-r55/main-pic.jpg", type: "image" },
+      { src: "/machines/elha-r55/img-01.jpg", type: "image" },
+      { src: "/machines/elha-r55/img-02.jpg", type: "image" },
+      { src: "/machines/elha-r55/img-03.jpg", type: "image" },
+      { src: "/machines/elha-r55/img-04.jpg", type: "image" },
+      { src: "/machines/elha-r55/img-05.jpg", type: "image" },
+      { src: "/machines/elha-r55/img-06.jpg", type: "image" },
+      { src: "/machines/elha-r55/img-07.jpg", type: "image" },
+      { src: "/machines/elha-r55/img-08.jpg", type: "image" },
+      { src: "/machines/elha-r55/img-09.jpg", type: "image" },
+      { src: "/machines/elha-r55/img-10.jpg", type: "image" }
+    ],
+    locale: {
+      de: {
+        title: "1971 ELHA R 55 Radial­bohr­maschine",
+        summary:
+          "Radialbohrmaschine mit Bohrleistung Ø 55 mm in Stahl, Bohrradius 650 - 2000 mm, 12 Drehzahlen von 28 - 1250 1/min und Würfeltisch, Kühlmitteleinrichtung und Bedienungsanleitung.",
+        highlights: [
+          "Bohrleistung Ø 55 mm in Stahl, Ø 70 mm in Guss",
+          "Bohrradius 650 - 2000 mm, Ausladung 450 - 1800 mm",
+          "12 Drehzahlen 28 - 1250 1/min, 8 Vorschübe",
+          "Spindelaufnahme MK 5, Bohrhub 330 mm"
+        ],
+        specGroups: [
+          {
+            title: "Maschinendaten",
+            specs: [
+              { label: "Hersteller", value: "ELHA" },
+              { label: "Typ", value: "R 55" },
+              { label: "Bauart", value: "Radialbohrmaschine" },
+              { label: "Baujahr", value: "1971" }
+            ]
+          },
+          {
+            title: "Arbeitsbereich",
+            specs: [
+              { label: "Bohrleistung in Stahl", value: "Ø 55 mm" },
+              { label: "Bohrleistung in Guss", value: "Ø 70 mm" },
+              { label: "Ausbohrleistung", value: "Ø 85 mm" },
+              { label: "Ausladung", value: "450 - 1800 mm" },
+              { label: "Bohrradius", value: "650 - 2000 mm" },
+              { label: "Säulendurchmesser", value: "400 mm" },
+              { label: "Tischaufspannfläche", value: "600 x 750 mm" }
+            ]
+          },
+          {
+            title: "Spindel, Drehzahlen und Vorschübe",
+            specs: [
+              { label: "Spindelaufnahme", value: "MK 5" },
+              { label: "Bohrspindelhub", value: "330 mm" },
+              { label: "Anzahl Drehzahlen", value: "12" },
+              { label: "Drehzahlbereich", value: "28 - 1250 1/min" },
+              { label: "Anzahl Vorschübe", value: "8" },
+              { label: "Vorschubbereich", value: "0,1 - 1,12 mm/U" },
+              { label: "Bohrmotor", value: "4 / 5 kW" }
+            ]
+          },
+          {
+            title: "Ausstattung",
+            specs: [
+              { label: "Kühlmitteleinrichtung", value: "Ja" },
+              { label: "Gewindeschneidautomatik", value: "Ja" },
+              { label: "Universal-Bohrtisch", value: "Ja" },
+              { label: "Würfelbohrtisch", value: "Ja" },
+              { label: "Schnellwechselfutter", value: "Ja" },
+              { label: "Sondergrundplatten", value: "Ja" },
+              { label: "Bedienungsanleitung", value: "Vorhanden" }
+            ]
+          }
+        ],
+        dimensions: [
+          { label: "Grundplatte (L x B)", value: "1840 x 1000 mm" },
+          { label: "Höhe", value: "ca. 3100 mm" },
+          { label: "Gewicht (netto)", value: "ca. 5500 kg" }
+        ],
+        applications: [],
+        ctaTitle: "ELHA R 55 anfragen",
+        ctaDescription: "Fordern Sie weitere Informationen oder einen Besichtigungstermin für diese Maschine an.",
+        ctaLabel: "Details & Preis anfragen"
+      },
+      en: {
+        title: "1971 ELHA R 55 Radial Drilling Machine",
+        summary:
+          "Radial drilling machine with 55 mm drilling capacity in steel, 650 - 2000 mm drilling radius, 12 speeds from 28 - 1250 rpm, cubic drilling table, coolant system and instruction manual.",
+        highlights: [
+          "Drilling capacity 55 mm in steel, 70 mm in cast iron",
+          "Drilling radius 650 - 2000 mm, projection 450 - 1800 mm",
+          "12 speeds 28 - 1250 rpm, 8 feeds",
+          "Spindle taper MT 5, spindle stroke 330 mm"
+        ],
+        specGroups: [
+          {
+            title: "Machine data",
+            specs: [
+              { label: "Brand", value: "ELHA" },
+              { label: "Type", value: "R 55" },
+              { label: "Machine type", value: "Radial drilling machine" },
+              { label: "Year of build", value: "1971" }
+            ]
+          },
+          {
+            title: "Working range",
+            specs: [
+              { label: "Drilling capacity in steel", value: "55 mm" },
+              { label: "Drilling capacity in cast iron", value: "70 mm" },
+              { label: "Boring capacity", value: "85 mm" },
+              { label: "Projection", value: "450 - 1800 mm" },
+              { label: "Drilling radius", value: "650 - 2000 mm" },
+              { label: "Column diameter", value: "400 mm" },
+              { label: "Table work surface", value: "600 x 750 mm" }
+            ]
+          },
+          {
+            title: "Spindle, speeds and feeds",
+            specs: [
+              { label: "Spindle taper", value: "MT 5" },
+              { label: "Drilling spindle stroke", value: "330 mm" },
+              { label: "Number of speeds", value: "12" },
+              { label: "Speed range", value: "28 - 1250 rpm" },
+              { label: "Number of feeds", value: "8" },
+              { label: "Feed range", value: "0.1 - 1.12 mm/rev" },
+              { label: "Drilling motor", value: "4 / 5 kW" }
+            ]
+          },
+          {
+            title: "Equipment",
+            specs: [
+              { label: "Coolant system", value: "Yes" },
+              { label: "Automatic threading", value: "Yes" },
+              { label: "Universal drilling table", value: "Yes" },
+              { label: "Cubic drilling table", value: "Yes" },
+              { label: "Quick-change chuck", value: "Yes" },
+              { label: "Special base plates", value: "Yes" },
+              { label: "Instruction manual", value: "Available" }
+            ]
+          }
+        ],
+        dimensions: [
+          { label: "Base plate (L x W)", value: "1840 x 1000 mm" },
+          { label: "Height", value: "approx. 3100 mm" },
+          { label: "Net weight", value: "approx. 5500 kg" }
+        ],
+        applications: [],
+        ctaTitle: "Enquire About the ELHA R 55",
+        ctaDescription: "Request more information or arrange a viewing of this machine.",
+        ctaLabel: "Request details & price"
+      }
+    }
   }
 ];
 

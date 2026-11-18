@@ -188,6 +188,14 @@ function machineCardsDe(): HomeMachineCard[] {
       imageAlt: "G. Breda R 50-1600 Radialbohrmaschine",
       href: "/de/machines/breda-r50-1600/",
       status: "available"
+    },
+    {
+      title: "1971 ELHA R 55",
+      description: "Radialbohrmaschine mit Bohrleistung Ø 55 mm in Stahl, Bohrradius bis 2000 mm und 12 Drehzahlen von 28 - 1250 1/min.",
+      imageSrc: "/machines/elha-r55/main-pic.jpg",
+      imageAlt: "1971 ELHA R 55 Radialbohrmaschine",
+      href: "/de/machines/elha-r55/",
+      status: "available"
     }
   ]);
 }
@@ -288,6 +296,14 @@ function machineCardsEn(): HomeMachineCard[] {
       imageSrc: "/machines/breda-r50-1600/main-pic.jpg",
       imageAlt: "G. Breda R 50-1600 radial drilling machine",
       href: "/en/machines/breda-r50-1600/",
+      status: "available"
+    },
+    {
+      title: "1971 ELHA R 55",
+      description: "Radial drilling machine with 55 mm drilling capacity in steel, drilling radius up to 2000 mm and 12 speeds from 28 - 1250 rpm.",
+      imageSrc: "/machines/elha-r55/main-pic.jpg",
+      imageAlt: "1971 ELHA R 55 radial drilling machine",
+      href: "/en/machines/elha-r55/",
       status: "available"
     }
   ]);
